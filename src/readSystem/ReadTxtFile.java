@@ -1,39 +1,65 @@
 package readSystem;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
+
 class ReadTxtFile implements Reader{
-	//TODO
-	String FileLocation;
+	ArrayList<String> fileLines = new ArrayList<String>();
+	
 	/**
 	 * Constructor - sets up an empty ReadTxtFile object.
-	 * Requires ReadFrom to be used before safe to use.
+	 * Requires setTarget to be used before safe to use.
 	 */
 	ReadTxtFile(){
-		//TODO - Finish
-		FileLocation = new String();
 		
 	}
 	
 	/**
 	 * Reads from the source location provided by accessing the system's type,
-	 * and reading from the text file with the source name (source [0] in the
-	 * source location[1].
+	 * and reading from the text file in the source location (source [0]) with
+	 * the source name (source[1]).
+	 * if the source file is not found, it will throw a File Not Found
+	 * Exception. if the source file is found to not have supported encoding,
+	 * an UnsupportedEncodingException will be thrown. If there is an issue
+	 * with reading from the file, a IOException will be thrown.
 	 * @param source
+	 * @throws FileNotFoundException 
+	 * @throws UnsupportedEncodingException
+	 * @throws IOException
 	 */
-	public void ReadFrom(String source[])
+	public void setTarget(String source[]) throws FileNotFoundException, UnsupportedEncodingException, IOException
 	{
-		//TODO
+		String target = source[0] + "\\" + source[1];
+		InputStream inputStream = new FileInputStream(target);
+		BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
+			
+		for(String line; (line = in.readLine()) != null; )
+			fileLines.add(line);
+
+		in.close();
 	}
 	
+	
+	
 	/**
-	 * Will return all items read from the text file as an arraylist of type string.
-	 * Must be accessed as unicode.
+	 * Creates a deep copy of the fileLines read, and returns them.
 	 * @return
 	 */
-	public ArrayList<String> ToArrayList()
+	public ArrayList<String> toArrayList()
 	{
-		//TODO - FINISH
-		return new ArrayList<String>();
+		ArrayList<String> temp = new ArrayList<String>();
+		for(String line: fileLines)
+		{
+			temp.add(line);
+		}
+	
+		return fileLines;
 	}
 }

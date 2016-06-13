@@ -19,7 +19,7 @@ class ReadTwitter implements Reader{
 	 * @param source
 	 * @param SourceFileName
 	 */
-	public void ReadFrom(String source[])
+	public void setTarget(String source[])
 	{
 		//TODO
 		// call TwitterCopier in here!
@@ -30,7 +30,7 @@ class ReadTwitter implements Reader{
 	 * Must be accessed as unicode.
 	 * @return
 	 */
-	public ArrayList<String> ToArrayList()
+	public ArrayList<String> toArrayList()
 	{
 		//TODO
 		return null;
