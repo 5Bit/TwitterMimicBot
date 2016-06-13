@@ -24,17 +24,17 @@ public class testReadSystem {
 		try {
 			reader.setTarget(target);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+
 			System.out.println("The file was not found.");
 			e.printStackTrace();
 			fail();
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
+
 			System.out.println("The encoding provided was not supported");
 			e.printStackTrace();
 			fail();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			System.out.println("There was an error reading from the file.");
 			e.printStackTrace();
 			fail();

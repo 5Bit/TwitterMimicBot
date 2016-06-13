@@ -44,6 +44,24 @@ class ReadTxtFile implements Reader{
 			fileLines.add(line);
 
 		in.close();
+		
+		cleanFileLines();
+	}
+	
+	/**
+	 * Removes any empty lines from the fileLines String ArrayList.
+	 */
+	private void cleanFileLines()
+	{
+		ArrayList<String> newList = new ArrayList<String>();
+		
+		for(String str: fileLines)
+		{
+			if(!str.isEmpty())
+				newList.add(str);
+		}
+		
+		fileLines = newList;
 	}
 	
 	
