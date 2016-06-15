@@ -10,14 +10,14 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 
-class ReadTxtFile implements Reader{
+public class ReadTxtFile implements Reader{
 	ArrayList<String> fileLines = new ArrayList<String>();
 	
 	/**
 	 * Constructor - sets up an empty ReadTxtFile object.
 	 * Requires setTarget to be used before safe to use.
 	 */
-	ReadTxtFile(){
+	public ReadTxtFile(){
 		
 	}
 	

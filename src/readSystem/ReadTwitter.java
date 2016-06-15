@@ -2,7 +2,7 @@ package readSystem;
 
 import java.util.ArrayList;
 
-class ReadTwitter implements Reader{
+public class ReadTwitter implements Reader{
 	String TwitterAccount, password;
 	
 	//TODO - uncomment when twitterCopier is done

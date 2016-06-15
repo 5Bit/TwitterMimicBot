@@ -2,8 +2,8 @@ package generatorSystem;
 
 import java.util.ArrayList;
 
-class Generator {
-	//PatternAnalyzer pa = null;
+public class Generator {
+	PostGenerator postGen = null;
 	
 	public Generator(String save)
 	{
@@ -29,17 +29,23 @@ class Generator {
 		}
 		
 		
-		//TODO
+		PatternAnalyzer pa = new PatternAnalyzer(modifiedWithBuffers);
+		
+		postGen = pa.toPostGenerator();
 	}
 	
-	public void run()
+	public PostGenerator getPostGeneratorData(){
+		return postGen;
+	}
+	
+	public String run()
 	{
-		//TODO
+		return postGen.generate();
 	}
 	
 	private double timer()
 	{
-		//TODO - make seperate class?
+		//TODO - make separate class?
 		return 0;
 	}
 	

@@ -2,7 +2,7 @@ package generatorSystem;
 
 import java.util.ArrayList;
 
-class PostGenerator {
+public class PostGenerator {
 	private int sentenceLength = 140;
 	private boolean running = false, save = false;
 	
@@ -26,9 +26,11 @@ class PostGenerator {
 	}
 	
 	
-	public void generate()
+	public String generate()
 	{
 		//TODO
+		return null;
+		
 	}
 	
 	private void saveNewPostGeneratorPattern()
