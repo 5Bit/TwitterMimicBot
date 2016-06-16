@@ -2,7 +2,7 @@ package generatorSystem;
 
 import java.util.ArrayList;
 
-public class PostGenerator {
+public class PostGenerator extends MarkovThreeState{
 	private int sentenceLength = 140;
 	private boolean running = false, save = false;
 	
@@ -12,7 +12,8 @@ public class PostGenerator {
 		
 	}
 	
-	PostGenerator(ArrayList<ArrayList<String>> inKnown, double[][][] Probabilities)
+	// Used for creating a postGenerator!
+	PostGenerator()
 	{
 		//TODO
 	}
@@ -29,6 +30,7 @@ public class PostGenerator {
 	public String generate()
 	{
 		//TODO
+		//Will need to do the percentage calculations here for randomizing the generation. 
 		return null;
 		
 	}
