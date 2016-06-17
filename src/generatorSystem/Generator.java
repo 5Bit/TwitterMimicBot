@@ -5,6 +5,11 @@ import java.util.ArrayList;
 public class Generator {
 	PostGenerator postGen = null;
 	
+	
+	/**
+	 * Takes a save file location, and loads it as a Pattern Analyzer.
+	 * @param save
+	 */
 	public Generator(String save)
 	{
 		//TODO
@@ -22,9 +27,9 @@ public class Generator {
 		for(String str: lines)
 		{
 			StringBuilder temp = new StringBuilder();
-			temp.append("__");
+			temp.append("__STRT");
 			temp.append(str);
-			temp.append("__");
+			temp.append("__END");
 			modifiedWithBuffers.add(temp.toString());
 		}
 		
@@ -41,12 +46,6 @@ public class Generator {
 	public String run()
 	{
 		return postGen.generate();
-	}
-	
-	private double timer()
-	{
-		//TODO - make separate class?
-		return 0;
 	}
 	
 }

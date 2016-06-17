@@ -13,7 +13,11 @@ import org.junit.Test;
 
 public class testReadSystem {
 	
-	
+	/**
+	 * For testing the Read system. If one wants to test it on their own system, alter the target array so that the first contains the test file location.
+	 * and the second contains the test file.
+	 * Only accepts .txt files.
+	 */
 	@Test
 	public void txtFileReadAndPrint()
 	{

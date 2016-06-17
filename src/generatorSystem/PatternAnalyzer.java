@@ -1,8 +1,6 @@
 package generatorSystem;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Hashtable;
 import java.util.Vector;
 
 class PatternAnalyzer extends MarkovThreeState {
@@ -30,48 +28,48 @@ class PatternAnalyzer extends MarkovThreeState {
 		// For clarity: ArrayList(Sentences) contains ArrayList(words)
 		for(String sentence: knownSentences)
 		{
-			String partOne;
-			String partTwo;
-			String partThree;
+//			String partOne;
+//			String partTwo;
+//			String partThree;
 			// convert the sentences into ArrayLists
 			String[] temp = sentence.split(" ");
 			
-			// go through each word and count up combinations.
-			for(int i = 0; i < temp.length - 2; i++)
+			for(int i = 0; i < temp.length; i++)
 			{
-				partOne = temp[i];
-				partTwo = temp[i+1];
-				partThree = temp[i+2];
-				numberOfWordsTotal += 3;
-				String[] tempThree = {partOne, partTwo, partThree};
 				
-				processInputData(tempThree);
+				if(i == 0)
+				{
+					Vector<String> start = markovChain.get("__STRT");
+					start.add(temp[i]);
+					
+					Vector<String> suff = markovChain.get(temp[i]);
+					if(suff == null)
+					{
+						suff = new Vector<String>();
+						suff.add(temp[i+1]);
+						markovChain.put(temp[i], suff);
+					}
+				}
+				else if(i == temp.length-1)
+				{
+					Vector<String> endOfSentence = markovChain.get("__END");
+					endOfSentence.add(temp[i]);
+				}
+				else
+				{
+					Vector<String> suff = markovChain.get(temp[i]);
+					if(suff == null)
+					{
+						suff = new Vector<String>();
+						suff.add(temp[i+1]);
+						markovChain.put(temp[i], suff);
+					}
+				}
 			}
 		}
 		
 		
 
-		
-	}
-	
-	//TODO - TEST
-	private void processInputData(String combo[])
-	{
-		
-		//comment out - debugging only!
-		//System.out.println("Processing combination: " + combo[0] + ", " + combo[1] + ", " + combo[2]);
-		
-		
-		
-		if(markovChain.containsKey(combo))
-		{
-			int tmp = markovChain.get(combo);
-			tmp += 1;
-			markovChain.replace(combo, tmp);
-			
-		}
-		else
-			markovChain.put(combo, 1);
 		
 	}
 	

@@ -56,10 +56,7 @@ public class ReadTxtFile implements Reader{
 		ArrayList<String> newList = new ArrayList<String>();
 		
 		for(String str: fileLines)
-		{
-			if(!str.isEmpty())
-				newList.add(str);
-		}
+			if(!str.isEmpty()) newList.add(str);
 		
 		fileLines = newList;
 	}
@@ -73,10 +70,9 @@ public class ReadTxtFile implements Reader{
 	public ArrayList<String> toArrayList()
 	{
 		ArrayList<String> temp = new ArrayList<String>();
+		
 		for(String line: fileLines)
-		{
 			temp.add(line);
-		}
 	
 		return fileLines;
 	}
