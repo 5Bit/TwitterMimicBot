@@ -1,6 +1,7 @@
 package generatorSystem;
 
 
+import java.util.Hashtable;
 import java.util.Random;
 import java.util.Vector;
 
@@ -19,7 +20,9 @@ public class PostGenerator extends MarkovThreeState {
 	/**
 	 * Constructor to construct a post generator from new data.
 	 */
-	PostGenerator() {
+	PostGenerator(Hashtable<String, Vector<String>> inMarkovChain) {
+		this.markovChain = inMarkovChain;
+		
 		// Filler - in case needed.
 	}
 
@@ -54,6 +57,11 @@ public class PostGenerator extends MarkovThreeState {
 		
 		return returnItem;
 
+	}
+	
+	public Hashtable<String, Vector<String>> getMarkovChain()
+	{
+		return markovChain;
 	}
 
 }

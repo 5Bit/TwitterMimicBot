@@ -1,6 +1,8 @@
 package generatorSystem;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
+//import java.util.Hashtable;
 import java.util.Vector;
 
 class PatternAnalyzer extends MarkovThreeState {
@@ -39,7 +41,13 @@ class PatternAnalyzer extends MarkovThreeState {
 				
 				if(i == 0)
 				{
-					Vector<String> start = markovChain.get("__STRT");
+					Vector<String> start = new Vector<String>();
+					if(markovChain.get("__STRT") != null)
+					{
+						start = markovChain.get("__STRT");
+					}
+
+					
 					start.add(temp[i]);
 					
 					Vector<String> suff = markovChain.get(temp[i]);
@@ -52,7 +60,13 @@ class PatternAnalyzer extends MarkovThreeState {
 				}
 				else if(i == temp.length-1)
 				{
-					Vector<String> endOfSentence = markovChain.get("__END");
+					Vector<String> endOfSentence = new Vector<String>();
+					if(markovChain.get("__END") != null)
+					{
+						endOfSentence = markovChain.get("__END");
+					}
+					
+					
 					endOfSentence.add(temp[i]);
 				}
 				else
@@ -67,16 +81,7 @@ class PatternAnalyzer extends MarkovThreeState {
 				}
 			}
 		}
-		
-		
 
-		
-	}
-	
-	PostGenerator toPostGenerator()
-	{
-		//TODO
-		return null;
 	}
 	
 	
@@ -87,6 +92,12 @@ class PatternAnalyzer extends MarkovThreeState {
 	{
 		//TODO
 	}
+	
+	public Hashtable<String, Vector<String>> getMarkovChain(){
+		
+		return markovChain;
+	}
+
 	
 	
 }

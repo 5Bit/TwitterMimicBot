@@ -6,9 +6,13 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.Vector;
 
 import readSystem.*;
 import generatorSystem.*;
+import outputSystem.OutputPostCMD;
+import outputSystem.OutputPoster;
 
 
 public class Main {
@@ -63,6 +67,17 @@ public class Main {
 		
 		System.out.println("\n\nGenerator Pre-processing step:");
 		Generator gen = new Generator(reader.toArrayList());
+		
+		Hashtable<String, Vector<String>> markovChain = gen.getMarkovChain();
+		
+		if(markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
+		
+//		for(Vector<String> s: gen.)
+		
+//		OutputPoster outputPost = new OutputPostCMD();
+		
+		
+//		outputPost.submit(gen.run());
 		
 
 		
