@@ -30,9 +30,9 @@ public class Generator {
 		for(String str: lines)
 		{
 			StringBuilder temp = new StringBuilder();
-			temp.append("__STRT");
+//			temp.append("__STRT");
 			temp.append(str);
-			temp.append("__END");
+//			temp.append("__END");
 			modifiedWithBuffers.add(temp.toString());
 		}
 		

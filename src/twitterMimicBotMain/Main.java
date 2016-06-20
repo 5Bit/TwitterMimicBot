@@ -72,9 +72,17 @@ public class Main {
 		
 		if(markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
 		
-//		for(Vector<String> s: gen.)
+//		for(Vector<String> s: markovChain.values())
+//		{
+//			
+//			System.out.println(s.toString());
+//		}
 		
-//		OutputPoster outputPost = new OutputPostCMD();
+		System.out.println(markovChain.toString());
+		
+		OutputPoster outputPost = new OutputPostCMD();
+		
+		outputPost.submit(gen.run());
 		
 		
 //		outputPost.submit(gen.run());
