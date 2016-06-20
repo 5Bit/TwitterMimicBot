@@ -63,13 +63,19 @@ class PatternAnalyzer extends MarkovThreeState {
 				else if(i == temp.length-1)
 				{
 					Vector<String> endOfSentence = new Vector<String>();
+					String end = "__END";
+					
 					if(markovChain.get("__END") != null)
 					{
-						endOfSentence = markovChain.get("__END");
+						endOfSentence = markovChain.get(end);
+						
 					}
 					
-					
 					endOfSentence.add(temp[i]);
+					
+					markovChain.put(end, endOfSentence);
+					
+					
 				}
 				else
 				{
