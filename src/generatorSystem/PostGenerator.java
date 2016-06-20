@@ -42,13 +42,17 @@ public class PostGenerator extends MarkovThreeState {
 			String nextWord = strt.get(rand.nextInt(sizeOfVector));
 			returnSentence.append(nextWord);
 			
+
+			// TODO - sentence checking - prevent sentence repeats.
 			do {
+				returnSentence.append(" ");
 				Vector<String> tempSelect = markovChain.get(nextWord);
 				int tempLength = tempSelect.size();
 				nextWord = tempSelect.get(rand.nextInt(tempLength));
 				returnSentence.append(nextWord);
-			} while (!returnSentence.toString().contains("__END"));
+			} while (!nextWord.equals("__END") && returnSentence.length() < 140 +11);
 
+			
 		} while (returnSentence.length() <= sentenceLength + 11);
 		
 		// removes the "__STRT" and "__END"

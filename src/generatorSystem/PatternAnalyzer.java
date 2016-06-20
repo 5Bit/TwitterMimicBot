@@ -30,9 +30,6 @@ class PatternAnalyzer extends MarkovThreeState {
 		// For clarity: ArrayList(Sentences) contains ArrayList(words)
 		for(String sentence: knownSentences)
 		{
-//			String partOne;
-//			String partTwo;
-//			String partThree;
 			// convert the sentences into ArrayLists
 			String[] temp = sentence.split(" ");
 			
@@ -65,16 +62,14 @@ class PatternAnalyzer extends MarkovThreeState {
 					Vector<String> endOfSentence = new Vector<String>();
 					String end = "__END";
 					
-					if(markovChain.get("__END") != null)
+					if(markovChain.get(temp[i]) != null)
 					{
-						endOfSentence = markovChain.get(end);
-						
+						endOfSentence = markovChain.get(temp[i]);
 					}
 					
-					endOfSentence.add(temp[i]);
+					endOfSentence.add(end);
 					
-					markovChain.put(end, endOfSentence);
-					
+					markovChain.put(temp[i], endOfSentence);
 					
 				}
 				else
