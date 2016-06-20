@@ -57,6 +57,7 @@ class PatternAnalyzer extends MarkovThreeState {
 						suff = new Vector<String>();
 						suff.add(temp[i+1]);
 						markovChain.put("__STRT", start);
+						markovChain.put(temp[i], suff);
 					}
 				}
 				else if(i == temp.length-1)

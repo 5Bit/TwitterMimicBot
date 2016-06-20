@@ -44,7 +44,6 @@ public class PostGenerator extends MarkovThreeState {
 			
 			do {
 				Vector<String> tempSelect = markovChain.get(nextWord);
-				//TODO - bug here!
 				int tempLength = tempSelect.size();
 				nextWord = tempSelect.get(rand.nextInt(tempLength));
 				returnSentence.append(nextWord);
