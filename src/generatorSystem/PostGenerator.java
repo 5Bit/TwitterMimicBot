@@ -83,6 +83,8 @@ public class PostGenerator extends MarkovThreeState {
 		
 		if(returnItem.endsWith("__END")) returnItem = returnItem.substring(0, returnItem.length()-5);
 		
+		if(returnItem.endsWith(" __END ")) returnItem = returnItem.substring(0, returnItem.length()-7);
+		
 		return returnItem;
 
 	}

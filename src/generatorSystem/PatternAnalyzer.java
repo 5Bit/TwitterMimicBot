@@ -77,6 +77,12 @@ class PatternAnalyzer extends MarkovThreeState {
 					endOfSentence.add(tempEnd);
 					
 					markovChain.put(temp[i], endOfSentence);
+					
+					String[] endEnd = {end, end};
+					Vector<String[]> endOfTheLine = new Vector<String[]>();
+					endOfTheLine.addElement(endEnd);
+					
+					markovChain.put(temp[i+1], endOfTheLine);
 				}
 				else
 				{
