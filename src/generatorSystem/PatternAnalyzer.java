@@ -19,7 +19,6 @@ class PatternAnalyzer extends MarkovThreeState {
 		
 		// call AnalyzerHelper
 		AnalyzerHelper();
-		
 	}
 	
 	//TODO - TEST

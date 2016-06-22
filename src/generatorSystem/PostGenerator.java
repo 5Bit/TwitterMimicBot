@@ -1,6 +1,7 @@
 package generatorSystem;
 
 
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Random;
 import java.util.Vector;
@@ -25,6 +26,22 @@ public class PostGenerator extends MarkovThreeState {
 		
 		// Filler - in case needed.
 	}
+	
+	/**
+	 * Used to verify if a sentence is already known. if it isn't it adds it to known sentences, and returns false.
+	 * If it is, it returns true.
+	 * @param inSentence
+	 * @return
+	 */
+	private Boolean sentenceAlreadyKnown(String inSentence)
+	{
+		if(knownSentences.contains(inSentence)) return true;
+		
+		//TODO - Improve later. Possibly create a basic parser?
+		
+		knownSentences.add(inSentence);
+		return false;
+	}
 
 	/**
 	 * Generates a sentence based on the markov chain held inside MarkovThreeState.
@@ -42,22 +59,19 @@ public class PostGenerator extends MarkovThreeState {
 			String nextWord = strt.get(rand.nextInt(sizeOfVector));
 			returnSentence.append(nextWord);
 			
-
-			// TODO - sentence checking - prevent sentence repeats.
 			do {
 				returnSentence.append(" ");
 				Vector<String> tempSelect = markovChain.get(nextWord);
 				int tempLength = tempSelect.size();
 				nextWord = tempSelect.get(rand.nextInt(tempLength));
 				returnSentence.append(nextWord);
-			} while (!nextWord.equals("__END") && returnSentence.length() < 140 +11);
-
+			} while (!nextWord.equals("__END") && returnSentence.length() <= sentenceLength );
 			
-		} while (returnSentence.length() <= sentenceLength + 11);
+		} while ((returnSentence.length() <= sentenceLength) && !sentenceAlreadyKnown(returnSentence.toString()));
 		
-		// removes the "__STRT" and "__END"
 		String returnItem = returnSentence.toString();
-		returnItem.substring(6, 146);
+		
+		if(returnItem.endsWith("__END")) returnItem = returnItem.substring(0, returnItem.length()-5);
 		
 		return returnItem;
 

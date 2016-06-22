@@ -82,7 +82,10 @@ public class Main {
 		
 		OutputPoster outputPost = new OutputPostCMD();
 		
-		outputPost.submit(gen.run());
+		
+		System.out.println("Printing 42 outputs.");
+		for(int i = 0; i < 42; i++)
+			outputPost.submit(gen.run());
 		
 		
 //		outputPost.submit(gen.run());
