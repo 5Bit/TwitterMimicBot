@@ -58,12 +58,12 @@ class PatternAnalyzer extends MarkovThreeState {
 						markovChain.put(temp[i], suff);
 					}
 				}
-				else if(i == temp.length-1)
+				else if(i >= temp.length-2)
 				{
 					Vector<String[]> endOfSentence = new Vector<String[]>();
 					String end = "__END";
 					
-					String[] tempEnd = {temp[i], temp[i]};
+					String[] tempEnd = {temp[i], end};
 					
 					if(markovChain.get(tempEnd) != null)
 					{
@@ -77,27 +77,16 @@ class PatternAnalyzer extends MarkovThreeState {
 				}
 				else
 				{
-					
+					//TODO BUG IN HERE
 					
 					Vector<String[]> suff = markovChain.get(temp[i]);
 					if(suff == null)
 					{
-						if(temp.length < i+2)
-						{
 							suff = new Vector<String[]>();
 							String[] tempSuff = {temp[i+1], temp[i+2]};
 							suff.add(tempSuff);
 							markovChain.put(temp[i], suff);
-						}
-						else
-						{
-							
-							suff = new Vector<String[]>();
-							String[] tempSuff = {temp[i+1], "__END"};
-							suff.add(tempSuff);
-							markovChain.put(temp[i], suff);
-								
-						}
+						
 					}
 					
 					
