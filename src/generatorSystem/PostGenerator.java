@@ -19,7 +19,7 @@ public class PostGenerator extends MarkovThreeState {
 	/**
 	 * Constructor to construct a post generator from new data.
 	 */
-	PostGenerator(Hashtable<String, Vector<String>> inMarkovChain) {
+	PostGenerator(Hashtable<String, Vector<String[]>> inMarkovChain) {
 		this.markovChain = inMarkovChain;
 	}
 	
@@ -50,18 +50,24 @@ public class PostGenerator extends MarkovThreeState {
 			returnSentence = new StringBuilder();
 			Random rand = new Random();
 			
-			Vector<String> strt = markovChain.get("__STRT");
+			Vector<String[]> strt = markovChain.get("__STRT");
 			int sizeOfVector = strt.size();
-			String nextWord = strt.get(rand.nextInt(sizeOfVector));
+			String nextWord = strt.get(rand.nextInt(sizeOfVector))[0];
+			String secondWord = strt.get(rand.nextInt(sizeOfVector))[1];
+
 			returnSentence.append(nextWord);
-			
+			returnSentence.append(" ");
+			returnSentence.append(secondWord);
 			do {
 				returnSentence.append(" ");
-				Vector<String> tempSelect = markovChain.get(nextWord);
+				Vector<String[]> tempSelect = markovChain.get(nextWord);
 				int tempLength = tempSelect.size();
-				nextWord = tempSelect.get(rand.nextInt(tempLength));
+				nextWord = tempSelect.get(rand.nextInt(tempLength))[0];
+				secondWord = tempSelect.get(rand.nextInt(tempLength))[1];
 				returnSentence.append(nextWord);
-			} while (!nextWord.equals("__END") && returnSentence.length() <= sentenceLength );
+				returnSentence.append(" ");
+				returnSentence.append(secondWord);
+			} while ((!nextWord.equals("__END") || !secondWord.equals("__END")) && returnSentence.length() <= sentenceLength );
 			
 		} while ((returnSentence.length() <= sentenceLength) && !sentenceAlreadyKnown(returnSentence.toString()));
 		
@@ -73,7 +79,7 @@ public class PostGenerator extends MarkovThreeState {
 
 	}
 	
-	public Hashtable<String, Vector<String>> getMarkovChain()
+	public Hashtable<String, Vector<String[]>> getMarkovChain()
 	{
 		return markovChain;
 	}

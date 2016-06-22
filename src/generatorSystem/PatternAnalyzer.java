@@ -37,49 +37,70 @@ class PatternAnalyzer extends MarkovThreeState {
 				
 				if(i == 0)
 				{
-					Vector<String> start = new Vector<String>();
+					Vector<String[]> start = new Vector<String[]>();
 					if(markovChain.get("__STRT") != null)
 					{
 						start = markovChain.get("__STRT");
 
 					}
-						start.add(temp[i]);
+						String[] tempArray = {temp[i], temp[i+1]};
+						start.add(tempArray);
 					
 					
 					
-					Vector<String> suff = markovChain.get(temp[i]);
+					Vector<String[]> suff = markovChain.get(temp[i]);
 					if(suff == null)
 					{
-						suff = new Vector<String>();
-						suff.add(temp[i+1]);
+						suff = new Vector<String[]>();
+						String[] suffTemp = {temp[i+1], temp[i+2]};
+						suff.add(suffTemp);
 						markovChain.put("__STRT", start);
 						markovChain.put(temp[i], suff);
 					}
 				}
 				else if(i == temp.length-1)
 				{
-					Vector<String> endOfSentence = new Vector<String>();
+					Vector<String[]> endOfSentence = new Vector<String[]>();
 					String end = "__END";
 					
-					if(markovChain.get(temp[i]) != null)
+					String[] tempEnd = {temp[i], temp[i]};
+					
+					if(markovChain.get(tempEnd) != null)
 					{
-						endOfSentence = markovChain.get(temp[i]);
+						endOfSentence = markovChain.get(tempEnd);
 					}
 					
-					endOfSentence.add(end);
+					endOfSentence.add(tempEnd);
 					
 					markovChain.put(temp[i], endOfSentence);
 					
 				}
 				else
 				{
-					Vector<String> suff = markovChain.get(temp[i]);
+					
+					
+					Vector<String[]> suff = markovChain.get(temp[i]);
 					if(suff == null)
 					{
-						suff = new Vector<String>();
-						suff.add(temp[i+1]);
-						markovChain.put(temp[i], suff);
+						if(temp.length < i+2)
+						{
+							suff = new Vector<String[]>();
+							String[] tempSuff = {temp[i+1], temp[i+2]};
+							suff.add(tempSuff);
+							markovChain.put(temp[i], suff);
+						}
+						else
+						{
+							
+							suff = new Vector<String[]>();
+							String[] tempSuff = {temp[i+1], "__END"};
+							suff.add(tempSuff);
+							markovChain.put(temp[i], suff);
+								
+						}
 					}
+					
+					
 				}
 			}
 		}
@@ -95,7 +116,7 @@ class PatternAnalyzer extends MarkovThreeState {
 		//TODO
 	}
 	
-	public Hashtable<String, Vector<String>> getMarkovChain(){
+	public Hashtable<String, Vector<String[]>> getMarkovChain(){
 		
 		return markovChain;
 	}

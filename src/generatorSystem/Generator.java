@@ -6,7 +6,7 @@ import java.util.Vector;
 
 public class Generator {
 	PostGenerator postGen = null;
-	Hashtable<String, Vector<String>> localMarkovChain = new Hashtable<String, Vector<String>>();
+	Hashtable<String, Vector<String[]>> localMarkovChain = new Hashtable<String, Vector<String[]>>();
 	
 	
 	/**
@@ -51,7 +51,7 @@ public class Generator {
 		return postGen.generate();
 	}
 	
-	public Hashtable<String, Vector<String>> getMarkovChain(){
+	public Hashtable<String, Vector<String[]>> getMarkovChain(){
 		
 		return postGen.markovChain;
 	}

@@ -68,7 +68,7 @@ public class Main {
 		System.out.println("\n\nGenerator Pre-processing step:");
 		Generator gen = new Generator(reader.toArrayList());
 		
-		Hashtable<String, Vector<String>> markovChain = gen.getMarkovChain();
+		Hashtable<String, Vector<String[]>> markovChain = gen.getMarkovChain();
 		
 		if(markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
 		
