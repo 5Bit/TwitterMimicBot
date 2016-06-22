@@ -53,15 +53,18 @@ public class PostGenerator extends MarkovThreeState {
 			Vector<String[]> strt = markovChain.get("__STRT");
 			int sizeOfVector = strt.size();
 			String[] nextWords = strt.get(rand.nextInt(sizeOfVector));
-//			String secondWord = strt.get(rand.nextInt(sizeOfVector))[1];
 
 			returnSentence.append(nextWords[0]);
 			returnSentence.append(" ");
 			returnSentence.append(nextWords[1]);
 			do {
 				returnSentence.append(" ");
+				
+				//For debugging.
+//				System.out.println("Choosing from " + nextWords[1]);
+				
 				Vector<String[]> tempSelect = markovChain.get(nextWords[1]);
-
+				if(tempSelect == null) break; // TODO - REMOVE THIS EVIL CREATURE!
 				int tempLength = tempSelect.size();
 				nextWords = tempSelect.get(rand.nextInt(tempLength));
 
@@ -69,11 +72,13 @@ public class PostGenerator extends MarkovThreeState {
 				returnSentence.append(" ");
 				returnSentence.append(nextWords[1]);
 				
-//				System.out.println("Line in development is: " + returnSentence.toString());
-			} while ((!nextWords[0].equals("__END") && !nextWords[1].equals("__END")) && returnSentence.length() <= sentenceLength );
+				//For debugging.
+				//System.out.println("Line in development is: " + returnSentence.toString());
+				
+				
+			} while ((!nextWords[0].equals("__END") && returnSentence.length() <= sentenceLength) && !nextWords[1].equals("__END"));
 			
 		} while ((returnSentence.length() <= sentenceLength) && !sentenceAlreadyKnown(returnSentence.toString()));
-//	} while ((returnSentence.length() <= sentenceLength) && !sentenceAlreadyKnown(returnSentence.toString()));
 		String returnItem = returnSentence.toString();
 		
 		if(returnItem.endsWith("__END")) returnItem = returnItem.substring(0, returnItem.length()-5);

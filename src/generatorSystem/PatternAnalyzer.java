@@ -32,8 +32,11 @@ class PatternAnalyzer extends MarkovThreeState {
 			// convert the sentences into ArrayLists
 			String[] temp = sentence.split(" ");
 			
-			for(int i = 0; i < temp.length; i++)
+			for(int i = 0; i <= temp.length-2; i++)
 			{
+				
+				//For debugging
+//				System.out.println("At position " + i + "trying to access position" + (i+1) + " and " + (i+2) + " when length is" + temp.length);
 				
 				if(i == 0)
 				{
@@ -58,12 +61,13 @@ class PatternAnalyzer extends MarkovThreeState {
 						markovChain.put(temp[i], suff);
 					}
 				}
-				else if(i >= temp.length-2)
+				else if(i == temp.length-2)
 				{
+
 					Vector<String[]> endOfSentence = new Vector<String[]>();
 					String end = "__END";
-					
-					String[] tempEnd = {temp[i], end};
+					System.out.println(temp[i] +" will hold" + temp[i+1] + "and __END");
+					String[] tempEnd = {temp[i+1], end};
 					
 					if(markovChain.get(tempEnd) != null)
 					{
@@ -73,13 +77,12 @@ class PatternAnalyzer extends MarkovThreeState {
 					endOfSentence.add(tempEnd);
 					
 					markovChain.put(temp[i], endOfSentence);
-					
 				}
 				else
 				{
-					//TODO BUG IN HERE
-					
+
 					Vector<String[]> suff = markovChain.get(temp[i]);
+					
 					if(suff == null)
 					{
 							suff = new Vector<String[]>();

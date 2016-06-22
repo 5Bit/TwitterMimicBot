@@ -85,7 +85,10 @@ public class Main {
 		
 		System.out.println("Printing 42 outputs.");
 		for(int i = 0; i < 42; i++)
+		{
+			System.out.println("");
 			outputPost.submit(gen.run());
+		}
 		
 		
 //		outputPost.submit(gen.run());
