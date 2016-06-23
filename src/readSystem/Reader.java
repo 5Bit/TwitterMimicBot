@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
+import twitter4j.TwitterException;
+
 public interface Reader {
 	
 	/**
@@ -22,8 +24,9 @@ public interface Reader {
 	 * @throws FileNotFoundException 
 	 * @throws UnsupportedEncodingException 
 	 * @throws IOException 
+	 * @throws TwitterException 
 	 */
-	void setTarget(String source[]) throws FileNotFoundException, UnsupportedEncodingException, IOException;
+	void setTarget(String source[]) throws FileNotFoundException, UnsupportedEncodingException, IOException, TwitterException;
 	
 
 }

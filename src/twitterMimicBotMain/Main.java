@@ -10,6 +10,7 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 import readSystem.*;
+import twitter4j.conf.ConfigurationBuilder;
 import generatorSystem.*;
 import outputSystem.OutputPostCMD;
 import outputSystem.OutputPoster;
@@ -21,10 +22,48 @@ public class Main {
 	//Where the magic happens!
 	public static void main(String[] args)
 	{
-		testingTxt();
-		
+//		testingTxt();
+		testingTwitter();
 		
 		//TODO
+	}
+	
+	public static void testingTwitter()
+	{
+
+		PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
+		String target = "google";
+		System.out.println("Testing target.\n target: " + target);
+		
+		ReadTwitter reader = new ReadTwitter();
+		
+		//Reference! 
+		// http://stackoverflow.com/questions/13545936/twitter4j-search-for-public-tweets
+	
+		
+		ConfigurationBuilder cb = new ConfigurationBuilder();
+	    cb.setDebugEnabled(true)
+	          .setOAuthConsumerKey("yourConsumerKey")
+	          .setOAuthConsumerSecret("yourConsumerSecret")
+	          .setOAuthAccessToken("yourAccessToken")
+	          .setOAuthAccessTokenSecret("yourTokenSecret");
+	    
+	    
+		reader.setTarget(target, cb);
+		
+		ArrayList<String> temp = reader.toArrayList();
+		
+		
+		
+		for(String s: temp)
+		{
+			System.out.println(s);
+		}
+		
+		
+		
+		
+
 	}
 	
 	public static void testingTxt()
