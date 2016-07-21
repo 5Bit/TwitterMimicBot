@@ -14,7 +14,8 @@ public class ReadTwitter implements Reader{
 	String twitterAccount, password;
 	ConfigurationBuilder cb = null;
 	
-	ArrayList<String> statusList = new ArrayList<String>();
+	ArrayList<Status> statusList = new ArrayList<Status>();
+	ArrayList<String> statusListWithoutData = new ArrayList<String>();
 	
 	//TODO - uncomment when twitterCopier is done
 	//private TwitterCopier Copier = new TwitterCopier();
@@ -71,7 +72,7 @@ public class ReadTwitter implements Reader{
 
 	    int pageno = 1;
 
-	    List statuses = new ArrayList();
+	    ArrayList<Status> statuses = new ArrayList();
 	    
 	    
 	    //TODO - fix and clean!
@@ -81,6 +82,10 @@ public class ReadTwitter implements Reader{
 	    		int size = statuses.size(); 
 	            Paging page = new Paging(pageno++, 100);
 	            statuses.addAll(twitter.getUserTimeline(twitterAccount, page));
+	            
+//	            System.out.println("Status size is: " + size);
+//	            for(int i = 0; i < 100; )
+	            
 	            if (statuses.size() == size)
 	              break;
 	    	}
@@ -90,22 +95,37 @@ public class ReadTwitter implements Reader{
 	    		break;
 	    	}
 	    }
-//		for(Status s: statuses)
-//		{
-//			statusList.add(s.getText());
-//		}
+	    
+	    System.out.println("Earliest post is " + statuses.get(statuses.size()-1).getCreatedAt());
+	    
+	    for(Status s: statuses)
+	    {
+	    	statusListWithoutData.add(s.getText());
+	    }
+	    
+	    statusList = statuses;
 		
 		System.out.println("Total: " + statuses.size());
 	}
 	
 	/**
 	 * Will return all items read from the text file as an arraylist of type string.
+	 * Returns the list without the status data
 	 * Must be accessed as unicode.
 	 * @return
 	 */
 	public ArrayList<String> toArrayList()
 	{
-		//TODO
+		
+		return statusListWithoutData;
+	}
+	
+	/**
+	 * Returns the list of status updates as status types.
+	 * @return
+	 */
+	public ArrayList<Status> toArrayListStatus()
+	{
 		return statusList;
 	}
 	

@@ -1,15 +1,23 @@
 package twitterMimicBotMain;
 
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Vector;
 
 import readSystem.*;
+import twitter4j.Status;
 import twitter4j.conf.ConfigurationBuilder;
 import generatorSystem.*;
 import outputSystem.OutputPostCMD;
@@ -33,7 +41,7 @@ public class Main {
 
 		PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
 		String target = "google";
-		System.out.println("Testing target.\n target: " + target);
+		System.out.println("Testing target.\nTarget: " + target);
 		
 		ReadTwitter reader = new ReadTwitter();
 		
@@ -43,27 +51,44 @@ public class Main {
 		
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 	    cb.setDebugEnabled(true)
-	          .setOAuthConsumerKey("yourConsumerKey")
-	          .setOAuthConsumerSecret("yourConsumerSecret")
-	          .setOAuthAccessToken("yourAccessToken")
-	          .setOAuthAccessTokenSecret("yourTokenSecret");
+	          .setOAuthConsumerKey("EMPTY")
+	          .setOAuthConsumerSecret("EMPTY")
+	          .setOAuthAccessToken("EMPTY")
+	          .setOAuthAccessTokenSecret("EMPTY");
 	    
 	    
 		reader.setTarget(target, cb);
 		
 		ArrayList<String> temp = reader.toArrayList();
+		ArrayList<Status> statusTemp = reader.toArrayListStatus();
 		
+		List<String> statusStrgPrep = new ArrayList<String>();
 		
-		
-		for(String s: temp)
+		Path file = Paths.get(target + "StatusUpdates");
+		for(Status s: statusTemp)
 		{
-			System.out.println(s);
+			StringBuilder newStr = new StringBuilder();
+			newStr.append(s.getText());
+			newStr.append("\n");
+			newStr.append("RETWEET: " + s.getRetweetCount() +" FAVORITE: " + s.getFavoriteCount());
+			statusStrgPrep.add(newStr.toString());
 		}
 		
 		
+		for(String x: statusStrgPrep)
+			try {
+				
+				Files.write(file, statusStrgPrep, Charset.forName("UTF-8"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+//		Files.write(file, statusStrgPrep, Charset.forName("UTF-8"));
 		
 		
-
+		
+		System.out.println("Done.");
 	}
 	
 	public static void testingTxt()
