@@ -38,7 +38,6 @@ public class Generator {
 		
 		
 		PatternAnalyzer pa = new PatternAnalyzer(modifiedWithBuffers);
-		
 		postGen = new PostGenerator(pa.markovChain);
 	}
 	

@@ -41,7 +41,6 @@ public class ReadTwitter implements Reader{
 		catch(TwitterException e)
 		{
 			System.out.println("There was an error reading from the twitter account.");
-			
 		}
 		
 	}
@@ -75,7 +74,7 @@ public class ReadTwitter implements Reader{
 	    ArrayList<Status> statuses = new ArrayList();
 	    
 	    
-	    //TODO - fix and clean!
+
 	    while(true){
 	    	
 	    	try{
@@ -83,8 +82,7 @@ public class ReadTwitter implements Reader{
 	            Paging page = new Paging(pageno++, 100);
 	            statuses.addAll(twitter.getUserTimeline(twitterAccount, page));
 	            
-//	            System.out.println("Status size is: " + size);
-//	            for(int i = 0; i < 100; )
+
 	            
 	            if (statuses.size() == size)
 	              break;
@@ -96,7 +94,7 @@ public class ReadTwitter implements Reader{
 	    	}
 	    }
 	    
-	    System.out.println("Earliest post is " + statuses.get(statuses.size()-1).getCreatedAt());
+	    //System.out.println("Earliest post is " + statuses.get(statuses.size()-1).getCreatedAt());
 	    
 	    for(Status s: statuses)
 	    {
@@ -105,7 +103,7 @@ public class ReadTwitter implements Reader{
 	    
 	    statusList = statuses;
 		
-		System.out.println("Total: " + statuses.size());
+		//System.out.println("Total: " + statuses.size());
 	}
 	
 	/**
