@@ -42,6 +42,7 @@ public class Main {
 	public static void main(String[] args)
 	{
 		vtmb(args);
+//		testingTwitter();
 	}
 	
 	/**
@@ -49,7 +50,7 @@ public class Main {
 	 */
 	public static void vtmb(String[] args)
 	{
-		Scanner textInput = new Scanner(System.in);
+
 		
 		System.out.println("Viral Twitter Mimic Bot, ver. " + versionNum);
 		System.out.println("Developer: Thomas S. Field | Twitter: @FieldOfDesign"
@@ -57,7 +58,7 @@ public class Main {
 		System.out.println("Utilizing Twitter4j - http://twitter4j.org/en/index.html");
 
 		// main menu sys call
-		mainMenu(textInput);
+		mainMenu();
 		
 
 
@@ -65,17 +66,20 @@ public class Main {
 	
 
 	
-	public static void mainMenu(Scanner scan){
+	public static void mainMenu(){
 		int choice = 42;
 		boolean quit = false;
-		String[] targetAccounts;
-		
+		String[] targetAccounts = new String[10];
+		Scanner scan = new Scanner(System.in);
+
 		while(quit == false)
 		{
-		
+
+			choice = 42;
 	
 			do{ 
-			System.out.println("\n-MENU-----------------------------------------------------------------------/n");
+			
+			System.out.println("\n\n-MENU-----------------------------------------------------------------------/n");
 			System.out.println("1. Download tweet data from n Twitter accounts (to local file)");
 			System.out.println("2. Download data from n Twitter accounts and generate tweets (to local file)");
 			System.out.println("3. Download data from n Twitter accounts and generate tweets (to twitter)");
@@ -83,9 +87,12 @@ public class Main {
 			System.out.println("5. Use saved twitter data and generate tweets (to twitter)");
 			System.out.println("6. Quit");
 			System.out.println("\nNOTE: For 1, 2, 3 or 5 the user needs Twitter Keys and Access Tokens");
+
 			choice = scan.nextInt();
 			
 			}while(choice < 0 || choice > 6);
+			
+			scan = scan.reset();
 			
 			switch(choice)
 			{
@@ -103,8 +110,26 @@ public class Main {
 					
 					// set up link to twitter
 					ConfigurationBuilder cb = enterAccessData();
-					
+					System.out.print("Keys and Secret Keys entered.");
 					// Create and call a Reader, download from twitter
+					
+					ReadTwitter reader = new ReadTwitter();
+					
+					// loops through all the targets, assigning the reader to look at it, record all statuses to a local file
+					// repeats.
+					if(targetAccounts.length <= 10)
+					{
+						for(String target: targetAccounts)
+						{
+							reader.setTarget(target, cb);
+						}
+					}
+					else
+					{
+						System.out.println("The number of target accounts exceeded the amount allowed.");
+						System.out.println("The maximum number of accounts to pull from is 10.");
+						break;
+					}
 					
 					
 					//TODO
@@ -134,9 +159,8 @@ public class Main {
 					quit = true;
 					break;
 			}
-		
 		}
-		
+		scan.close();
 	}
 	
 	public static Boolean yesNoConfirmation(Scanner scan)
@@ -155,7 +179,7 @@ public class Main {
 	public static ConfigurationBuilder enterAccessData()
 	{
 		System.out.print("\nVerify you have entered the following data into the config.txt file that came with this program.");
-		System.out.println("Consumer key");
+		System.out.println("\nConsumer key");
 		System.out.println("Consumer Secret");
 		System.out.println("OAuthTokenKey");
 		System.out.println("OAuthTokenSecret");
@@ -171,6 +195,11 @@ public class Main {
 			e.printStackTrace();
 		}
 		
+		System.out.println("Consumer key: " + configData[0]);
+		System.out.println("Consumer Secret: " + configData[1]);
+		System.out.println("OAuthTokenKey: " + configData[2]);
+		System.out.println("OAuthTokenSecret: " + configData[3]);
+		
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 	    cb.setDebugEnabled(true)
 	          .setOAuthConsumerKey(configData[0])
@@ -185,15 +214,15 @@ public class Main {
 	{
 		String[] returnString = new String[4];
 		
-		URL path = Main.class.getResource("Config.txt");
+		URL path = Main.class.getResource("config.txt");
 		File file = new File(path.getFile());
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		
 		// assuming 0 based
 		returnString[0] = reader.readLine().substring(13);
-		returnString[1] = reader.readLine().substring(15);
-		returnString[2] = reader.readLine().substring(14);
-		returnString[3] = reader.readLine().substring(17);
+		returnString[1] = reader.readLine().substring(16);
+		returnString[2] = reader.readLine().substring(15);
+		returnString[3] = reader.readLine().substring(18);
 		reader.close();
 		return returnString;
 	}
@@ -216,7 +245,7 @@ public class Main {
 		{
 			if(!s.startsWith("@")) throw new Exception();
 		}
-		scan.close();
+
 		return targetAccounts;
 	}
 	
@@ -228,7 +257,9 @@ public class Main {
 			System.in.read();
 		}
 		catch(Exception e)
-		{}
+		{
+			System.out.println("Error in pressAnyKeyToContinue. If you are seeing this, something went seriously wrong. See http://i.imgur.com/ChzUb.jpg?fb");
+		}
 	}
 	
 	

@@ -1,4 +1,0 @@
-ConsumerKey: EMPTY
-ConsumerSecret: EMPTY
-OAuthTokenKey: EMPTY
-OAuthTokenSecret: EMPTY
