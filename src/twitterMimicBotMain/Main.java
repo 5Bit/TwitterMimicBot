@@ -80,6 +80,7 @@ public class Main {
 			do{ 
 			
 			System.out.println("\n\n-MENU-----------------------------------------------------------------------/n");
+			System.out.println("0. Testing the system - download from twitter, store to local file, read from local file, generate to local file AND to twitter.");
 			System.out.println("1. Download tweet data from n Twitter accounts (to local file)");
 			System.out.println("2. Download data from n Twitter accounts and generate tweets (to local file)");
 			System.out.println("3. Download data from n Twitter accounts and generate tweets (to twitter)");
@@ -96,7 +97,7 @@ public class Main {
 			
 			switch(choice)
 			{
-				// TEST!
+				// TEST MODE!
 				case 0:
 					
 					// get account info
@@ -107,22 +108,51 @@ public class Main {
 						System.out.println("An error has occured.");
 						System.out.println("Returning to main menu");
 					}
-					
-					// set up link to twitter
-					ConfigurationBuilder cb = enterAccessData();
-					System.out.print("Keys and Secret Keys entered.");
 					// Create and call a Reader, download from twitter
 					
-					ReadTwitter reader = new ReadTwitter();
-					
-					// loops through all the targets, assigning the reader to look at it, record all statuses to a local file
+					// loops through all the targets, assigning the reader to look at it, record all statuses to a local file,
 					// repeats.
+					// Will need to modify to work with FileManager within Reader!
 					if(targetAccounts.length <= 10)
 					{
 						for(String target: targetAccounts)
 						{
+							System.out.println("Downloading " + target + " information.");
+							ReadTwitter reader = new ReadTwitter();
+							ConfigurationBuilder cb = enterAccessData();
+							System.out.print("Keys and Secret Keys entered.");
 							reader.setTarget(target, cb);
+							
+							ArrayList<Status> statusTemp = reader.toArrayListStatus();
+							List<String> statusStringPrep = new ArrayList<String>();
+							
+							Path file = Paths.get(target + "StatusUpdates");
+							
+							for(Status s: statusTemp)
+							{
+								StringBuilder newStr = new StringBuilder();
+								newStr.append(s.getText());
+								newStr.append("\n");
+								newStr.append("RETWEET: " + s.getRetweetCount() +" FAVORITE: " + s.getFavoriteCount());
+								statusStringPrep.add(newStr.toString());
+							}
+							
+							for(String x: statusStringPrep)
+							{
+								try {
+									Files.write(file,  statusStringPrep, Charset.forName("UTF-8"));
+								} catch(IOException e) {
+									System.out.println("An error occured in saving records from " + target);
+									System.out.println("Printing stacktrace.");
+									e.printStackTrace();
+								}
+							}
+							
+
+							
 						}
+						
+						System.out.println("Done saving Twitter posts of all targets to local system.");
 					}
 					else
 					{
@@ -130,6 +160,7 @@ public class Main {
 						System.out.println("The maximum number of accounts to pull from is 10.");
 						break;
 					}
+					
 					
 					
 					//TODO
@@ -161,19 +192,6 @@ public class Main {
 			}
 		}
 		scan.close();
-	}
-	
-	public static Boolean yesNoConfirmation(Scanner scan)
-	{
-		String temp = "What!?";
-		do
-		{
-			temp = scan.nextLine();
-			temp.toUpperCase(Locale.ROOT);// Using Locale to avoid cross-sys support issues.
-		}while(!temp.contentEquals("Y") || !temp.contentEquals("N"));
-		
-		if(temp.contentEquals("Y")) return true;
-		else return false;
 	}
 	
 	public static ConfigurationBuilder enterAccessData()
@@ -258,13 +276,12 @@ public class Main {
 		}
 		catch(Exception e)
 		{
-			System.out.println("Error in pressAnyKeyToContinue. If you are seeing this, something went seriously wrong. See http://i.imgur.com/ChzUb.jpg?fb");
+			System.out.println("Error in pressAnyKeyToContinue. If you are seeing this, something went seriously wrong. PM @FieldOfDesign the stacktrace.");
+			e.printStackTrace();
 		}
 	}
 	
-	
-	
-	
+
 	
 	public static void testingTwitter()
 	{
@@ -313,10 +330,6 @@ public class Main {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-//		Files.write(file, statusStrgPrep, Charset.forName("UTF-8"));
-		
-		
 		
 		System.out.println("Done.");
 	}
@@ -354,7 +367,6 @@ public class Main {
 			++lineCount;
 		}
 		
-		
 		System.out.println("Number of lines:" + lineCount);
 		
 		// End of reading
@@ -369,6 +381,7 @@ public class Main {
 		
 		Set<String> keys = markovChain.keySet();
 		
+		//NOTE: Used for Showing storage within markov chain!
 //		for(String key: keys)
 //		{
 //			System.out.print(key + " : ");
@@ -383,27 +396,15 @@ public class Main {
 //			
 //			System.out.println("");
 //		}
-
-
-		
-
-		
+	
 		OutputPoster outputPost = new OutputPostCMD();
-		
-		
+
 		System.out.println("Printing 42 outputs.");
 		for(int i = 0; i < 42; i++)
 		{
 			System.out.println("");
 			outputPost.submit(gen.run());
 		}
-		
-		
-//		outputPost.submit(gen.run());
-		
-
-		
-		
 	}
 	
 	

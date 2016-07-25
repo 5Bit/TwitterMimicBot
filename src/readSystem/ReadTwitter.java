@@ -81,7 +81,7 @@ public class ReadTwitter implements Reader{
 	    		int size = statuses.size(); 
 	            Paging page = new Paging(pageno++, 200);
 	            statuses.addAll(twitter.getUserTimeline(twitterAccount, page));
-//	            System.out.println("Twitter contacted");
+	            System.out.println("Twitter contacted");
 
 	            
 	            if (statuses.size() == size)
