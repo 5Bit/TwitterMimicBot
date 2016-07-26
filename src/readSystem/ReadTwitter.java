@@ -65,16 +65,12 @@ public class ReadTwitter implements Reader{
 	
 	private void readAccount() throws TwitterException
 	{
-
 		Twitter twitter = new TwitterFactory(cb.build()).getInstance();
-
-
 	    int pageno = 1;
 
 	    ArrayList<Status> statuses = new ArrayList();
-	    
-	    
 
+	    //Messy, but works
 	    while(true){
 	    	
 	    	try{
@@ -97,9 +93,7 @@ public class ReadTwitter implements Reader{
 	    //System.out.println("Earliest post is " + statuses.get(statuses.size()-1).getCreatedAt());
 	    
 	    for(Status s: statuses)
-	    {
 	    	statusListWithoutData.add(s.getText());
-	    }
 	    
 	    statusList = statuses;
 		

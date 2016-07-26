@@ -19,7 +19,7 @@ import java.util.ArrayList;
 //import java.util.Collections;
 import java.util.Hashtable;
 import java.util.List;
-import java.util.Locale;
+//import java.util.Locale;
 import java.util.Set;
 import java.util.Vector;
 //import java.util.function.BiConsumer;
@@ -57,7 +57,7 @@ public class Main {
 				+ " | Github: https://github.com/5Bit/TwitterMimicBot");
 		System.out.println("Utilizing Twitter4j - http://twitter4j.org/en/index.html");
 
-		// main menu sys call
+		// main menu run
 		mainMenu();
 		
 
@@ -76,9 +76,7 @@ public class Main {
 		{
 
 			choice = 42;
-	
 			do{ 
-			
 			System.out.println("\n\n-MENU-----------------------------------------------------------------------/n");
 			System.out.println("0. Testing the system - download from twitter, store to local file, read from local file, generate to local file AND to twitter.");
 			System.out.println("1. Download tweet data from n Twitter accounts (to local file)");
@@ -99,6 +97,7 @@ public class Main {
 			{
 				// TEST MODE!
 				case 0:
+				
 					
 					// get account info
 					try {
@@ -115,44 +114,8 @@ public class Main {
 					// Will need to modify to work with FileManager within Reader!
 					if(targetAccounts.length <= 10)
 					{
-						for(String target: targetAccounts)
-						{
-							System.out.println("Downloading " + target + " information.");
-							ReadTwitter reader = new ReadTwitter();
-							ConfigurationBuilder cb = enterAccessData();
-							System.out.print("Keys and Secret Keys entered.");
-							reader.setTarget(target, cb);
-							
-							ArrayList<Status> statusTemp = reader.toArrayListStatus();
-							List<String> statusStringPrep = new ArrayList<String>();
-							
-							Path file = Paths.get(target + "StatusUpdates");
-							
-							for(Status s: statusTemp)
-							{
-								StringBuilder newStr = new StringBuilder();
-								newStr.append(s.getText());
-								newStr.append("\n");
-								newStr.append("RETWEET: " + s.getRetweetCount() +" FAVORITE: " + s.getFavoriteCount());
-								statusStringPrep.add(newStr.toString());
-							}
-							
-							for(String x: statusStringPrep)
-							{
-								try {
-									Files.write(file,  statusStringPrep, Charset.forName("UTF-8"));
-								} catch(IOException e) {
-									System.out.println("An error occured in saving records from " + target);
-									System.out.println("Printing stacktrace.");
-									e.printStackTrace();
-								}
-							}
-							
-
-							
-						}
-						
-						System.out.println("Done saving Twitter posts of all targets to local system.");
+						//TODO - test following
+						targetAccounts = dlTwitAccUpdatesToFile(targetAccounts);
 					}
 					else
 					{
@@ -160,14 +123,42 @@ public class Main {
 						System.out.println("The maximum number of accounts to pull from is 10.");
 						break;
 					}
+					// updates the DataManager.txt file
+					updateDataManager(targetAccounts);
 					
+					// next, read from file...
 					
 					
 					//TODO
 					break;
 				// Download tweets to local file
-				case 1: 
-					//TODO
+				case 1:
+					// get account info
+					try {
+						targetAccounts = inputAccounts();
+					} catch (Exception e) {
+						System.out.println("Twitter accounts provided are incorrectly formatted.");
+						System.out.println("An error has occured.");
+						System.out.println("Returning to main menu");
+					}
+					// Create and call a Reader, download from twitter
+					
+					// loops through all the targets, assigning the reader to look at it, record all statuses to a local file,
+					// repeats.
+					// Will need to modify to work with FileManager within Reader!
+					if(targetAccounts.length <= 10)
+					{
+						//TODO - test following
+						targetAccounts = dlTwitAccUpdatesToFile(targetAccounts);
+					}
+					else
+					{
+						System.out.println("The number of target accounts exceeded the amount allowed.");
+						System.out.println("The maximum number of accounts to pull from is 10.");
+						break;
+					}
+					// updates the DataManager.txt file
+					updateDataManager(targetAccounts);
 					break;
 				// Download tweets from n twitter accounts and generate (to local file)
 				case 2:
@@ -192,6 +183,84 @@ public class Main {
 			}
 		}
 		scan.close();
+	}
+	
+	/**
+	 * Creates or Replaces any prior dataManager.txt file,
+	 * filling it with the new fileNames.
+	 * Used by the Reader to ReadManager to get all the input
+	 * for markov chain.
+	 * @param fileNames
+	 */
+	public static void updateDataManager(String[] fileNames)
+	{
+		Path file = Paths.get("dataManager.txt");
+		
+		List<String> updatedContent = new ArrayList<String>();
+		
+		for(String fileName: fileNames)
+			updatedContent.add(fileName + ".txt");
+		try {
+			Files.write(file,  updatedContent, Charset.forName("UTF-8"));
+		} catch (IOException e) {
+			System.out.println("An error occured while updating the Data Manager.");
+			System.out.println("Printing Stacktrace.");
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Takes twitter account information, contacts Twitter, downloads as many
+	 * tweets as it can from each account given. Returns a list of the
+	 * filenames for all Twitter Account data. Files created are stored locally.
+	 * @param targetAccounts
+	 * @return targetFileNames
+	 */
+	public static String[] dlTwitAccUpdatesToFile(String[] targetAccounts)
+	{
+		ArrayList<String> returnStringArray = new ArrayList<String>();
+		for(String target: targetAccounts)
+		{
+			System.out.println("Downloading " + target + " information.");
+			ReadTwitter reader = new ReadTwitter();
+			ConfigurationBuilder cb = enterAccessData();
+			System.out.print("Keys and Secret Keys entered.");
+			reader.setTarget(target, cb);
+			
+			ArrayList<Status> statusTemp = reader.toArrayListStatus();
+			List<String> statusStringPrep = new ArrayList<String>();
+			
+			String fileName = target + "StatusUpdates.txt";
+			Path file = Paths.get(fileName);
+			returnStringArray.add(fileName);
+			
+			for(Status s: statusTemp)
+			{
+				StringBuilder newStr = new StringBuilder();
+				newStr.append(s.getText());
+				newStr.append("\n");
+				newStr.append("RETWEET: " + s.getRetweetCount() +" FAVORITE: " + s.getFavoriteCount());
+				statusStringPrep.add(newStr.toString());
+			}
+			
+			for(String x: statusStringPrep)
+			{
+				try {
+					Files.write(file,  statusStringPrep, Charset.forName("UTF-8"));
+				} catch(IOException e) {
+					System.out.println("An error occured in saving records from " + target);
+					System.out.println("Printing stacktrace.");
+					e.printStackTrace();
+				}
+			}
+			
+
+			
+		}
+		
+		System.out.println("Done saving Twitter posts of all targets to local system.");
+		
+		return (String[]) returnStringArray.toArray();
 	}
 	
 	public static ConfigurationBuilder enterAccessData()
