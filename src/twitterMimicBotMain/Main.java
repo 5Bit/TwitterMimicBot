@@ -37,6 +37,9 @@ import java.util.Scanner;
 public class Main {
 	final static double versionNum = 0.1;
 	final static String name = "VTMB";
+	final static String devs = "Developer: Thomas S. Field | Twitter: @FieldOfDesign";
+	final static String projectGitHub = "Github: https://github.com/5Bit/TwitterMimicBot";
+	final static String tools = "Utilizing Twitter4j - http://twitter4j.org/en/index.html";
 	
 	//Where the magic happens!
 	public static void main(String[] args)
@@ -46,22 +49,17 @@ public class Main {
 	}
 	
 	/**
-	 * Will be the core Viral Twitter Mimic Bot system.
+	 * Viral Twitter Mimic Bot run!
+	 * @param args
 	 */
 	public static void vtmb(String[] args)
 	{
-
-		
 		System.out.println("Viral Twitter Mimic Bot, ver. " + versionNum);
-		System.out.println("Developer: Thomas S. Field | Twitter: @FieldOfDesign"
-				+ " | Github: https://github.com/5Bit/TwitterMimicBot");
-		System.out.println("Utilizing Twitter4j - http://twitter4j.org/en/index.html");
-
+		System.out.println(devs);
+		System.out.println(projectGitHub);
+		System.out.println(tools);
 		// main menu run
 		mainMenu();
-		
-
-
 	}
 	
 
@@ -253,13 +251,8 @@ public class Main {
 					e.printStackTrace();
 				}
 			}
-			
-
-			
 		}
-		
 		System.out.println("Done saving Twitter posts of all targets to local system.");
-		
 		return (String[]) returnStringArray.toArray();
 	}
 	
@@ -270,9 +263,7 @@ public class Main {
 		System.out.println("Consumer Secret");
 		System.out.println("OAuthTokenKey");
 		System.out.println("OAuthTokenSecret");
-		
 		pressAnyKeyToContinue();
-		
 		String[] configData = null;
 		try {
 			configData = readConfigFile();
@@ -354,7 +345,6 @@ public class Main {
 	
 	public static void testingTwitter()
 	{
-
 		PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
 		String target = "google";
 		System.out.println("Testing target.\nTarget: " + target);
