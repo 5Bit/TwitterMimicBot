@@ -107,19 +107,34 @@ public class Main {
 						System.out.println("An error has occured.");
 						System.out.println("Returning to main menu");
 					}
-					// Create and call a Reader, download from twitter
 					
 					// loops through all the targets, assigning the reader to look at it, record all statuses to a local file,
 					// repeats.
 					// Will need to modify to work with FileManager within Reader!
 					if(targetAccounts.length <= 10)
 					{
-						//TODO - test following
 						ArrayList<String> fileNames = dlTwitAccUpdatesToFile(targetAccounts);
 						
 						for(String s: fileNames)
 							fileManager.addFile(s);
 						
+						try {
+							ArrayList<String> collectedData = fileManager.getAllFilesContent();
+							
+							//   use the following block only for testing.
+							//////////////////////////////////////////////
+							System.out.println("Printing collective data for verification.");
+							for(String s: collectedData)
+							{
+								System.out.println(s);
+							}
+							//////////////////////////////////////////////
+							
+							
+						} catch (IOException e) {
+							System.out.println("An error occured while reading the collective data from the HDD.");
+							e.printStackTrace();
+						}
 						
 					}
 					else
@@ -128,8 +143,7 @@ public class Main {
 						System.out.println("The maximum number of accounts to pull from is 10.");
 						break;
 					}
-					// updates the DataManager.txt file
-//					updateDataManager(targetAccounts);
+
 					
 					// next, read from file...
 					
