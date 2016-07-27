@@ -2,6 +2,11 @@ package readSystem;
 
 
 
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -110,6 +115,46 @@ public class ReadTwitter implements Reader{
 	{
 		
 		return statusListWithoutData;
+	}
+	
+	public String saveToFile()
+	{
+		String fileName = twitterAccount + "StatusUpdates.txt";
+		
+	ArrayList<Status> statusTemp = toArrayListStatus();
+	List<String> statusStringPrep = new ArrayList<String>();
+	
+	Path file = Paths.get(fileName);
+	
+	for(Status s: statusTemp)
+	{
+		StringBuilder newStr = new StringBuilder();
+		
+		//TODO - preprocess text before saving!
+		newStr.append(s.getText());
+		
+		
+		newStr.append("\n");
+		newStr.append("RETWEET: " + s.getRetweetCount() +" FAVORITE: " + s.getFavoriteCount());
+		statusStringPrep.add(newStr.toString());
+	}
+	
+	
+	try {
+		Files.write(file,  statusStringPrep, Charset.forName("UTF-8"));
+	} catch(IOException e) {
+		System.out.println("An error occured in saving records from " + twitterAccount);
+		System.out.println("Printing stacktrace.");
+		e.printStackTrace();
+	}
+		
+		
+	
+	
+		
+	System.out.println("Done saving " + twitterAccount + " data.");
+		
+		return fileName;
 	}
 	
 	/**
