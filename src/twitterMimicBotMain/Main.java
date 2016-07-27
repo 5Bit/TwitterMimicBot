@@ -40,8 +40,8 @@ public class Main {
 	final static String devs = "Developer: Thomas S. Field | Twitter: @FieldOfDesign";
 	final static String projectGitHub = "Github: https://github.com/5Bit/TwitterMimicBot";
 	final static String tools = "Utilizing Twitter4j - http://twitter4j.org/en/index.html";
-	
 	final static String fileManagerName = "dataManager.txt";
+	final static FileManager fileManager = new FileManager(fileManagerName);
 	
 	//Where the magic happens!
 	public static void main(String[] args)
@@ -115,9 +115,12 @@ public class Main {
 					if(targetAccounts.length <= 10)
 					{
 						//TODO - test following
-						dlTwitAccUpdatesToFile(targetAccounts);
+						ArrayList<String> fileNames = dlTwitAccUpdatesToFile(targetAccounts);
 						
-//						targetAccounts = dlTwitAccUpdatesToFile(targetAccounts);
+						for(String s: fileNames)
+							fileManager.addFile(s);
+						
+						
 					}
 					else
 					{
@@ -161,29 +164,6 @@ public class Main {
 		scan.close();
 	}
 	
-	/**
-	 * Creates or Replaces any prior dataManager.txt file,
-	 * filling it with the new fileNames.
-	 * Used by the Reader to ReadManager to get all the input
-	 * for markov chain.
-	 * @param fileNames
-	 */
-	public static void updateDataManager(String[] fileNames)
-	{
-		Path file = Paths.get(fileManagerName);
-		
-		List<String> updatedContent = new ArrayList<String>();
-		
-		for(String fileName: fileNames)
-			updatedContent.add(fileName + ".txt");
-		try {
-			Files.write(file,  updatedContent, Charset.forName("UTF-8"));
-		} catch (IOException e) {
-			System.out.println("An error occured while updating the Data Manager.");
-			System.out.println("Printing Stacktrace.");
-			e.printStackTrace();
-		}
-	}
 	
 	
 	//TODO FIX
@@ -207,10 +187,12 @@ public class Main {
 			
 			// TODO - put everything after this into the reader...
 			returnStringArray.add(reader.saveToFile());
+
 			
-			
-			//TODO - return name of file location.
 		}
+		
+		// update the file manager
+
 		System.out.println("Done saving Twitter posts of all targets to local system.");
 		return returnStringArray;
 	}

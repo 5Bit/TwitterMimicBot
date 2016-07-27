@@ -107,7 +107,7 @@ public class ReadTwitter implements Reader{
 	
 	/**
 	 * Will return all items read from the text file as an arraylist of type string.
-	 * Returns the list without the status data
+	 * Returns the filename.
 	 * Must be accessed as unicode.
 	 * @return
 	 */
