@@ -3,9 +3,12 @@ package readSystem;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -17,7 +20,7 @@ import java.util.List;
 import twitterMimicBotMain.Main;
 
 public class FileManager {
-	ArrayList<String> files = null;
+	ArrayList<String> files = new ArrayList<String>();
 	String fileManagerName;
 	Path filePath = null;
 	
@@ -31,7 +34,12 @@ public class FileManager {
 		fileManagerName = fileMangrName; 
 		filePath = Paths.get(fileManagerName);
 		// Get any previous files, and readies the files array list.
-		files = readFileManager();	
+		try {
+			files = readFileManager();
+		} catch (IOException e) {
+			System.out.println("An error occured with readFileManager.");
+			e.printStackTrace();
+		}	
 	}
 	
 	
@@ -41,10 +49,11 @@ public class FileManager {
 	 * If error IOException, an error occured while reading from the fileManager or with accessing
 	 * the file.
 	 * @return
+	 * @throws IOException 
 	 */
-	public ArrayList<String> readFileManager()
+	public ArrayList<String> readFileManager() throws IOException
 	{
-		if(files == null)
+		if(filePath == null)
 		{
 			List<String> temp = new ArrayList<String>();
 			files = new ArrayList<String>();
@@ -55,37 +64,21 @@ public class FileManager {
 				System.out.println("Solution - create an empty " + fileManagerName + " in the root location of this software package.");
 				e.printStackTrace();
 			}
+			return files;
 		}
+		List<String> fileContent = Files.readAllLines(filePath);
 		
-		ArrayList<String> lines = new ArrayList<String>();
-		File file = new File(filePath.toUri());
-		
-		BufferedReader reader;
-		try {
-			reader = new BufferedReader(new FileReader(file));
+		ArrayList<String> returnArray = new ArrayList<String>();
+		for(String s: fileContent)
+		{
+			returnArray.add(s);
+			System.out.println("The file manager contains: " + s);
+		}
 
-			String line = null;
-			try {
-				while((line = reader.readLine()) != null)
-				{
-					lines.add(line);
-				}
-			}
-			catch (IOException e) {
-				System.out.println("An error occured while reading a line from file " + fileManagerName);
-				System.out.println("Printing stacktrace.");
-				e.printStackTrace();
-			}
-			reader.close();
-			return lines;
-			
-		} catch (IOException e1) {
-			System.out.println("An error occured with the Buffered Reader to " + fileManagerName);
-			System.out.println("Printing stacktrace.");
-			e1.printStackTrace();
-			return null;
-		}
 		
+
+		
+		return returnArray;
 	}
 	
 	/**
@@ -161,6 +154,7 @@ public class FileManager {
 	 */
 	public void addFile(String addedFileName)
 	{
+		//TODO FIND BUG IN HERE
 		files.add(addedFileName);
 		updateFileManager();
 	}

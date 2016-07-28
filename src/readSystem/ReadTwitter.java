@@ -21,11 +21,11 @@ public class ReadTwitter implements Reader{
 	
 	ArrayList<Status> statusList = new ArrayList<Status>();
 	ArrayList<String> statusListWithoutData = new ArrayList<String>();
-	
-	//TODO - uncomment when twitterCopier is done
-	//private TwitterCopier Copier = new TwitterCopier();
+	String hashtag, atUser;
 	
 	public ReadTwitter(){
+		hashtag = null;
+		atUser = null;
 		
 	}
 	
@@ -50,6 +50,16 @@ public class ReadTwitter implements Reader{
 		
 	}
 	
+	public void setHashtag(String hash)
+	{
+		hashtag = hash;
+	}
+	
+	public void setAt(String atTarget)
+	{
+		atUser = atTarget;
+	}
+	
 	/**
 	 * Use for twitter accounts that one does not have password access to.
 	 * @param source
@@ -72,7 +82,7 @@ public class ReadTwitter implements Reader{
 	{
 		Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 	    int pageno = 1;
-
+	    twitter.getScreenName();
 	    ArrayList<Status> statuses = new ArrayList();
 
 	    //Messy, but works
@@ -83,8 +93,6 @@ public class ReadTwitter implements Reader{
 	            Paging page = new Paging(pageno++, 200);
 	            statuses.addAll(twitter.getUserTimeline(twitterAccount, page));
 	            System.out.println("Twitter contacted");
-
-	            
 	            if (statuses.size() == size)
 	              break;
 	    	}
@@ -117,6 +125,33 @@ public class ReadTwitter implements Reader{
 		return statusListWithoutData;
 	}
 	
+	private String sentenceCleaning(Status status, String hashReplacement, String atReplacement)
+	{
+		StringBuilder cleanedData = new StringBuilder();
+		
+		String[] temp = status.getText().split(" ");
+		
+		for(String s: temp)
+		{
+			if(s.contains("@"))
+			{
+//			    cleanedData.append(atReplacement);
+			}
+			else if(s.contains("#"))
+			{
+//				cleanedData.append(hashReplacement);
+			}
+			else
+			{
+				cleanedData.append(s);
+			}
+			cleanedData.append(" ");
+		}
+		
+		cleanedData.append(" ");
+		return cleanedData.toString().trim();
+	}
+	
 	public String saveToFile()
 	{
 		String fileName = twitterAccount + "StatusUpdates.txt";
@@ -130,13 +165,17 @@ public class ReadTwitter implements Reader{
 	{
 		StringBuilder newStr = new StringBuilder();
 		
-		//TODO - preprocess text before saving!
-		newStr.append(s.getText());
+		
+		// if it is a retweet, ignore.
+		if(!s.getText().contains("RT"))
+		{
+		newStr.append(sentenceCleaning(s, hashtag, atUser));
 		
 		
 		newStr.append("\n");
 		newStr.append("RETWEET: " + s.getRetweetCount() +" FAVORITE: " + s.getFavoriteCount());
 		statusStringPrep.add(newStr.toString());
+		}
 	}
 	
 	

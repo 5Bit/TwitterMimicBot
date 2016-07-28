@@ -47,7 +47,6 @@ public class Main {
 	public static void main(String[] args)
 	{
 		vtmb(args);
-//		testingTwitter();
 	}
 	
 	/**
@@ -113,7 +112,7 @@ public class Main {
 					// Will need to modify to work with FileManager within Reader!
 					if(targetAccounts.length <= 10)
 					{
-						ArrayList<String> fileNames = dlTwitAccUpdatesToFile(targetAccounts);
+						ArrayList<String> fileNames = dlTwitAccUpdatesToFile(targetAccounts, name, name);
 						
 						for(String s: fileNames)
 							fileManager.addFile(s);
@@ -121,13 +120,14 @@ public class Main {
 						try {
 							ArrayList<String> collectedData = fileManager.getAllFilesContent();
 							
+							//TODO remove
 							//   use the following block only for testing.
 							//////////////////////////////////////////////
-							System.out.println("Printing collective data for verification.");
-							for(String s: collectedData)
-							{
-								System.out.println(s);
-							}
+//							System.out.println("Printing collective data for verification.");
+//							for(String s: collectedData)
+//							{
+//								System.out.println(s);
+//							}
 							//////////////////////////////////////////////
 							
 							
@@ -143,6 +143,9 @@ public class Main {
 						System.out.println("The maximum number of accounts to pull from is 10.");
 						break;
 					}
+					
+					
+					
 
 					
 					// next, read from file...
@@ -188,13 +191,15 @@ public class Main {
 	 * @param targetAccounts
 	 * @return targetFileNames
 	 */
-	public static ArrayList<String> dlTwitAccUpdatesToFile(String[] targetAccounts)
+	public static ArrayList<String> dlTwitAccUpdatesToFile(String[] targetAccounts, String newHash, String newUserTarget)
 	{
 		ArrayList<String> returnStringArray = new ArrayList<String>();
 		for(String target: targetAccounts)
 		{
 			System.out.println("Downloading " + target + " information.");
 			ReadTwitter reader = new ReadTwitter();
+			reader.setHashtag(newHash);
+			reader.setAt(newUserTarget);
 			ConfigurationBuilder cb = enterAccessData();
 			System.out.print("Keys and Secret Keys entered.");
 			reader.setTarget(target, cb);
