@@ -120,7 +120,7 @@ public class Main {
 						try {
 							ArrayList<String> collectedData = fileManager.getAllFilesContent();
 							
-							//TODO remove
+							
 							//   use the following block only for testing.
 							//////////////////////////////////////////////
 //							System.out.println("Printing collective data for verification.");
@@ -129,6 +129,8 @@ public class Main {
 //								System.out.println(s);
 //							}
 							//////////////////////////////////////////////
+							
+							WeightedPatternAnalyzer PA = new WeightedPatternAnalyzer(collectedData);
 							
 							
 						} catch (IOException e) {

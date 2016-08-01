@@ -141,6 +141,10 @@ public class ReadTwitter implements Reader{
 			{
 //				cleanedData.append(hashReplacement);
 			}
+			else if(s.contains("http"))
+			{
+				// skip posts with websites...
+			}
 			else
 			{
 				cleanedData.append(s);
@@ -148,8 +152,8 @@ public class ReadTwitter implements Reader{
 			cleanedData.append(" ");
 		}
 		
-		cleanedData.append(" ");
-		return cleanedData.toString().trim();
+		
+		return cleanedData.toString().trim() + " ";
 	}
 	
 	public String saveToFile()
@@ -165,14 +169,14 @@ public class ReadTwitter implements Reader{
 	{
 		StringBuilder newStr = new StringBuilder();
 		
-		
-		// if it is a retweet, ignore.
-		if(!s.getText().contains("RT"))
+		if(s.getText().contains("\n")) System.out.println(s.getText());
+		// if it is a retweet or has a new line, ignore.
+		if(!s.getText().contains("RT") || s.getText().contains("\n"))
 		{
 		newStr.append(sentenceCleaning(s, hashtag, atUser));
 		
 		
-		newStr.append("\n");
+		newStr.append(" ");
 		newStr.append("RETWEET: " + s.getRetweetCount() +" FAVORITE: " + s.getFavoriteCount());
 		statusStringPrep.add(newStr.toString());
 		}

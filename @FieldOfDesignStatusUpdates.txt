@@ -1,0 +1,758 @@
+Test  RETWEET: 0 FAVORITE: 0
+Finally to the point with this AI's code where I have to consider how to handle it tweeting at people and mentioning hashtags.  RETWEET: 0 FAVORITE: 0
+Coding a  listening to  soundtrack -  RETWEET: 0 FAVORITE: 0
+Still working on my  - adding more functionality, like a file manager for copying those it will mimic and even some  RETWEET: 1 FAVORITE: 0
+Time to relax and play more of  RETWEET: 0 FAVORITE: 0
+Makes it clear I really need to recover some dimensionality, and do sentence checking.  RETWEET: 0 FAVORITE: 0
+Example: WHAT? NO, I’M NOT GOING TO A OPOSSUM IN THE INEFFICIENCY IS STAGGERING! ELECTRICITY IS STAGGERING!  RETWEET: 0 FAVORITE: 0
+Upside? My prototype twitter bot is working. Downside? It's writing gibberish.  RETWEET: 0 FAVORITE: 0
+the end product will be run with little states though - it started off as a fun raspberry pi project.  RETWEET: 0 FAVORITE: 0
+Tempting - my goal is to make it fully functional, open source, and let people have fun with it!  RETWEET: 0 FAVORITE: 1
+and generate new tweets to a Twitter bot.  RETWEET: 0 FAVORITE: 0
+name generation, it should be doable with a hash table. As for what, I'm designing the system to dissect Twitter accounts...  RETWEET: 0 FAVORITE: 0
+At the moment keeping it simple - two. My goal is to make it able to handle any chain length. I've done three with...  RETWEET: 0 FAVORITE: 1
+I need to finish the bare functionality of the markov chaining, read and post systems, which I am working on today.  RETWEET: 0 FAVORITE: 1
+...but after talkin g to a colleague, I'm going to instead save the markovchains as a database. That said...  RETWEET: 0 FAVORITE: 0
+at first I was designing my bot to take advantage of java's ability to save an Object as a file...  RETWEET: 0 FAVORITE: 0
+Making progress on the Twitter Mimic Bot - The markov chain core is almost done!  RETWEET: 0 FAVORITE: 1
+So I am making a twitter bot using  and I'd like to utilize OAuth. Should I use the github repo for Oauth Application?  RETWEET: 0 FAVORITE: 0
+Currently working on my Twitter bot. Developing it using  designing it to save copies of itself!  RETWEET: 0 FAVORITE: 1
+Gonna go see the  in a few hours. - nothing like a midnight movie to celebrate the end of tests!  RETWEET: 0 FAVORITE: 0
+Finals are finally over! Gonna get to designing my  tomorrow!  RETWEET: 0 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 0
+"Google notification - new storyteller is out" about damned time,  RETWEET: 0 FAVORITE: 0
+Nothing like watching an old anime like  to relax  RETWEET: 0 FAVORITE: 0
+Such as "I thought today was tomorrow, but today is still tonight, though technically the morrow - but not yet tomorrow."  RETWEET: 0 FAVORITE: 0
+Sometimes I like to make odd quotes mentally.  RETWEET: 0 FAVORITE: 0
+Chilling at Starbucks, studying, and enjoying this awesome weather.  RETWEET: 0 FAVORITE: 0
+Erry day I'm codering  RETWEET: 0 FAVORITE: 0
+Freaking love this video  RETWEET: 0 FAVORITE: 0
+Yo,  , I've been trying to access the site but it has no GUI items. Rokkaku finally catch ya, or tuning up the system?  RETWEET: 0 FAVORITE: 1
+Nothing like a few beers and old anime. watching  if anyone remembers it.  RETWEET: 0 FAVORITE: 0
+welcome to the twitterverse (not a name i would have chose)  RETWEET: 0 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 0
+Having a few beers at a Heart concert - freaking awesome  RETWEET: 0 FAVORITE: 0
+Just realized the year I graduate from Grad school with my MS in computer science is 8 years after I graduated high school. Huh.  RETWEET: 0 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 1 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 0
+Gonna go see a midnight release of  Such a hard choice to make. Freedom, or RDJ?  RETWEET: 0 FAVORITE: 1
+Barbarbarbarian  RETWEET: 0 FAVORITE: 0
+Gonna be a few days before i can stream some   - midterms have passed, and classes are getting tough again.  RETWEET: 0 FAVORITE: 0
+Back to the daily grind. Gloomy weather today in Chicago - love it!  RETWEET: 0 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 1
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 1
+Streaming some  [PC]  while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+So, I heard you liked  houses? I built a house... on a house.  RETWEET: 0 FAVORITE: 0
+reminds me that living is very, very scary.  RETWEET: 2 FAVORITE: 3
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+An amusing doodle I made in my data mining course a few weeks ago.  RETWEET: 0 FAVORITE: 0
+Watching the latest shoddycast fallout video and realized  appeased reddit and used a banana for scale.  RETWEET: 0 FAVORITE: 0
+Hah, replace that first Miho with azuki  RETWEET: 0 FAVORITE: 0
+I know Miho is the fan fav in  but i can't help but love Kaya- such nice character design, artistically and character-wise  RETWEET: 0 FAVORITE: 0
+rewatching some    - surprisingly a amazing series that I never got around to finishing. I remember the manga was super intense  RETWEET: 0 FAVORITE: 0
+Having some rum and coke while i play some  - been a few years, and want to experience the science again!  RETWEET: 0 FAVORITE: 0
+she looks awesome! Would be cool if you released more concept work in installments.  RETWEET: 0 FAVORITE: 0
+Just found that my system automatically adds junk to the end of an exclamation  RETWEET: 0 FAVORITE: 0
+Time to watch some  - been looking forward to the 3rd episode ever since I read the  RETWEET: 0 FAVORITE: 0
+NEEDZ MOAR GUNZ N BLUD FUR DA BLUD GOD.  RETWEET: 0 FAVORITE: 1
+Amazing cosplay!  RETWEET: 1 FAVORITE: 1
+I like to imagine there is an alternative dimension where the  movies are just about a guy who transports things with no combat.  RETWEET: 0 FAVORITE: 0
+'Merica.  RETWEET: 0 FAVORITE: 0
+Oh man,  IPA is amazing - highly recommend it!  RETWEET: 0 FAVORITE: 0
+I've gotten into odd habits for testing my code. Tests includes lines such as  "SHOW ME WHAT YOU'VE GOT!"  RETWEET: 0 FAVORITE: 0
+When practicing code for a test, go hardcore or go home - text editors without IDE help.  RETWEET: 0 FAVORITE: 0
+Just realized Master Chief could be called MS.Chief -  mind blown.  RETWEET: 0 FAVORITE: 0
+as a computer scientist, I can't express how much i love this without overloading a bit.  RETWEET: 0 FAVORITE: 1
+Oh man - nice new logo,  RETWEET: 0 FAVORITE: 0
+that looks fun as hell!  RETWEET: 0 FAVORITE: 0
+arguably the new F4 difficulty might be less of this - but I haven't had time to try it out.  RETWEET: 0 FAVORITE: 0
+from a dream I just woke up from - " The first is neither pretty, nor it is the best; but it is the first."  RETWEET: 0 FAVORITE: 13
+Freaking love this one:  RETWEET: 0 FAVORITE: 0
+So close to being done with my coding exercises for the day. So much  RETWEET: 0 FAVORITE: 0
+My brain feels like mush.  RETWEET: 0 FAVORITE: 0
+Did that a month ago and it trashed my system.  RETWEET: 0 FAVORITE: 0
+Almost forgot - Nvidia's been having some driver issues as of late. Don't install the latest drivers.  RETWEET: 0 FAVORITE: 0
+Looking at motherboards? Good. You should totally take advantage of price matching.  RETWEET: 0 FAVORITE: 0
+Would purchase a subscription to the Publick Occurences  RETWEET: 0 FAVORITE: 1
+Nothing is more infuriating when people argue over who is the best father in anime and forget this series.  RETWEET: 0 FAVORITE: 0
+The more I read  books, the more I insert my own humor.
+"To make the warnings go away..." == "To make the bad code go away..."  RETWEET: 0 FAVORITE: 1
+Statistics at work!  RETWEET: 0 FAVORITE: 1
+"If exists didn't exist" - Programming In  Chapter 9.2
+It's always amusing to find a programming language that takes things literally  RETWEET: 0 FAVORITE: 0
+I would be interested in seeing how you store and sift the entries - would be interesting to apply auomated spam filtering.  RETWEET: 0 FAVORITE: 0
+Been reading so much on data mining and scala - going to need to relax tonight and play some  RETWEET: 0 FAVORITE: 0
+To all my friends who like  RETWEET: 0 FAVORITE: 0
+Everyone is playing  and I'm just here playing  RETWEET: 0 FAVORITE: 0
+One he'll of a view on my commute in  RETWEET: 0 FAVORITE: 0
+Preparing for my  RETWEET: 0 FAVORITE: 0
+I guess nasa... (•_•) / ( •_•)>⌐■-■ / (⌐■_■)
+ Is trying to keep it cool.  RETWEET: 0 FAVORITE: 0
+use it as fuel for the next project!  RETWEET: 0 FAVORITE: 0
+Reading so much on multiple languages my brain is turning to mush. 120 pages of   functionality is an insane read in a week.  RETWEET: 0 FAVORITE: 0
+Finally watched this weeks  -  you cheeky bastards. Love it!  RETWEET: 0 FAVORITE: 0
+The more i study  the more I see the underlying  RETWEET: 0 FAVORITE: 2
+And it returns seconds later. Weird.  RETWEET: 0 FAVORITE: 0
+Awww man,  seems like it's down!  RETWEET: 0 FAVORITE: 0
+and  - they go together to deliciously!  RETWEET: 0 FAVORITE: 0
+Come on, an HD PC port would be awesome!  RETWEET: 0 FAVORITE: 1
+Why does  keep reminding me of Harvey Birdman?  RETWEET: 0 FAVORITE: 0
+perfectionism is admirable but painful.  RETWEET: 0 FAVORITE: 0
+*tweeting intensifies*  RETWEET: 0 FAVORITE: 0
+you kids and your fun. I spent my day reading about 3 different programming languages.  RETWEET: 0 FAVORITE: 0
+would watch. Can confirm.  RETWEET: 0 FAVORITE: 0
+I have no recollection of where I got this, but I know you'll like it.  RETWEET: 0 FAVORITE: 0
+It's fun leaving rambling  commit comments.  RETWEET: 0 FAVORITE: 0
+Ok, maybe  is pretty damn cool.  RETWEET: 0 FAVORITE: 0
+Coding with some  - making  less crazy in my eyes!  RETWEET: 0 FAVORITE: 2
+Welp, time for the morning  RETWEET: 0 FAVORITE: 0
+So who other than me wants a vr game that simulated the old school splitscreen experience? Let's get meta!  RETWEET: 3 FAVORITE: 0
+Finally, some chill remixes to make working more survivable - Thanks  for making that possible. Stay punk, stay funk!  RETWEET: 0 FAVORITE: 1
+Well, not making my train. Time to have a few beers at oglivie while I wait.  RETWEET: 0 FAVORITE: 0
+wrekt.  RETWEET: 0 FAVORITE: 0
+Illinois weather is really getting crazy.  RETWEET: 0 FAVORITE: 0
+I enjoyed that vid. Halo physics have always been wibbly-wobbly, but that really put the light on how wobbly it actually was.  RETWEET: 0 FAVORITE: 0
+So a driver in downtown Chicago tried to run me over today, despite the fact that i had the walk sign on. So that's a thing.  RETWEET: 0 FAVORITE: 0
+Planning on making a   playthrough for YouTube when it releases - so much hype.  RETWEET: 0 FAVORITE: 0
+The power of Google compells you! But yeah, completely understandable.  RETWEET: 0 FAVORITE: 0
+Starting to think making a tweetbot using AI and data mining on a  be pushing the hardware a bit too much...  RETWEET: 0 FAVORITE: 0
+linking sources would be awesome, but at that point it's less a game criticism and more of a research paper.  RETWEET: 0 FAVORITE: 0
+Tweeting after working out is like trying to play games while intoxicated - not reccomended.  RETWEET: 0 FAVORITE: 0
+not meant sarcastically to you! People underestimate independent research, and it always bugs me.  RETWEET: 0 FAVORITE: 1
+"Prove deeze nuts." -Twenty-something nerd | Truely a quote for future generations. People underestimate the power of research.  RETWEET: 0 FAVORITE: 1
+RT  Its happening right now
+Credits to the creator  RETWEET: 275 FAVORITE: 0
+Nothing like a  morning in rainy Chicago.  RETWEET: 0 FAVORITE: 1
+All my friends are using their  VR headsets, and I'm just here playing  and watching a show on  RETWEET: 0 FAVORITE: 0
+fuckyeah - got a score of 120,868 today. And now, to set my new goal... on disappointing my parents.  RETWEET: 0 FAVORITE: 0
+Gonna play some more  in a bit  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+Streaming some Witcher 3 [PC] while I play!  RETWEET: 0 FAVORITE: 0
+clearly Bethesda is a branch of majestic twelve. Come on... Aliens.  RETWEET: 0 FAVORITE: 2
+git it, pull it, submit it, push it,
+Break it, delete it, mail, update it,
+Pull it -  RETWEET: 0 FAVORITE: 0
+RT  How to go through tax season
+1) Me: "finally done with tax stuff"
+2) *gets another email from accountant*
+3) go to step 1…  RETWEET: 1 FAVORITE: 0
+that is absolutely adorable.  RETWEET: 0 FAVORITE: 0
+sad, but respectable/more amazing if they continue. I have a hard time making playthroughs myself. Always feel like a weirdo.  RETWEET: 0 FAVORITE: 1
+Gonna write a Twitter bot to imitate me this summer with markov chains!  RETWEET: 1 FAVORITE: 0
+The more I read about programming in  the more it looks like a mesh of various languages I know.  RETWEET: 0 FAVORITE: 0
+My dog doesn't know he's a good boy. You know who thinks like that? A synth.  RETWEET: 0 FAVORITE: 1
+Time for a truly educational night - of  SHOWS.  RETWEET: 0 FAVORITE: 0
+kinda sad you didn't name the "Platinum Porksword" achievement the "Platinum shlong". Still, got it on my second playthrough!  RETWEET: 0 FAVORITE: 0
+loved your vid on ME science. I love ME, but the whole element zero plot device makes it depressingly not really sci-fi  RETWEET: 0 FAVORITE: 0
+Absolutely love  Awesome game  RETWEET: 2 FAVORITE: 3
+name pun of the day - Nekoha Nyanoko!  RETWEET: 0 FAVORITE: 0
+" I am going to lay an egg of rage!" -Matthew Wasik  RETWEET: 0 FAVORITE: 1
+I'm going to hold you to that.  RETWEET: 0 FAVORITE: 0
+Still, thanks for setting me straight. Been out of the industry for a few years.  RETWEET: 0 FAVORITE: 1
+Can attest to that, was an indie dev for some time.  RETWEET: 0 FAVORITE: 1
+Understandable. On the mobile front, most of the industry is scrambling to get into the next big market - Asia, especially china  RETWEET: 0 FAVORITE: 1
+will return on investment.  RETWEET: 0 FAVORITE: 0
+In the industry, season passes/preorders are often viewed as a good way to assure investors and stockholders that the product...  RETWEET: 0 FAVORITE: 0
+Something you missed heavily in the Season Passes rethinking was how heavily they encourage investors.  RETWEET: 0 FAVORITE: 0
+Tube technology can only be pushed so small. Is the pipboy even possible with tube tech, or would they need semiconductors?  RETWEET: 2 FAVORITE: 0
+what capture and editing software do you use? How do you track down research papers related to your videos?  RETWEET: 0 FAVORITE: 0
+Today I have a class on data mining! Would be fun to write some tools to mine data from player data in  or  RETWEET: 3 FAVORITE: 2
+Classes start up tomorrow - taking a class on programming language concepts and another one on data mining. Teaching myself Japanese as well  RETWEET: 0 FAVORITE: 0
+beta is nice, but has a bug/feature - if at full health, doesn't show amount food will heal you in pipboy.  RETWEET: 0 FAVORITE: 0
+It's midnight and I want sweets. What i would do for some doughnuts...  RETWEET: 0 FAVORITE: 0
+Cool RPG idea - randomize dungeon layouts using the current day as the seed. Dungeon layout changes from day to day!  RETWEET: 0 FAVORITE: 1
+*realizes he hasn't watched the new episode of  RETWEET: 0 FAVORITE: 0
+Welp, now Microcenter is taking a look at my computer. Gonna work out and watch  RETWEET: 0 FAVORITE: 0
+Oh to the joy. Seems  on my custom build PC has an OS corruption - crashes randomly. Looks like a format week.  RETWEET: 0 FAVORITE: 0
+Thought - Jensen from  sitting in a resteraunt, explaining to his waiter his frustration about the soup, "I never asked for this."  RETWEET: 0 FAVORITE: 0
+Wrex from  knows how to speak his mind - " I don't get how a clothed female is more attractive than a naked one."  RETWEET: 0 FAVORITE: 0
+So much hype for the  - it's time for SCIENCE.  RETWEET: 0 FAVORITE: 0
+you could have used Preston as a form of measure in the last  You could have said, "This supermutant is 7 Prestons!"  RETWEET: 0 FAVORITE: 2
+M.A.K.O. - Most Alcoholic Kinetic Object - summarizes my experience when driving the Mako in  RETWEET: 0 FAVORITE: 0
+And Tali literally called them a neural network. Damn this replay has been a long time coming.  RETWEET: 0 FAVORITE: 0
+Playing  again makes me think the Geth are more a form of advanced hive-minded neural network  RETWEET: 0 FAVORITE: 0
+I forgot how catchy the elevator music was in  Effect 1.  RETWEET: 0 FAVORITE: 0
+Nothing like replaying a classic - currently playing through  Effect again.  RETWEET: 0 FAVORITE: 0
+I love messing with my friends.  inspired.  RETWEET: 0 FAVORITE: 0
+seems Like a play on the knights, knaves and spies problems, combined with the death and freedom puzzle.  RETWEET: 0 FAVORITE: 0
+Practicing FTOC and CNF logic math before i take a  break!  RETWEET: 0 FAVORITE: 0
+Aaand voted!  for  - and the burn feels good!  RETWEET: 1 FAVORITE: 3
+Regret is the strongest force In the world. It drives and pushes us to do so much - so that we don't feel it. You've got this.  RETWEET: 0 FAVORITE: 0
+- why would a second or first gen Synth working as security in the Institute have bottlecaps?  RETWEET: 0 FAVORITE: 1
+Note to self: look into randomization of all data prior to usage in  - might reduce false positives.  RETWEET: 1 FAVORITE: 0
+Super excited for the Google AI go challenge. I want to dissect that AI so baaaad.  RETWEET: 0 FAVORITE: 0
+I just want    - would rather have to worry about antibiotics and food than how to spend my spring break  RETWEET: 0 FAVORITE: 0
+close - Elder Fallout Dishonored Online 5 confirmed.  RETWEET: 2 FAVORITE: 6
+RT  "I'll vote for Trump if Bernie doesn't get the nomination."
+=
+"My marriage proposal was rejected, so I'm gonna fuck th…  RETWEET: 1988 FAVORITE: 0
+Finally finished my text-based  remake in  - has a few bugs, but none are gamebreaking.  RETWEET: 0 FAVORITE: 0
+Just wait, the "This is my favorite X on the citadel" will be still in use, and conspiracy theories about him will be everywhere  RETWEET: 0 FAVORITE: 0
+One week from finals, and all i want to do is replay  and get  revamped survival mode.  RETWEET: 0 FAVORITE: 0
+Finally above 40 degrees!  RETWEET: 0 FAVORITE: 0
+Winter isn't gone yet.  RETWEET: 0 FAVORITE: 0
+- vote for hope, not for fear.  RETWEET: 0 FAVORITE: 0
+Normally I avoid tweeting politics, but agreed. This is a foreign affairs nightmare.  RETWEET: 0 FAVORITE: 0
+Hey! Do you have a link to that wallpaper you had on today's Rethinking? I absolutely must have it!  RETWEET: 0 FAVORITE: 0
+Wow -  feels amazing to write. It's just flows. Almost feels like I'm writing in cursive.  RETWEET: 0 FAVORITE: 0
+Today's goal - finish my LISP hw, and then read three chapters in Object-Oriented Common Lisp. The quarter begins.  RETWEET: 0 FAVORITE: 0
+Starting to recognize   in vocaloid pvs. Didn't expect learning a new language to be so invigorating!  RETWEET: 0 FAVORITE: 0
+That moment you realize your cursive T is actually フ(Fu). I choose to believe that my I am the !Boolean.  RETWEET: 0 FAVORITE: 1
+Clearly Tails needs to get clean.  RETWEET: 0 FAVORITE: 0
+Catching up on my  list while fixing up my laptop. All aboard the hype train next year for Gate!  RETWEET: 0 FAVORITE: 0
+Frack it. As of a few days ago, I have begun my lifelong dream to learn  RETWEET: 0 FAVORITE: 0
+Me: Hey, python. I'm gonna mess with you.
+>>> 42 ** 222
+229796001888148832801258993512475261267034476746976203943669773983144134085215388...  RETWEET: 0 FAVORITE: 2
+Today I realized Garrus from   is a rogue cop with nothing to lose. No wonder I liked him.  RETWEET: 0 FAVORITE: 0
+Programming Jedi Code moment of my day:
+Do, or do not - there is no compiler error.  RETWEET: 0 FAVORITE: 0
+Writing a Traffic Simulator for a class - finally working on a project with limited time again!  RETWEET: 0 FAVORITE: 3
+Will  have  support?  RETWEET: 0 FAVORITE: 0
+Time for the usual weapon concept art relaxation before a midterm. Use them as you see fit  RETWEET: 1 FAVORITE: 0
+I need to order a new headset audio splitter before  - need that to make an awesome  playthrough!  RETWEET: 0 FAVORITE: 0
+My   class just started covering probability. My years of  have prepared me for this.  RETWEET: 1 FAVORITE: 1
+the router my parents have rented from you for 2+ years just locked out for "activation", and won't 're-activate.  RETWEET: 0 FAVORITE: 0
+That feeling when your  system doesn't complain it's running on 'technically' unsupported hardware.  RETWEET: 0 FAVORITE: 1
+Trying to help my parents with a tech issue with their DVR. Estimated wait-time: 15 min. So far: 45 min.  RETWEET: 0 FAVORITE: 0
+Reading: Check. Homework: Check. Rum and Coke - Check. Videogame: Check. Time to relax.  RETWEET: 0 FAVORITE: 0
+Aaand forgot to attach the link.  RETWEET: 0 FAVORITE: 0
+You might want to check this out - seems  has been hacked. Didn't know if you knew. And now, for some  GNR!  RETWEET: 0 FAVORITE: 0
+Fallout Shelter needs a family tree - would make populating the vault easier. Wouldn't pair family members together.  RETWEET: 0 FAVORITE: 0
+Also, a nice sign from  that things will work out:  RETWEET: 0 FAVORITE: 0
+  RETWEET: 0 FAVORITE: 0
+Had an awesome day - homework with fellow  beer and food after, and a nice walk to the station- what's not to love?  RETWEET: 0 FAVORITE: 0
+- you are actually a Chinese spy, and can return to your homeland to start the invasion.  RETWEET: 0 FAVORITE: 1
+-  the player attends the institute for degrees (ex.  theoretical degree in  ...)  RETWEET: 0 FAVORITE: 0
+Calculating standard deviation and I wrote shorthand "stdlib" a  moment.  RETWEET: 0 FAVORITE: 1
+Only a week before my steam  ships - looking forward to messing with it in code!  RETWEET: 0 FAVORITE: 0
+Near done with reading for classes - get ahead on homework, start  applications + designing my prototype  RETWEET: 0 FAVORITE: 1
+Study study study - need more time to study. Only week two and I already have the mantra.  RETWEET: 0 FAVORITE: 0
+Really love what I got on  from Suvali.  It was exactly the pendant I was searching for.  RETWEET: 0 FAVORITE: 0
+And beat  again, 11 years after it's release. Nothing like replaying a classic.  RETWEET: 0 FAVORITE: 0
+Gonna try to survive a quarter with  as my primary OS on my laptop.  is nice for my gamingpc, but slow on this dinosaur.  RETWEET: 0 FAVORITE: 0
+Perfect timing:  just uploaded GNN before my 2 hour commute. Time for some  news!  RETWEET: 0 FAVORITE: 0
+Best two words found in a textbook today: elaborate nonsense.  RETWEET: 0 FAVORITE: 1
+Aaaaand ended up playing  until 2 AM.  RETWEET: 0 FAVORITE: 0
+Currently at the church of brew works - looks awesome inside  RETWEET: 0 FAVORITE: 0
+Now visiting the church of the brew!  RETWEET: 0 FAVORITE: 0
+Tomorrows plan - look (im)patiently  old offices in Bethesda, visit the Capitol and hum  RETWEET: 0 FAVORITE: 0
+Fishing on the  out of Chesapeake bay  RETWEET: 0 FAVORITE: 0
+On the  - ROAD NOT FOUND  RETWEET: 0 FAVORITE: 0
+Slight trip change - heading towards maryland's coast. Checking  off my to visit list  RETWEET: 0 FAVORITE: 0
+Good Morning  RETWEET: 0 FAVORITE: 0
+Road trip to  in progress.  RETWEET: 0 FAVORITE: 0
+I'll be out of town for a week starting thurs, solo unsure of when.  RETWEET: 0 FAVORITE: 0
+no idea! A few places come to mind downtown, but dunno good places locally.  RETWEET: 0 FAVORITE: 0
+next time we shall go out for beers!  RETWEET: 0 FAVORITE: 0
+yup - and sounds like a plan. Text away!  RETWEET: 0 FAVORITE: 1
+agreed. I'm busy today (lounging about for 15 min more before  ) but tomorrow To thurs I'm free. You?  RETWEET: 0 FAVORITE: 0
+haven't tried that place - just down the road from it at the Starbucks. They better with tea I take it?  RETWEET: 0 FAVORITE: 0
+Chilling with a chai latte and Think like a  by v. Anton Spraul  RETWEET: 0 FAVORITE: 0
+I remember from mantis a post said that it might need some  - might give that a shot after the next update.  RETWEET: 0 FAVORITE: 0
+Slowly stepping through  obs.h. Freaking massive/amazing header. Has some variables which I cant nail down the use for though.  RETWEET: 0 FAVORITE: 0
+Time for day 3 of studying the  - fell down the bug report trap last night.  RETWEET: 0 FAVORITE: 0
+As a devout Space Marine-esque character in tabletop RPGs, I love  in the  Kernel  style doc.  RETWEET: 0 FAVORITE: 1
+How should I notify the project lead of bugs I find? First attempt at helping out an Open-Source project.  RETWEET: 0 FAVORITE: 0
+Thanks for pointing that out - been using OBS for a while - might as well look through it.  RETWEET: 0 FAVORITE: 0
+- if it can, it will.  RETWEET: 0 FAVORITE: 0
+Studying the  code - loving the AppWarnings
+"...actually, no one should get this error.  if you do send it to jim immidiately."  RETWEET: 0 FAVORITE: 0
+Awww yissss - Motherfracking  RETWEET: 4 FAVORITE: 0
+So will  for PC be compatible with  I've seen mixed reports of Fallout 3 not working.  RETWEET: 0 FAVORITE: 0
+Finally catching up on my anime backlog on  RETWEET: 0 FAVORITE: 0
+Nothing brings on the  like good  RETWEET: 0 FAVORITE: 0
+Finished my first networking  - a basic  server. Finally, done with my assignments for this quarter!  RETWEET: 0 FAVORITE: 1
+is the best  show I've seen in years.  RETWEET: 0 FAVORITE: 0
+Finals have arrived  - bout  time!  RETWEET: 0 FAVORITE: 0
+Aaaand now I want one.  RETWEET: 0 FAVORITE: 0
+Coding up a basic  client on  RETWEET: 0 FAVORITE: 0
+trippy! Loved the custom shaders! Definitely on my watch list!  RETWEET: 0 FAVORITE: 0
+awesome - I'll keep my eyes out for it! What engine  are you using, or did you code it up as well?  RETWEET: 0 FAVORITE: 0
+what's your launch looking like if you don't mind me asking? What systems/platforms? I understand if you can't say much!  RETWEET: 0 FAVORITE: 0
+looking good! Nothing like a game near finish!  RETWEET: 0 FAVORITE: 1
+And overslept. Joy. Time to do some C  via an ssh client - nothing like coding on a mobile connection.  RETWEET: 0 FAVORITE: 0
+didn't lose anything, but scared the crap out of me.  RETWEET: 0 FAVORITE: 0
+still new to Ubuntu - crashed during some music via YouTube and some emacs coding in c - specifically during a copy/paste  RETWEET: 0 FAVORITE: 0
+there a list of sites participating?  RETWEET: 0 FAVORITE: 0
+Any list of the sites participating in  RETWEET: 1 FAVORITE: 1
+My  dualboot crashed about an hour ago - probably should update from 14.04 to 15.  RETWEET: 0 FAVORITE: 2
+Met with the  team on  game at  - looking forward to working with them!  RETWEET: 0 FAVORITE: 1
+Absolutely loving  - reminds me a lot of the novels!  RETWEET: 0 FAVORITE: 0
+The more I consider upgrading to  the more I grumble about reinstalling everything.  RETWEET: 0 FAVORITE: 0
+I'm considering trying this competition this year - any suggestions for a former game dev/masters student studying AI?  RETWEET: 0 FAVORITE: 0
+Sounds fun!  RETWEET: 0 FAVORITE: 1
+Programmers know how to count! 0, 1, 10, 11, 100...  RETWEET: 0 FAVORITE: 0
+I just signed up for a free bitcoin wallet on Coinbase - try it!  RETWEET: 0 FAVORITE: 1
+Code code code  RETWEET: 0 FAVORITE: 0
+9 times out of 10, it's an issue with the code.  RETWEET: 2 FAVORITE: 1
+Any suggested books on advanced programming algorithms?  RETWEET: 2 FAVORITE: 2
+if( (Node) x == null) return "There is no node, there is only  //I have too much fun with  RETWEET: 0 FAVORITE: 3
+Hey  press square to tell Jason.  RETWEET: 1 FAVORITE: 1
+How bools make me feel sometimes with comparisons and just calling the bloody things.  RETWEET: 3 FAVORITE: 0
+Didn't think about it that way - and... well, thanks!  RETWEET: 0 FAVORITE: 1
+o.o;;; Nande? Also, forgive me for the slow response - been busy.  RETWEET: 0 FAVORITE: 1
+Alas, it was a good series with a lot of... subtle truths about the game industry.  RETWEET: 0 FAVORITE: 0
+Working on some Binary Search Trees. Nothing like algorithms in the... err... what time is it?  RETWEET: 1 FAVORITE: 1
+Just had my first  Chai latte - it is now my favorite beverage. Time to have some  programming with my latte.  RETWEET: 3 FAVORITE: 6
+That feeling you get when you realize Code Monkeys isn't on netflix anymore.  RETWEET: 2 FAVORITE: 2
+Pointers are love. Pointers are life.  RETWEET: 5 FAVORITE: 2
+Percolation! Currently going for my masters in   All of the code!  RETWEET: 1 FAVORITE: 2
+return; // get out of the choppah!  RETWEET: 0 FAVORITE: 0
+You should probably rest when your java bleeds into your C++ work.  RETWEET: 3 FAVORITE: 1
+A friends kickstarter just went live this week!  RETWEET: 0 FAVORITE: 0
+heck yeah!  RETWEET: 0 FAVORITE: 0
+Will Do Liz - Keep kicking ass in film and gaming news!  RETWEET: 0 FAVORITE: 0
+And finished a rudimentary movement script for my mobile game! All I need to do is hook it up.  RETWEET: 1 FAVORITE: 0
+Registered for classes - Check.
+Acquired new student ID - Check.
+Need to talk to an adviser to verify some things - To Be Done.  RETWEET: 0 FAVORITE: 0
+RT  How I feel when there is a very difficult bug in my  RETWEET: 4 FAVORITE: 0
+Well, I'm crunching for the next few days to brush up on C++ Re-reading Absolute C++, C++ for game programmers, and Effective C++  RETWEET: 1 FAVORITE: 1
+On my way to Chicago to talk to Doris Rusch of  about pursuing a masters degree in programming  never stop learning!  RETWEET: 0 FAVORITE: 0
+Programming in a new language feels like 50% figuring out what I can do, 40% planning out the code, and 10% on actually coding it.  RETWEET: 3 FAVORITE: 4
+Looking over some code I wrote a month ago... what was I thinking!?  RETWEET: 3 FAVORITE: 2
+Been using it a lot more recently as well! I love the amount of detail you put into it!  RETWEET: 0 FAVORITE: 1
+Working on my next game - an economics adventure game!  RETWEET: 3 FAVORITE: 3
+And another sketch. This time onodera from  RETWEET: 0 FAVORITE: 0
+Just drew a quick one. chitoge from nisekoi as a character to study. an action shot for reference  RETWEET: 0 FAVORITE: 0
+And time for some Sherlock.  RETWEET: 0 FAVORITE: 0
+about 29 minutes. 30 minute speed challenge. The topic I chose was bison hunt!  RETWEET: 0 FAVORITE: 0
+Just drew this for a speed challenge. Had to make due with pencil and paper. Bison hunt Anyone?  RETWEET: 1 FAVORITE: 0
+Another experimental dinner - time to see how it tastes!  RETWEET: 0 FAVORITE: 0
+Make a classic top-down shooter I said, it would be easy I said....  RETWEET: 3 FAVORITE: 0
+Got myself a copy of steins;gate - official translation. Gonna play it right after persona 4 golden sun!  RETWEET: 0 FAVORITE: 0
+Looking for a job ain't easy - Design is a fun thing to talk about though, so it makes the hunt easier!  RETWEET: 0 FAVORITE: 0
+Relaxing at the W bar and hotel - going to meet  RETWEET: 0 FAVORITE: 1
+  RETWEET: 0 FAVORITE: 0
+At the gdc design panel - Andrew leaker talking at the front!  RETWEET: 0 FAVORITE: 0
+At the design panel it is packed!  RETWEET: 1 FAVORITE: 0
+Got my badge!  RETWEET: 0 FAVORITE: 1
+Whoo  RETWEET: 0 FAVORITE: 0
+And my website has been fixed!  RETWEET: 1 FAVORITE: 0
+that is horrible. I hope things get better for everyone from irrational!  RETWEET: 0 FAVORITE: 0
+Just got over a long stomach flu. Regenerated my mind and body!  RETWEET: 0 FAVORITE: 0
+Going back to my roots on a day I must rest - Star Wars, and drawing up cool gadgets!  RETWEET: 0 FAVORITE: 0
+The war on  and  - It begins.  RETWEET: 0 FAVORITE: 0
+Just shared it with my fellow devs and our programmer over Skype! Behold - PROOF!  RETWEET: 0 FAVORITE: 0
+A sweet program! Get it! Use it! Make all the dialogue trees!  RETWEET: 2 FAVORITE: 2
+Time for us to create a game that will reach the heavens! Who the hell do they think we are!?  RETWEET: 0 FAVORITE: 1
+I'd absolutely love to use your Dialoguer code! I'm the lead   - we use unity in our studio!  RETWEET: 0 FAVORITE: 0
+It's suprising how much  can be applied to  RETWEET: 1 FAVORITE: 0
+day 2 - they have still not discovered my Octo nature.  RETWEET: 0 FAVORITE: 0
+I wanna play octodad, but I need to play street fighter to study animations and vfx for our asset lists  RETWEET: 0 FAVORITE: 0
+Might I advise... banana?  RETWEET: 0 FAVORITE: 1
+Looking forward to your launch! Was happy to have you look over my game design at DePaul Capstone last year!  RETWEET: 0 FAVORITE: 0
+The GDD is finished - now for the team review!  RETWEET: 1 FAVORITE: 3
+looks like my design process.  RETWEET: 0 FAVORITE: 0
+Just discovered a cool game hanging mechanic in a bug - I love these moments!  RETWEET: 0 FAVORITE: 3
+Ah - never covered that from my experience. Thanks!  RETWEET: 0 FAVORITE: 0
+I use  a lot, but never used  - what is it for?  RETWEET: 0 FAVORITE: 1
+Time to resume development. I will finish this GDD by Wednesday!  RETWEET: 1 FAVORITE: 2
+Looking awfully pretty!  RETWEET: 0 FAVORITE: 1
+It knows...  RETWEET: 0 FAVORITE: 1
+Using fire extinguishers as substitute explosive devices  RETWEET: 0 FAVORITE: 0
+Hey, I can see my house from here!  RETWEET: 0 FAVORITE: 0
+*insert hippie VO* Far out maaan.  RETWEET: 0 FAVORITE: 0
+That feeling when you're filing taxes and say, "That cant be right."  RETWEET: 0 FAVORITE: 0
+dat unreal!  RETWEET: 0 FAVORITE: 0
+Time for adventure time!  RETWEET: 0 FAVORITE: 0
+Friday anime night is a great night to have!  RETWEET: 1 FAVORITE: 1
+Wheehe!  mechanics! I /love/ making level design mechanics!  RETWEET: 0 FAVORITE: 1
+Gah! Google docs is having some connection issues.  RETWEET: 0 FAVORITE: 0
+  RETWEET: 0 FAVORITE: 0
+Relaxing, playing some Game Dev Tycoon - listening to some hilarious  RETWEET: 0 FAVORITE: 0
+Creative chaos - to use insanity to create unique game design!  RETWEET: 1 FAVORITE: 0
+Sounds like a fun party!  RETWEET: 0 FAVORITE: 1
+Its a great game (I play it every now and then) but age hasn't treated the UI well.  RETWEET: 0 FAVORITE: 0
+I now have utter respect for the gameplay math behind  This math is nuts!  RETWEET: 0 FAVORITE: 1
+c-c-c-COMBO Counter implemented in the design! Time for a Break;  RETWEET: 0 FAVORITE: 3
+Writing some equations for calculating damage and defense for physical and elemental attacks!  RETWEET: 1 FAVORITE: 4
+Time to take a break from making games -  time!  RETWEET: 0 FAVORITE: 0
+I sense destruction in their wake... and for some reason, pew pew noises.  RETWEET: 0 FAVORITE: 0
+Merging a homicidal AI within your sociopath Player character's brain.  RETWEET: 0 FAVORITE: 0
+"At first I saw suicidal bat robots as a bad idea, but my prototype decided to dive-bomb the lab intern. Now I love it!"  RETWEET: 0 FAVORITE: 0
+FPS games should have the player press the reload button twice - once to drop a mag and another to load a new one in.  RETWEET: 0 FAVORITE: 0
+I love working at night - something about the absolute darkness outside the window keeps me working!  RETWEET: 0 FAVORITE: 1
+Rewriting my GDD... again! D:  RETWEET: 1 FAVORITE: 2
+up. It's why we are spending so much time on combat, game math, and lore writing. Trainee is studying fighting games.  RETWEET: 0 FAVORITE: 1
+I love games that have prep in them - witcher, rts, NWN, mass effect. Though I do say "this is stupidly fun!" On occasion.  RETWEET: 0 FAVORITE: 1
+sidescroller action, with a focus on story, combat, preparation. Mana is a big cornerstone for Spellstone: Mount Ternion!  RETWEET: 1 FAVORITE: 1
+congrats! we should have you come over to our office sometime to check out our prototype down the line!  RETWEET: 0 FAVORITE: 0
+going good - working on our next game! How about you? Development going well?  RETWEET: 0 FAVORITE: 1
+Writing a ton of backlore! Elves, golems, gorehounds, oh my!  RETWEET: 1 FAVORITE: 4
+Tested the controller on my steam machine long enough. Time to use it on my PC.  RETWEET: 0 FAVORITE: 0
+half the fun of development is giving new and interesting challenges.  next game is on it's 6th iteration!  RETWEET: 0 FAVORITE: 0
+now to get used to the  controller - If I am to design for something, I must know that something!  RETWEET: 0 FAVORITE: 2
+Was awesome meeting you guys at  - looking forward to Xing! Just in case, I'm the designer at  RETWEET: 0 FAVORITE: 0
+Beautiful designs! We might use this as a reference later on at  Studio!  RETWEET: 0 FAVORITE: 0
+Glad to meet your team at  - keep in touch with us at  RETWEET: 0 FAVORITE: 0
+Was nice meeting you guys at  - not just from me, but from all of  RETWEET: 0 FAVORITE: 0
+Hey - we met briefly at the opening ceremonies. I'm Tom from  - was nice meeting you at  RETWEET: 0 FAVORITE: 1
+Hey, was awesome meeting you at Steam Dev Days! It's Tom from  RETWEET: 0 FAVORITE: 0
+Sending out follow up emails - gotta keep writing, gotta keep writing!  RETWEET: 1 FAVORITE: 2
+Coworkers and I went to  - got back around 1 AM Sunday.  RETWEET: 0 FAVORITE: 0
+That road trip really messed with my sleep schedule  RETWEET: 0 FAVORITE: 0
+RT  New week with new aspirations! Make glory happen folks, god  RETWEET: 2 FAVORITE: 0
+well that's a bummer  RETWEET: 0 FAVORITE: 0
+was it cancelled or...?  RETWEET: 0 FAVORITE: 0
+What really happened in Sherlock...  RETWEET: 0 FAVORITE: 0
+next time I'm taking the train.  RETWEET: 0 FAVORITE: 0
+Taking a break from the road - halfway back to sf!  RETWEET: 0 FAVORITE: 0
+It was a triumph~  RETWEET: 0 FAVORITE: 0
+hanging out after steam dev days with the team! Helping with next game concept  RETWEET: 0 FAVORITE: 0
+A cool picture I got on the drive up to Seattle! I sense a Reference for the next game...  RETWEET: 0 FAVORITE: 0
+After party at  RETWEET: 2 FAVORITE: 0
+yeah. I was talking to  but It was /loud/ until the band left  RETWEET: 0 FAVORITE: 0
+pretty good. 3 free drinks, and a nice band. I left early - got a bloody migraine midway through.  RETWEET: 0 FAVORITE: 0
+was awesome!  RETWEET: 1 FAVORITE: 0
+same here! You go to the after party?  RETWEET: 0 FAVORITE: 0
+hey, it's Tom from last night at  RETWEET: 0 FAVORITE: 0
+Me (right) with our script programmer Robby (left) and Ohad our CEO (mid)  RETWEET: 1 FAVORITE: 3
+Full circle is coming together! The pieces are starting to solve themselves!  RETWEET: 0 FAVORITE: 0
+Finally got a haircut - no longer have the unkempt game designer look, aside my glorious beard!  RETWEET: 1 FAVORITE: 0
+Sleep you say?  RETWEET: 1 FAVORITE: 1
+Gotta love  net. Paying for 50 Mbs, speedtest reads slightly above 10.  RETWEET: 0 FAVORITE: 0
+telling our story I see. Do continue.  RETWEET: 0 FAVORITE: 0
+Dem stickies  RETWEET: 0 FAVORITE: 0
+I'll take your dog and bubble wrap and raise you research, dew, music and game design.  RETWEET: 0 FAVORITE: 0
+  RETWEET: 0 FAVORITE: 0
+Texture texture texture~  RETWEET: 0 FAVORITE: 1
+Gomen!!!!!  RETWEET: 0 FAVORITE: 1
+Before I sleep...  Never ever use cthulu(); with any programming language. Only when you can slay him shall you command him.  RETWEET: 0 FAVORITE: 1
+  RETWEET: 0 FAVORITE: 0
+Zombie Yoga, a game I worked on for a year with Doris C. Rusch, was given gold at International Serious Play Awards!  RETWEET: 0 FAVORITE: 0
+awesome!  RETWEET: 0 FAVORITE: 0
+- kinda like cooking. You can make a great recipient by the book, or experiment and create a sentient beast who demands sacrifices.  RETWEET: 0 FAVORITE: 1
+I am looking forward to the American history ep when you talk about Theodore Roosevelt. One of the manliest men of America!  RETWEET: 0 FAVORITE: 0
+I swear,  spoiled me. I just tried to use  and it was not working well for me. Currently using  until I'm used to git!  RETWEET: 0 FAVORITE: 0
+Just woke up from a dream of a giant robot and a kaiju fighting, and some guy running Across rooftops with a leaf blower. Wut.  RETWEET: 0 FAVORITE: 0
+Full Circle will be a puzzle game that revolves around manipulating interactive, visual puzzles.  RETWEET: 0 FAVORITE: 0
+Workworkwork on Games games games...  RETWEET: 0 FAVORITE: 0
+Well, I can finally let the cat out of the bag. The studio I work at,  is making it's first game -  for  RETWEET: 1 FAVORITE: 0
+Example of office buffoonery.  RETWEET: 0 FAVORITE: 0
+We never received the call.  RETWEET: 0 FAVORITE: 0
+Due to some timing issues, we weren't able to take the call. Could you ask them to contact us at 5:45 PM PST?  RETWEET: 0 FAVORITE: 0
+Mobile RPG done right. Nameless: the Hackers  on  They have a giveaway! Seriously, their game is awesome!  RETWEET: 0 FAVORITE: 0
+The sony and EA press conference at Gamescon. Some talk about  for  RETWEET: 0 FAVORITE: 0
+Yes, 6208 is the best number for contact and we will be able to take the call at 4:30 PM PST. Thank you very much!  RETWEET: 0 FAVORITE: 0
+working on my first game for iOS! look forward to  first game! More info coming soon!  RETWEET: 0 FAVORITE: 0
+That would be great! How would we go about this?  RETWEET: 0 FAVORITE: 0
+Octodad reference on the EA and Sony conference going on right now at Gamescom! WHOO!  RETWEET: 0 FAVORITE: 0
+Watching the EA and Sony gamescom press conference. Very entertaining to listen to while you work on a game!  RETWEET: 0 FAVORITE: 0
+I did. On the 16th. It should be in your message history.  RETWEET: 0 FAVORITE: 0
+...fudge it. I'm going to buy a new copy. Adobe needs to make it VERY clear that they view pre-owned copies to be pirate.  RETWEET: 0 FAVORITE: 0
+It was only after deactivating it on the machine and reformatting the computer, reinstalling the software and reactivating the...  RETWEET: 0 FAVORITE: 0
+...employees are taking our word. We purchased our copy through ebay, yes, but it was working for over a year with no issues.  RETWEET: 0 FAVORITE: 0
+The problem has not been solved. My boss and I have been calling adobe support every day to get it solved, and none of the...  RETWEET: 0 FAVORITE: 0
+Cookin some pot roast for the weekend!  RETWEET: 0 FAVORITE: 0
+will do on the trial copy. Just give me a moment - my boss has to check something.  RETWEET: 0 FAVORITE: 0
+... And registered for over a year.  RETWEET: 0 FAVORITE: 0
+we called adobe support, they said our license didn't exist, our product number was wrong. Which is bull. The copy was working...  RETWEET: 0 FAVORITE: 0
+yeah, our copy of photoshop isnt being accepted here at work, despite disabling the lisence so we could reformat the computer.  RETWEET: 0 FAVORITE: 0
+Watching  on Steam!  RETWEET: 0 FAVORITE: 0
+Just had the worst customer service in over 7 years. I worked i. Retail and repaired computers, but  support just reestablished bad.  RETWEET: 0 FAVORITE: 0
+too bad I already have it.  RETWEET: 0 FAVORITE: 0
+I punch! *rolls d20*  RETWEET: 0 FAVORITE: 1
+Normally I avoid arguments on the net, but when someone says the special needs dept is a waste of taxpayer money, I make an exception.  RETWEET: 0 FAVORITE: 0
+unite!  RETWEET: 0 FAVORITE: 0
+:p  RETWEET: 0 FAVORITE: 0
+who the hell do you think I am?!  RETWEET: 0 FAVORITE: 0
+Makin up sound effects while making particle sprites. Ka-spwoosh!  RETWEET: 0 FAVORITE: 0
+so far it's been a good place. Near shopping and food.  RETWEET: 0 FAVORITE: 0
+that feel when you need to stop for the day but the game you play to relax makes you want to work.  RETWEET: 0 FAVORITE: 0
+I'm in that building!  RETWEET: 0 FAVORITE: 0
+they have been notified!  RETWEET: 0 FAVORITE: 0
+will do!  RETWEET: 0 FAVORITE: 0
+Stuck at the DMV. We create all this order to help ourselves, but there is always a bottleneck.  RETWEET: 0 FAVORITE: 0
+almost to the eye of the storm. And we are watching it unfold before us.  RETWEET: 0 FAVORITE: 0
+I like 69:D  RETWEET: 0 FAVORITE: 0
+yes! Yeeees!  RETWEET: 0 FAVORITE: 0
+Futures are a funny thing. Here I am, in Cali, making a studio with   and my first indie game, but it all seems so familiar. Odd.  RETWEET: 0 FAVORITE: 0
+the question is... Is it good for the company?  RETWEET: 0 FAVORITE: 0
+  RETWEET: 1 FAVORITE: 0
+Killing time while I wait to see the last apartment for the night.  RETWEET: 0 FAVORITE: 0
+aaaaaaahci miss talkin to you! I really need to find a place and get settled!  RETWEET: 0 FAVORITE: 0
+I know that feeling. :D  RETWEET: 0 FAVORITE: 0
+Looking delish!  RETWEET: 0 FAVORITE: 0
+Hanging out in the fresh market, getting some breakfast. Absolutely in food heaven at the emeryville  RETWEET: 0 FAVORITE: 0
+Hello State of the sun  RETWEET: 0 FAVORITE: 0
+That feeling when you have a patentable idea, and find it crazy that it could be profitable.  RETWEET: 0 FAVORITE: 1
+And just arrived in Reno! :D  RETWEET: 0 FAVORITE: 0
+bummer.  RETWEET: 0 FAVORITE: 0
+Relaxing in the hotel, waiting to watch battleship with my mom. All of the aliens!  RETWEET: 0 FAVORITE: 0
+do want. :D  RETWEET: 0 FAVORITE: 0
+Just arrived in Missoula!  3 days remaining.  RETWEET: 0 FAVORITE: 0
+thanks for pointing out the hack. Wouldn't have seen it til morning if not for a false fire alarm in my hotel  RETWEET: 0 FAVORITE: 0
+Driving through Montana really nice scenery  RETWEET: 0 FAVORITE: 0
+Well. My time has come. Tomorrow morning, I drive for the west.  RETWEET: 0 FAVORITE: 0
+bathe in the purifying light of the flame!  RETWEET: 0 FAVORITE: 0
+or it marks that fire good. /:D  RETWEET: 0 FAVORITE: 0
+Freaking love candles!  RETWEET: 0 FAVORITE: 0
+Bored and still waiting.  RETWEET: 0 FAVORITE: 0
+sounds like  in  RETWEET: 0 FAVORITE: 0
+I sense a new hash tag.  RETWEET: 0 FAVORITE: 0
+a great disturbance in the force was felt today. It felt like a planet of trolls cried.  RETWEET: 0 FAVORITE: 0
+I know how you feel!  RETWEET: 0 FAVORITE: 0
+congrats! Collision detection is always a pain the first time. :D  RETWEET: 0 FAVORITE: 0
+All you need is poni  RETWEET: 0 FAVORITE: 0
+Finally, the last of the car maintenance - installing new tires. So happy my dad works at continental automotive!  RETWEET: 0 FAVORITE: 0
+Looking forward to reading the book!  RETWEET: 0 FAVORITE: 0
+I wish I was. Doom was one of my favorite games growing up. Great designer behind some great games and ambition!  RETWEET: 0 FAVORITE: 0
+looking forward to it becoming number one again!  RETWEET: 0 FAVORITE: 1
+Almost done fixing up my car for the drive to California!  RETWEET: 0 FAVORITE: 0
+Changing mah breaks!  RETWEET: 0 FAVORITE: 0
+catching up on some railgun desu.  RETWEET: 0 FAVORITE: 0
+lookin forward to more b&b  RETWEET: 0 FAVORITE: 0
+dat setup  RETWEET: 0 FAVORITE: 0
+feels a little late. Much like this response.  RETWEET: 0 FAVORITE: 0
+This isn't even my final form.  RETWEET: 0 FAVORITE: 0
+Gotta shoot fast  RETWEET: 0 FAVORITE: 0
+Gotta puck fast!  RETWEET: 0 FAVORITE: 0
+So Gannon... We meet again.  RETWEET: 0 FAVORITE: 0
+Such manners! Always in the last place you look. Much like stockings.  RETWEET: 0 FAVORITE: 0
+This was hidden with my new graphics card!  RETWEET: 0 FAVORITE: 0
+I posted a new photo to Facebook  RETWEET: 0 FAVORITE: 0
+I posted a new photo to Facebook  RETWEET: 0 FAVORITE: 0
+  RETWEET: 0 FAVORITE: 0
+You mean that thing I ate wasn't a tootsie roll?  RETWEET: 0 FAVORITE: 0
+And here's the slither - the colors are almost finished, and after I wrap that up I'll be working on shading!  RETWEET: 0 FAVORITE: 0
+Allright - just finished tracing "the slither" - now to do a base color!  RETWEET: 0 FAVORITE: 0
+the beast cometh.  RETWEET: 0 FAVORITE: 0
+Alright. Going to make this beast into a full piece! Listening to  mixing for some new inspiration!  RETWEET: 0 FAVORITE: 0
+did someone mention pathfinder!? :D  RETWEET: 0 FAVORITE: 0
+Now I want it. Just for the greed factor.  RETWEET: 0 FAVORITE: 0
+The Elgin branch of  is full of people. I have a feeling they need more staff!  RETWEET: 0 FAVORITE: 0
+Just finished cleaning the apartment. Goodby, old abode!  RETWEET: 0 FAVORITE: 0
+Allen turner schooling the fighting team!  RETWEET: 0 FAVORITE: 0
+Mr bais of  enjoying last of the magi!  RETWEET: 0 FAVORITE: 0
+wut  RETWEET: 0 FAVORITE: 0
+was a good meeting!  RETWEET: 0 FAVORITE: 0
+An oldie butt a goodie   via  RETWEET: 0 FAVORITE: 0
+here is some vector math. May be helpful!  RETWEET: 0 FAVORITE: 1
+Something I drew earlier this year. A bored designer makes some interesting ideas!  RETWEET: 0 FAVORITE: 0
+The fog cometh.  RETWEET: 0 FAVORITE: 0
+  RETWEET: 0 FAVORITE: 0
+come on! e3 is a prime example of American beliefs! Capitalism, salesmanship, over promising-  RETWEET: 0 FAVORITE: 0
+call me shallow, but when we can enter that event as developers, I'll know we have made it.  RETWEET: 0 FAVORITE: 0
+my personal goal with our studio is to do my dream of makin awesome games and presenting at e3.  RETWEET: 0 FAVORITE: 0
+I guess now I can tell people about the job openly. Pic related.  RETWEET: 0 FAVORITE: 1
+I sense a disturbance in the  It's as if a parallel universe threw it's domain into our dimension...  RETWEET: 0 FAVORITE: 1
+well, at least we can deal with it during our first!  RETWEET: 0 FAVORITE: 0
+My the seat of my pants, I got   - and I didn't preorder!  RETWEET: 0 FAVORITE: 0
+I swear - this never dies. Time for the Shingeki No Can-Can!  via  RETWEET: 0 FAVORITE: 0
+Watching  on  -  is completely wrong on his katana's date! His  design wasn't invented until 1392!  RETWEET: 0 FAVORITE: 0
+don't see this everyday. Met these wubwubs Omy from studying sound design.  RETWEET: 0 FAVORITE: 0
+Looking forward to  this year.    blow our minds with awesome cool stuff!  RETWEET: 0 FAVORITE: 0
+I dont care about better graphics anymore. Hell, just give me a better UI + social network interface and I'm interested.  RETWEET: 0 FAVORITE: 0
+What did it beat specifically? You have me curious!  RETWEET: 0 FAVORITE: 0
+Unless they can swoon me with free swag and logic, I'm sticking with my PC well into the first two years.  RETWEET: 0 FAVORITE: 0
+I wonder where all the hero video-games are. That's a good market right about now, with  movies and  movies.  RETWEET: 0 FAVORITE: 0
+I've learned to be quiet about top-secret game dev stuff but I admit - I will /really/ enjoy the point where I can talk openly!  RETWEET: 0 FAVORITE: 0
+tends to cause my sleep schedule to go out of whack too. One of the reasons I don't play it much for now.  RETWEET: 0 FAVORITE: 0
+been playing fallout 2 - I've finally found the one that captures my heart! Dat old school feel.  RETWEET: 0 FAVORITE: 0
+wait, what game?!? O.o  RETWEET: 0 FAVORITE: 0
+That feeling you get when you forget you can remove the disc causing you trouble.  RETWEET: 0 FAVORITE: 0
+just read your article. It was great! I liked the particular detail you have by showing the designed that didn't meet expectation  RETWEET: 0 FAVORITE: 1
+Ah. Good point. I enjoy it as a community thing, and I do find the salesmanship to be shallow, but it is a good way to analyze market trends  RETWEET: 0 FAVORITE: 0
+what's wrong with E3 in your opinion?  RETWEET: 0 FAVORITE: 0
+how is it so far?  RETWEET: 0 FAVORITE: 0
+looking forward to reading it!  RETWEET: 0 FAVORITE: 1
+Looking forward to the fresh cut fusion gamejam tonight!  RETWEET: 0 FAVORITE: 0
+Crazy as it sounds, I want  to include a cloud service that would make sharing characters easier!  RETWEET: 0 FAVORITE: 0
+Aaaand my desktop has been reformatted. now for the re-installation dance, complete with Nanami-chan~.  RETWEET: 0 FAVORITE: 0
+Looks like I Need to format my desktop.  RETWEET: 0 FAVORITE: 0
+Huh. Well, this is news my dad, a  would enjoy.  RETWEET: 0 FAVORITE: 0
+Second final finished - break time!  RETWEET: 0 FAVORITE: 0
+And a cool mouse!  RETWEET: 0 FAVORITE: 0
+Was bored in class so I drew my dnd monk weapon - complete with wrist guard!  RETWEET: 0 FAVORITE: 0
+look what my school Barnes and nobles has in stock!  RETWEET: 0 FAVORITE: 0
+I enjoy my sound design course, but this final project requires so much time to get right...  RETWEET: 0 FAVORITE: 0
+My spidey sense is tingling - I forsee a positive  in our near future.  RETWEET: 0 FAVORITE: 0
+OHMYGODOHMYGODOHMYGODOHMYGOD!!!!!!!!!!  RETWEET: 0 FAVORITE: 1
+Long time no talk! How are you two doing?  RETWEET: 0 FAVORITE: 0
+Love it!  RETWEET: 0 FAVORITE: 0
+I always said that the 'net is the new wild west. Now that it's being settled and established in  I feel like an old cowboy.  RETWEET: 0 FAVORITE: 0
+Agreed! C&C for mobile!  RETWEET: 0 FAVORITE: 0
+That website link gets me a 404. Forwarding issues?  RETWEET: 0 FAVORITE: 0
+Do you have any recommendations for version control for a small, indie dev team?  RETWEET: 0 FAVORITE: 0
+Spent my morning thinking of how to procedurally generate puzzles. And then it hit me - it rides on art development!  RETWEET: 0 FAVORITE: 0
+Just read Gamasutra's article on how Xbox One's publishing is going to affect developers.  RETWEET: 0 FAVORITE: 0
+I still want to wear a labcoat while I'm at work. Even if I don't do science, I do work in the field of fun research and development!  RETWEET: 0 FAVORITE: 0
+Speaking of shirts - we need shirts.  RETWEET: 0 FAVORITE: 0
+I swear, my sound design course is intended to give me migraines.  RETWEET: 0 FAVORITE: 0
+Upcoming Gamejam!  RETWEET: 0 FAVORITE: 0
+You know your a workaholic when your standard meal plan has two meals a day, along with soda when at work.  RETWEET: 0 FAVORITE: 0
+I swear, that was the darkest chapter I have written ever.  RETWEET: 0 FAVORITE: 0
+So I decided to publish the Prologue of Chronicles of Siligas.  RETWEET: 0 FAVORITE: 0
+So, I wrote a prologue to my DND story but I'm hesitant to publish it 'cause it's highly graphic. Thoughts?  RETWEET: 0 FAVORITE: 0
+Good Morning. Currently in my Mass Communications class. :D  RETWEET: 0 FAVORITE: 0
+Spent my holiday playing  3,  and  Good times!  RETWEET: 0 FAVORITE: 0
+Tweeting. Tweeting never changes.  RETWEET: 0 FAVORITE: 0
+Time to celebrate Memorial day - by playing  3!  RETWEET: 0 FAVORITE: 0
+Aww man - only halfway with the update, and I'm already out of puppy pictures!  RETWEET: 0 FAVORITE: 0
+Kitteh!  RETWEET: 0 FAVORITE: 0
+I wonder why  like to lick couches...  RETWEET: 0 FAVORITE: 0
+Bella knows what must be done - Assuming direct control!  RETWEET: 0 FAVORITE: 0
+has a lot on her mind.  RETWEET: 0 FAVORITE: 0
+The games you find in  RETWEET: 0 FAVORITE: 0
+Brookie taking a nap as well!  RETWEET: 0 FAVORITE: 0
+Daisy taking a little nap.  RETWEET: 0 FAVORITE: 0
+Adorable  Image dump starting now... until my  Game finishes updating!  RETWEET: 0 FAVORITE: 0
+I really want to start writing a  based on my  group.  RETWEET: 0 FAVORITE: 0
+and the old puppers brookie!  RETWEET: 1 FAVORITE: 0
+Daisy wants to cuddle!  RETWEET: 1 FAVORITE: 1
+Almost forgot: my personal favorite so far  RETWEET: 0 FAVORITE: 0
+You should check out the powerpoint doc - I think we're pretty set on art for now, until you start throwing DLC concepts at me.  RETWEET: 0 FAVORITE: 0
+I posted a new photo to Facebook  RETWEET: 0 FAVORITE: 0
+I posted a new photo to Facebook  RETWEET: 0 FAVORITE: 0
+Ready for the cuteness of  RETWEET: 0 FAVORITE: 0
+I posted a new photo to Facebook  RETWEET: 0 FAVORITE: 0
+I posted a new photo to Facebook  RETWEET: 0 FAVORITE: 0
+I posted a new photo to Facebook  RETWEET: 0 FAVORITE: 0
+I posted a new photo to Facebook  RETWEET: 0 FAVORITE: 0
+Dropping adorableness payload in 3...2....1-  RETWEET: 0 FAVORITE: 0
+As a friend put it, " the future is now."  RETWEET: 0 FAVORITE: 0
+Watching  Remember - when in doubt,  RETWEET: 0 FAVORITE: 0
+  RETWEET: 0 FAVORITE: 0
+All of my YES  RETWEET: 0 FAVORITE: 0
+So, who's thinking about going to the  booth that will be in the parking lot across the street from  RETWEET: 0 FAVORITE: 0
+remember - when in doubt, rifle it out!  RETWEET: 0 FAVORITE: 0
+sounds interesting!  RETWEET: 0 FAVORITE: 0
+Apparently 30% of  online revenue in 2012 and 2011 was Consumable virtual goods.  RETWEET: 0 FAVORITE: 0
+Metric for the  -  - Daily Active User. The things you learn from Zynga!  RETWEET: 0 FAVORITE: 0
+I should really flesh out this idea I have regarding expanding a  Game beyond the tabletop with an app/game...  RETWEET: 0 FAVORITE: 0
+So how's  treating you? ;D  RETWEET: 0 FAVORITE: 0
+I know, right? I've had this account, but haven't given it much use. I swear, my  really got me into using Twitter again.  RETWEET: 0 FAVORITE: 0
+the general rule of marketing for  is around 19%. Mobile, done after development and publications. Make sure it floats!  RETWEET: 0 FAVORITE: 1
+- Guess who!  RETWEET: 0 FAVORITE: 0
+Wow,  , you have been rolling out the good news this week! Please, keep it up.  RETWEET: 0 FAVORITE: 0
+It seems all we're talking about today in  is  and microtransactions. Sorry  you were a brief topic.  RETWEET: 0 FAVORITE: 0
+We're breaking down the LOL growth - 5% of Taiwan was playing  at one point. Crazy, right?  RETWEET: 0 FAVORITE: 0
+In one of my last  course - I'm going to miss this course!  RETWEET: 0 FAVORITE: 0
+Last quarter in college, and I'm already designing the first two games I'll be working on.  RETWEET: 0 FAVORITE: 1
+I love Game Dev Story, but I really wish the UI was more suited for my iPhone 5  RETWEET: 0 FAVORITE: 0
+Looking forward to it!  RETWEET: 0 FAVORITE: 0
+Thanks for the recommendations! I'll definitely keep that in mind.  RETWEET: 0 FAVORITE: 0
+I hate feeling sick on a day I want to work...  RETWEET: 0 FAVORITE: 0
+Amazing how the  is making such strong feelings.  I'm curious to see the prices. :D  RETWEET: 0 FAVORITE: 0
+Gamasutra - News - Opinion: Xbox One is a desperate prayer to stop time:  RETWEET: 0 FAVORITE: 0
+I swear, nobody is talking about free  Mobile Development? It deserves some of the spotlight,  RETWEET: 0 FAVORITE: 0
+Hey, hey - no  on Twitter.  RETWEET: 0 FAVORITE: 0
+The more I read up on the  the more it intrigues me /and/ worries me...  RETWEET: 0 FAVORITE: 0
+not sure Nintendo would make that deal. I got my 3ds for  anyways!  RETWEET: 0 FAVORITE: 1
+I originally found your article on  and I just got a iPhone to study the games- going to be doing mobiledev soon too!  RETWEET: 0 FAVORITE: 0
+how is licensing going to be done with the  RETWEET: 0 FAVORITE: 1
+I swear, being a computer enthusiast is a pain during new console announcements. Nobody gives me the detail of the specs that I want!  RETWEET: 0 FAVORITE: 0
+RT  The  has officially been revealed. 
+What do you think about the games and features announced?  RETWEET: 8 FAVORITE: 0
+The one thing that worries me is hardware; they have alot of ram and a lot of cores on their processor, but what about speed?  RETWEET: 0 FAVORITE: 0
+That is awesome! :D  RETWEET: 0 FAVORITE: 0
+Soon I'll be posting a link to Last of the Magi, a game I've been working on with a team since the beginning of the year!  RETWEET: 0 FAVORITE: 0
+Agreed!  RETWEET: 0 FAVORITE: 0
+So what's the processor speed? :D  RETWEET: 0 FAVORITE: 0
+Just took a look. Interesting article, but I haven't found a line explaining the processor clock speed.  RETWEET: 0 FAVORITE: 0
+It does look powerful, but until they announce the processor clock speed, I'm hesitant.  RETWEET: 0 FAVORITE: 0
+- Absolutely love Nameless! A surprisingly robust game that is absolutely amazing!  RETWEET: 0 FAVORITE: 0
+So -  eh? Suprising. I thought they would go with  I have a feeling XboxOne will be a confusing name for collectors...  RETWEET: 0 FAVORITE: 0
+Build imminent!  RETWEET: 0 FAVORITE: 0
+Watching some  - catching up on this awesome series.  RETWEET: 0 FAVORITE: 0
+I still firmly believe the invention of  occurred when a man realized he could shout the loudest.  RETWEET: 0 FAVORITE: 0
+- so many feels. soo many feels.  RETWEET: 0 FAVORITE: 0
+That awkward feeling when you want to play a game, but don't know what you want to play.  RETWEET: 0 FAVORITE: 0
+Just applied to  studio. My inner fanboy is squee-ing!  RETWEET: 0 FAVORITE: 0
+I havent been this fired up by a manga in over a year! SUBARASHIIII!!!  RETWEET: 0 FAVORITE: 0
+Denpa Kyoushi is a great manga! A good mix of NEET and nerdy endeavors targeted towards an interesting audience!  RETWEET: 0 FAVORITE: 0
+3回失敗しちゃったけど、10.90秒でマミさんは復活したよ。よかったね。 (Touch)  RETWEET: 0 FAVORITE: 0
+Why was this cancelled? D:  RETWEET: 0 FAVORITE: 0
+Interesting read. I like it!  RETWEET: 0 FAVORITE: 0
+Applied to a Tech Artist position at  - Oh, the suspense!  RETWEET: 0 FAVORITE: 0
+Just spent the last hour weeding through Job prospects. Stress disorder, commence the stressing!  RETWEET: 0 FAVORITE: 0
+I find it rather amusing that I have a digital audio playing through an optical cable. I'm playing the speed of sound at the speed of light.  RETWEET: 0 FAVORITE: 0
+Agreed. I look back now and thing "What the hell was I thinking!?"  RETWEET: 0 FAVORITE: 0
+I'm dancing like a buffoon simply because I've gotten two paddles for pong moving and respecting court boundaries through pure code. xD  RETWEET: 0 FAVORITE: 0
+Yeah - that demand is pretty outrageous. I completely understand.  RETWEET: 0 FAVORITE: 0
+That feeling when you know there is an issue in your code, know what the problem is, but don't know how to fix it.  RETWEET: 0 FAVORITE: 0
+>Doesn't panic over mid term test
+>Flips the panic button on homework  RETWEET: 0 FAVORITE: 0
+QE, you are a nice system, but you drive me up the wall with your lack of comprehensive documentation.  RETWEET: 0 FAVORITE: 0
+send me a copy! You should know my email by now. :p  RETWEET: 0 FAVORITE: 0
+Tonari no kaibutsu-kun - I think I love this anime.  RETWEET: 0 FAVORITE: 0
+Blog « Chicago Game Jam Chicago Game Jam  RETWEET: 0 FAVORITE: 0
+Looks like someone shouted in the 3rd to last image!  RETWEET: 0 FAVORITE: 0
+Looks amazing! Hunter mode will use balancing, like better weapons for Cell Operatives as it progresses. Looks amazing!  RETWEET: 0 FAVORITE: 0
+Finally went back to  Sorry  but your remaining bugs keep messing with me.  RETWEET: 0 FAVORITE: 0
+We from ADHD don't endorse Robot Orphanage Destruction. We did, however, find it hilarious.  RETWEET: 0 FAVORITE: 0
+I don't think we hallucinated at all - It was an amazing experience!  RETWEET: 0 FAVORITE: 0
+You should show them the game. That might explain things.  RETWEET: 0 FAVORITE: 0
+How I feel about my midterms. I usually avoid posponing work, but the Chicago Game Jam was worth it!  RETWEET: 2 FAVORITE: 0
+I'm stuck in a computer lab and I can't stop working until we finish the game!  RETWEET: 0 FAVORITE: 0
+Note to self - never carry 40+ pounds of groceries for a half a mile ever again.  RETWEET: 0 FAVORITE: 0
+A friend has a bug in Border2 in which he can't join games, but is still online and still hosting his own server - thoughts?  RETWEET: 0 FAVORITE: 0
+Who wants some Gangnam Han Solo Style?:  via  RETWEET: 0 FAVORITE: 0
+Whatever happened to love and tolerate? There are so many Bronies and Pegasisters not acting with love and tolerance these days.  RETWEET: 0 FAVORITE: 0
+it's been a year since  started - we are so near the finish line, we're talking about releasing it to the general public!  RETWEET: 0 FAVORITE: 0
+I could see it being a game for change - making interactions with new people easy, in person and fun!  RETWEET: 0 FAVORITE: 0
+OYAKATA-SAMA!  RETWEET: 0 FAVORITE: 0
+Love it!  RETWEET: 0 FAVORITE: 0
+I'd love to work for you, but I have to finish my last year at DePaul. D:  RETWEET: 0 FAVORITE: 0
+Wake up and panic about a class that hasn't started yet. Yup, I'm still me.  RETWEET: 0 FAVORITE: 0
+looks interesting. Can't wait to hear/see more in the time to come!  RETWEET: 0 FAVORITE: 0
+What is better for mobile development? unity or UDK? I can't decide even after using both for over a year.  RETWEET: 0 FAVORITE: 0
+yes! Now we just need to figure out a effecient way to make him run!  RETWEET: 0 FAVORITE: 0
+I love the pimp my dorm sweeps! Computer science majors salute you across the us!  RETWEET: 0 FAVORITE: 0
+Working on revamping my website - This portfolio is going to look great!  RETWEET: 0 FAVORITE: 0
+you can only imagine how good I feel about this new source of income. if you value your future you will check this out  RETWEET: 0 FAVORITE: 0
+good luck with bf4. Development is always a handful.  RETWEET: 0 FAVORITE: 0
+Thanks for the suggestion - I'll forward it to our producer.  RETWEET: 0 FAVORITE: 0
+Zombie Yoga - Almost there!  RETWEET: 0 FAVORITE: 0
+Nothing like  and  planning.  RETWEET: 0 FAVORITE: 0
+Huh. The internet isn't down.  seems that you were just paranoia. If you did crash something, I don't see it!  RETWEET: 0 FAVORITE: 0
+Rorschach's journal, October 12th 1985. Adorable Puppy in alley this morning. I pet it. The city is loves me. I have seen it's true face.  RETWEET: 0 FAVORITE: 0
+Weekend development crunch. Glorious fun! :D  RETWEET: 0 FAVORITE: 0
+Quick - TO THE INTERNET!  RETWEET: 0 FAVORITE: 0
+Documenting gameplay information, watching a TV show on netflix and drinking some Mtn Dew. I love this night.  RETWEET: 0 FAVORITE: 0
+Time to battle Bugs, Design errors, Art asset issues. Let me get my +3 Axe!  RETWEET: 0 FAVORITE: 0
+Thanks! I love 3DS Max, but I'm not a big fan of the changes they made to UVW unwrapping from the 2011 build to 2012.  RETWEET: 0 FAVORITE: 0
+A good Game Designer doesn't just design the game - she continues to improve it while she can, while keeping in mind the system in place.  RETWEET: 0 FAVORITE: 0
+Bleh - felt sick today. Sat around, finished Ghost in the Shell - Standalone, and did some modeling. I missed 3DS Max!  RETWEET: 0 FAVORITE: 0
+Will do - I'm sure our Producer would love to ask some questions about P4V. I just wish it meshed better with Unity 3D.  RETWEET: 0 FAVORITE: 0
+About a year ago my friend Kenshiro3 posted this - I wonder if you've seen it?  RETWEET: 0 FAVORITE: 0
+Well, time to give Google Chrome a test for the first time in a long time.  RETWEET: 0 FAVORITE: 0
+And now Netflix won't let me rewatch Doctor Who... I think this is a sign I've watched enough Live Action TV for a bit.  RETWEET: 0 FAVORITE: 0
+Perforce - a very expensive program that likes to crash on occasion. Goodie Goodie Gumdrops!  RETWEET: 0 FAVORITE: 0
+I just prevented galactic war by modifying a communications tower into a Tesla coil. What did you do for your Friday night?  RETWEET: 0 FAVORITE: 0
+It seems my 'refurbished' 3Ds had a dead charger and the left shoulder button is broken. Now I know where not to shop.  RETWEET: 0 FAVORITE: 0
+It's sacrifice will be remembered! In all seriousness, I hope it goes well!  RETWEET: 0 FAVORITE: 0
+This song keeps popping up in design meetings I'm at! I swear, everyone loves the 80's!  RETWEET: 0 FAVORITE: 0
+- Thanks for giving me a broken 3DS charger with my refurbished 3DS today. This is why I don't like buying things from you.  RETWEET: 0 FAVORITE: 0
+Zelda - Ocarina of Time is great on the 3DS - the 3D aspect, though, feels very odd at times.  RETWEET: 0 FAVORITE: 0
+Do you believe in magic?  great job! I always knew she was a girl!  RETWEET: 0 FAVORITE: 0
+Catching up on some anime at the moment - Sankarea is better than I thought!　オモシロイ！  RETWEET: 0 FAVORITE: 0
+Zombie Yoga is going through some design changes. I'm curious if everyone will love it - We at Lab 707 think it's awesome!  RETWEET: 0 FAVORITE: 0
+I would join, but it's full! D:  RETWEET: 0 FAVORITE: 0
+ME3 extended cut DLC is out. As crazy as it sounds I liked the original ending. Hopefully the hater's hate less.  RETWEET: 0 FAVORITE: 0
+That feeling when you're sick and you still want to do work.  RETWEET: 0 FAVORITE: 0
+Time to relax tonight after the trip to NY - hello Avatar: The last Airbender! It's been so long! ．ｗ．  RETWEET: 0 FAVORITE: 0
+The train has hit outer Chicago. Hello internet!  RETWEET: 0 FAVORITE: 0
+New York feels like a steamer.  RETWEET: 0 FAVORITE: 0
+Checking out of our hotel. Were going to visit the Nintendo store after breakfast!  RETWEET: 0 FAVORITE: 0
+I know the feeling. This second iteration to train jam will be awesome!  RETWEET: 0 FAVORITE: 0
+can't wait to see your next work! Way was a great game. It makes me wonder what your new studio will tackle!  RETWEET: 0 FAVORITE: 1
+Aaaaand done setting up my LinkedIn Account! For now. > . >  RETWEET: 0 FAVORITE: 0
+I just joined LinkedIn and created my professional profile. Join my network.  RETWEET: 0 FAVORITE: 0
+Why do EA reps rip on steam? If you set a price right the game will sell well. Heck, look - origin is doing the same! Don't fight!  RETWEET: 0 FAVORITE: 0
+Thanks for all the adivce on Zombie Yoga! Can't wait to get back to Lab 707 and make it better!  RETWEET: 0 FAVORITE: 0
+best Twitter is excessive Twitter.  RETWEET: 0 FAVORITE: 0
+I don't always play Diablo 3, but when I do I Error33.  RETWEET: 0 FAVORITE: 0

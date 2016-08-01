@@ -14,6 +14,7 @@ class PatternAnalyzer extends MarkovThreeState {
 	//may take a while
 	PatternAnalyzer(ArrayList<String> lines)
 	{
+		
 		for(String s: lines)
 			knownSentences.add(s);
 		
@@ -21,7 +22,9 @@ class PatternAnalyzer extends MarkovThreeState {
 		AnalyzerHelper();
 	}
 	
-	//TODO - TEST
+
+	
+	//TODO - ISSUE! I think.
 	private void AnalyzerHelper()
 	{
 		
