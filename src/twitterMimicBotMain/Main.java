@@ -121,6 +121,7 @@ public class Main {
 							ArrayList<String> collectedData = fileManager.getAllFilesContent();
 							
 							
+							
 							//   use the following block only for testing.
 							//////////////////////////////////////////////
 //							System.out.println("Printing collective data for verification.");
@@ -130,8 +131,27 @@ public class Main {
 //							}
 							//////////////////////////////////////////////
 							
-							WeightedPatternAnalyzer PA = new WeightedPatternAnalyzer(collectedData);
+							WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
 							
+							if(pa.markovChain.markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
+							
+							Set<String> keys = pa.markovChain.markovChain.keySet();
+							
+//							NOTE: Used for Showing storage within markov chain!
+							for(String key: keys)
+							{
+								System.out.print(key + " : ");
+								Vector<String[]> tempStringVec = pa.markovChain.markovChain.get(key);
+								for(String[] s : tempStringVec)
+								{
+									for(int i = 0; i < s.length; i++)
+										System.out.print(s[i] + " ");
+									
+									System.out.print(" :: ");
+								}
+								
+								System.out.println("");
+							}
 							
 						} catch (IOException e) {
 							System.out.println("An error occured while reading the collective data from the HDD.");
@@ -146,7 +166,7 @@ public class Main {
 						break;
 					}
 					
-					
+	
 					
 
 					
