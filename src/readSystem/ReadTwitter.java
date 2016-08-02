@@ -168,10 +168,10 @@ public class ReadTwitter implements Reader{
 	for(Status s: statusTemp)
 	{
 		StringBuilder newStr = new StringBuilder();
-		
-		if(s.getText().contains("\n")) System.out.println(s.getText());
+		String text = s.getText();
+//		if(s.getText().contains("\n")) System.out.println(s.getText());
 		// if it is a retweet or has a new line, ignore.
-		if(!s.getText().contains("RT") || s.getText().contains("\n"))
+		if(!text.contains("RT ") && !text.contains("\n") && !text.contains("#") && !text.contains("@"))
 		{
 		newStr.append(sentenceCleaning(s, hashtag, atUser));
 		

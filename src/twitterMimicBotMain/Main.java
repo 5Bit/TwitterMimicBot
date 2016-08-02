@@ -138,6 +138,7 @@ public class Main {
 							Set<String> keys = pa.markovChain.markovChain.keySet();
 							
 //							NOTE: Used for Showing storage within markov chain!
+							// Comment out rather than delete.
 							for(String key: keys)
 							{
 								System.out.print(key + " : ");
@@ -216,6 +217,13 @@ public class Main {
 	public static ArrayList<String> dlTwitAccUpdatesToFile(String[] targetAccounts, String newHash, String newUserTarget)
 	{
 		ArrayList<String> returnStringArray = new ArrayList<String>();
+		
+//		System.out.print("\nVerify you have entered the following data into the config.txt file that came with this program.");
+//		System.out.println("\nConsumer key");
+//		System.out.println("Consumer Secret");
+//		System.out.println("OAuthTokenKey");
+//		System.out.println("OAuthTokenSecret");
+//		pressAnyKeyToContinue();
 		for(String target: targetAccounts)
 		{
 			System.out.println("Downloading " + target + " information.");
@@ -240,12 +248,7 @@ public class Main {
 	
 	public static ConfigurationBuilder enterAccessData()
 	{
-		System.out.print("\nVerify you have entered the following data into the config.txt file that came with this program.");
-		System.out.println("\nConsumer key");
-		System.out.println("Consumer Secret");
-		System.out.println("OAuthTokenKey");
-		System.out.println("OAuthTokenSecret");
-		pressAnyKeyToContinue();
+
 		String[] configData = null;
 		try {
 			configData = readConfigFile();
@@ -255,10 +258,10 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Consumer key: " + configData[0]);
-		System.out.println("Consumer Secret: " + configData[1]);
-		System.out.println("OAuthTokenKey: " + configData[2]);
-		System.out.println("OAuthTokenSecret: " + configData[3]);
+//		System.out.println("Consumer key: " + configData[0]);
+//		System.out.println("Consumer Secret: " + configData[1]);
+//		System.out.println("OAuthTokenKey: " + configData[2]);
+//		System.out.println("OAuthTokenSecret: " + configData[3]);
 		
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 	    cb.setDebugEnabled(true)
@@ -311,7 +314,7 @@ public class Main {
 	
 	public static void pressAnyKeyToContinue()
 	{
-		System.out.println("Press any key and press enter to continue...");
+		System.out.println("Press enter to continue...");
 		try
 		{
 			System.in.read();
