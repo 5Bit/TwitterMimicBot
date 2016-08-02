@@ -31,7 +31,7 @@ public class WeightedPatternAnalyzer {
 			if(s.contains("RETWEET"))
 			{
 			String temp[] = s.split(" ");
-			int currentPos = 1;
+			int currentPos = 0;
 			StringBuilder sentence = new StringBuilder();
 			// add start identifier
 			sentence.append(strtIdentifier + " ");
@@ -124,6 +124,7 @@ public class WeightedPatternAnalyzer {
 				
 				if(i == 0)
 				{
+//					if(temp.length >= 3) System.out.println("0 is " + temp[0] + " 1 is " + temp[1] +" 2 is "+ temp[2]);
 					// getting the first part of the sentence
 					// start doesn't need a weight... it always needs to occur.
 					Vector<String[]> start = new Vector<String[]>();
@@ -133,19 +134,45 @@ public class WeightedPatternAnalyzer {
 						start = markovChain.markovChain.get(strtIdentifier);
 					}
 					
-					//TODO - exception for if the sentence has only one word.
-					// __STRT WordHere
-					String[] tempArray = {temp[i], temp[i+1]};
+					//TODO exception for if the sentence has only one word.
+					//TODO - FIX!
+					// __STRT i+1 i+2
+					// if it only has one word...
+					if(temp[0].equals("Test") || temp[1].equals("Test"))
+						System.out.println("Test length is: " + temp.length);
+						
+					
+					if(temp.length == 3)
+					{
+						String[] tempArray = {temp[i+1], endIdentifier};
+						String[] suffArray = {endIdentifier, endIdentifier};
+						start.add(tempArray);
+						Vector<String[]> end = new Vector<String[]>();
+						// if there is an end item already
+						if(markovChain.markovChain.get(endIdentifier) != null)
+						{
+							end = markovChain.markovChain.get(endIdentifier);
+						}
+						end.add(suffArray);
+						markovChain.markovChain.put(endIdentifier, end);
+						markovChain.markovChain.put(strtIdentifier, start);
+						break;
+					}
+
+					String[] tempArray = {temp[i+1], temp[i+2]};
+					
+					
+					
 					start.add(tempArray);
 					
-					Vector<String[]> suff = markovChain.markovChain.get(temp[i]);
+					Vector<String[]> suff = markovChain.markovChain.get(temp[i+1]);
 					if(suff == null)
 					{
 						suff = new Vector<String[]>();
-						String[] suffTemp = {temp[i], temp[i+1]};
+						String[] suffTemp = {temp[i+1], temp[i+2]};
 						suff.add(suffTemp);
 						markovChain.markovChain.put(strtIdentifier, start);
-						markovChain.markovChain.put(temp[i], suff);
+						markovChain.markovChain.put(temp[i+1], suff);
 					}
 				}
 				else if(i == temp.length-2)
