@@ -35,7 +35,6 @@ public class WeightedPatternAnalyzer {
 			StringBuilder sentence = new StringBuilder();
 			// add start identifier
 			sentence.append(strtIdentifier + " ");
-
 			while(!temp[currentPos].contains("RETWEET:"))
 			{
 //				System.out.print(temp[currentPos]);
@@ -138,10 +137,10 @@ public class WeightedPatternAnalyzer {
 					//TODO - FIX!
 					// __STRT i+1 i+2
 					// if it only has one word...
-					if(temp[0].equals("Test") || temp[1].equals("Test"))
-						System.out.println("Test length is: " + temp.length);
+//					if(temp[0].equals("Test") || temp[1].equals("Test"))
+//						System.out.println("Test length is: " + temp.length);
 						
-					
+					//TODO - test.
 					if(temp.length == 3)
 					{
 						String[] tempArray = {temp[i+1], endIdentifier};

@@ -153,7 +153,7 @@ public class ReadTwitter implements Reader{
 		}
 		
 		
-		return cleanedData.toString().trim() + " ";
+		return cleanedData.toString().trim();
 	}
 	
 	public String saveToFile()
