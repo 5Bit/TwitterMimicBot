@@ -133,16 +133,18 @@ public class Main {
 							
 							WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
 							
-							if(pa.markovChain.markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
+							if(pa.markChain.markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
 							
-							Set<String> keys = pa.markovChain.markovChain.keySet();
+							Set<String> keys = pa.markChain.markovChain.keySet();
 							
 //							NOTE: Used for Showing storage within markov chain!
+							// modified to see the weights as well.
 							// Comment out rather than delete.
 							for(String key: keys)
 							{
-								System.out.print(key + " : ");
-								Vector<String[]> tempStringVec = pa.markovChain.markovChain.get(key);
+								System.out.print(pa.markChain.weightHashTable.get(key.hashCode()) + "| " + key + " : ");
+								Vector<String[]> tempStringVec = pa.markChain.markovChain.get(key);
+								
 								for(String[] s : tempStringVec)
 								{
 									for(int i = 0; i < s.length; i++)
@@ -153,6 +155,8 @@ public class Main {
 								
 								System.out.println("");
 							}
+							
+							
 							
 						} catch (IOException e) {
 							System.out.println("An error occured while reading the collective data from the HDD.");

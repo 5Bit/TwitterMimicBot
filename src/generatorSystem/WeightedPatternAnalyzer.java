@@ -11,7 +11,7 @@ public class WeightedPatternAnalyzer {
 	String strtIdentifier = "__STRT";
 	String endIdentifier = "__END";
 	int retweetModifier = 2;
-	public WeightedThreeStateMarkovChain markovChain = new WeightedThreeStateMarkovChain();
+	public WeightedThreeStateMarkovChain markChain = new WeightedThreeStateMarkovChain();
 	
 	public ArrayList<String> knownWords = new ArrayList<String>();
 	// holds each sentence's retweet and favorite counts.
@@ -46,7 +46,7 @@ public class WeightedPatternAnalyzer {
 			// add end identifier
 			sentence.append(endIdentifier);
 			
-			markovChain.knownSentences.add(sentence.toString().trim());
+			markChain.knownSentences.add(sentence.toString().trim());
 //			parsedLines.add(sentence.toString().trim());
 			currentPos++;
 			int retweetCount = Integer.parseInt(temp[currentPos]);
@@ -88,14 +88,14 @@ public class WeightedPatternAnalyzer {
 			int hashCode = sentence[i].hashCode();
 			int modifier = (retweetCount * retweetModifier) + favoriteCount + 1;
 			// if it does not contain the word...
-			if(markovChain.weightHashTable.get(hashCode) == null)
+			if(markChain.weightHashTable.get(hashCode) == null)
 			{
-				markovChain.weightHashTable.put(hashCode, modifier);
+				markChain.weightHashTable.put(hashCode, modifier);
 			}
 			else // if it does contain the word, add and replace val.
 			{
-				int currentVal = markovChain.weightHashTable.get(hashCode) + modifier;
-				markovChain.weightHashTable.replace(hashCode, currentVal);
+				int currentVal = markChain.weightHashTable.get(hashCode) + modifier;
+				markChain.weightHashTable.replace(hashCode, currentVal);
 			}
 		}
 	}
@@ -103,7 +103,7 @@ public class WeightedPatternAnalyzer {
 	private void AnalyzerHelper(ArrayList<Integer> retweetCounts, ArrayList<Integer> favoriteCounts)
 	{
 		int currentSentenceNum = 0;
-		for(String sentence: markovChain.knownSentences)
+		for(String sentence: markChain.knownSentences)
 		{
 			//TODO - create the markov chains in here!
 			
@@ -127,42 +127,57 @@ public class WeightedPatternAnalyzer {
 					// start doesn't need a weight... it always needs to occur.
 					Vector<String[]> start = new Vector<String[]>();
 					
-					if(markovChain.markovChain.get(strtIdentifier) != null)
+					if(markChain.markovChain.get(strtIdentifier) != null)
 					{
-						start = markovChain.markovChain.get(strtIdentifier);
+						start = markChain.markovChain.get(strtIdentifier);
 					}
+					
+					
 					
 					// exception for sentences with one word only.
 					if(temp.length == 3)
 					{
 						String[] tempArray = {temp[i+1], endIdentifier};
 						String[] suffArray = {endIdentifier, endIdentifier};
-						start.add(tempArray);
-						Vector<String[]> end = new Vector<String[]>();
-						// if there is an end item already
-						if(markovChain.markovChain.get(endIdentifier) != null)
+						
+						// if the item being added is not within the vector, add it!
+						if(!doesMarkovContains(temp[i], tempArray))
 						{
-							end = markovChain.markovChain.get(endIdentifier);
+							start.add(tempArray);
+							Vector<String[]> end = new Vector<String[]>();
+							// if there is an end item already
+							if(markChain.markovChain.get(endIdentifier) != null)
+							{
+								end = markChain.markovChain.get(endIdentifier);
+							}
+							end.add(suffArray);
+							markChain.markovChain.put(endIdentifier, end);
+							markChain.markovChain.put(strtIdentifier, start);
+							break;
 						}
-						end.add(suffArray);
-						markovChain.markovChain.put(endIdentifier, end);
-						markovChain.markovChain.put(strtIdentifier, start);
-						break;
 					}
+					
+					
 
 					String[] tempArray = {temp[i+1], temp[i+2]};
 					
-					start.add(tempArray);
-					
-					Vector<String[]> suff = markovChain.markovChain.get(temp[i+1]);
-					if(suff == null)
+					// if the array being added is not within the vector, add it!
+					if(!doesMarkovContains(temp[i], tempArray))
 					{
-						suff = new Vector<String[]>();
-						String[] suffTemp = {temp[i+1], temp[i+2]};
-						suff.add(suffTemp);
-						markovChain.markovChain.put(strtIdentifier, start);
-						markovChain.markovChain.put(temp[i+1], suff);
+						start.add(tempArray);
+						
+						Vector<String[]> suff = markChain.markovChain.get(temp[i+1]);
+						if(suff == null)
+						{
+							suff = new Vector<String[]>();
+							String[] suffTemp = {temp[i+1], temp[i+2]};
+							suff.add(suffTemp);
+							markChain.markovChain.put(strtIdentifier, start);
+							markChain.markovChain.put(temp[i+1], suff);
+						}
 					}
+					
+					
 				}
 				else if(i == temp.length-2) // if the end...
 				{
@@ -172,36 +187,47 @@ public class WeightedPatternAnalyzer {
 //					System.out.println(temp[i] +" will hold" + temp[i+1] + "and " + endIdentifier);
 					String[] tempEnd = {temp[i+1], endIdentifier};
 					
-					if(markovChain.markovChain.get(tempEnd) != null)
+					// The ending being added is not within the vector, add it!
+					if(!doesMarkovContains(temp[i], tempEnd))
 					{
-						endOfSentence = markovChain.markovChain.get(tempEnd);
+						
+						if(markChain.markovChain.get(tempEnd) != null)
+						{
+							endOfSentence = markChain.markovChain.get(tempEnd);
+						}
+						
+						endOfSentence.add(tempEnd);
+						
+						markChain.markovChain.put(temp[i], endOfSentence);
+						
+						String[] endEnd = {endIdentifier, endIdentifier};
+						Vector<String[]> endOfTheLine = new Vector<String[]>();
+						endOfTheLine.addElement(endEnd);
+						
+						markChain.markovChain.put(temp[i+1], endOfTheLine);
 					}
 					
-					endOfSentence.add(tempEnd);
-					
-					markovChain.markovChain.put(temp[i], endOfSentence);
-					
-					String[] endEnd = {endIdentifier, endIdentifier};
-					Vector<String[]> endOfTheLine = new Vector<String[]>();
-					endOfTheLine.addElement(endEnd);
-					
-					markovChain.markovChain.put(temp[i+1], endOfTheLine);
 				}
 				else // if in the middle...
 				{
-
-					Vector<String[]> suff = markovChain.markovChain.get(temp[i]);
+					
+					Vector<String[]> suff = markChain.markovChain.get(temp[i]);
 					String[] tempSuff = {temp[i+1], temp[i+2]};
-					if(suff == null)
+					
+					if(!doesMarkovContains(temp[i], tempSuff))
 					{
-							suff = new Vector<String[]>();
+						if(suff == null)
+						{
+								suff = new Vector<String[]>();
+								suff.add(tempSuff);
+								markChain.markovChain.put(temp[i], suff);
+						}
+						else
+						{
 							suff.add(tempSuff);
-							markovChain.markovChain.put(temp[i], suff);
+						}
 					}
-					else
-					{
-						suff.add(tempSuff);
-					}
+					
 					
 					
 				}
@@ -214,6 +240,27 @@ public class WeightedPatternAnalyzer {
 		}
 		
 		
+	}
+	
+	/**
+	 * Checks if the particular values given are contained within the key's
+	 * location in the markov chain.
+	 * @param key
+	 * @param values
+	 * @return
+	 */
+	private boolean doesMarkovContains(String key, String[] values)
+	{
+		Vector<String[]> target = markChain.markovChain.get(key);
+		if(target == null) return false; // Nothing here but us chickens
+		
+		for(String[] s: target)
+		{
+			if(s[0].equals(values[0]) && s[1].equals(values[1])) return true;
+			
+		}
+		
+		return false;
 	}
 	
 
