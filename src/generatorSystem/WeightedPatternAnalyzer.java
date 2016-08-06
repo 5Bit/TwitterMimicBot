@@ -47,7 +47,6 @@ public class WeightedPatternAnalyzer {
 			sentence.append(endIdentifier);
 			
 			markChain.knownSentences.add(sentence.toString().trim());
-//			parsedLines.add(sentence.toString().trim());
 			currentPos++;
 			int retweetCount = Integer.parseInt(temp[currentPos]);
 			currentPos+= 2;

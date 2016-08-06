@@ -8,5 +8,7 @@ public class WeightedThreeStateMarkovChain extends MarkovThreeState{
 	public Hashtable<Integer, Integer> weightHashTable = new Hashtable<Integer, Integer>();
 	
 	
+	
+	
 
 }

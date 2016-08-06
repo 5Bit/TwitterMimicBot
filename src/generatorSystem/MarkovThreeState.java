@@ -7,7 +7,7 @@ import java.util.Vector;
 
 abstract class MarkovThreeState {
 
-	ArrayList<String> knownSentences = new ArrayList<String>();
+	public ArrayList<String> knownSentences = new ArrayList<String>();
 	public Hashtable<String, Vector<String[]>> markovChain = new Hashtable<String, Vector<String[]>>();
 	
 	

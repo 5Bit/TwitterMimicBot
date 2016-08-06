@@ -98,6 +98,8 @@ public class Main {
 					collectedData = downloadSys();
 					WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
 
+					
+
 //					checkMarkovChain(pa);
 					
 					
@@ -312,6 +314,12 @@ public class Main {
 			}
 			
 			System.out.println("");
+		}
+		
+		//Used for showing the known sentences within the markov chain!
+		for(String s: pa.markChain.knownSentences)
+		{
+			System.out.println(s);
 		}
 	}
 	
