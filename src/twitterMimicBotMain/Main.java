@@ -32,8 +32,6 @@ import outputSystem.OutputPoster;
 import java.util.Scanner;
 
 
-
-
 public class Main {
 	final static double versionNum = 0.1;
 	final static String name = "VTMB";
@@ -68,7 +66,8 @@ public class Main {
 	public static void mainMenu(){
 		int choice = 42;
 		boolean quit = false;
-		String[] targetAccounts = new String[10];
+		ArrayList<String> collectedData = null;
+
 		Scanner scan = new Scanner(System.in);
 
 		while(quit == false)
@@ -96,96 +95,24 @@ public class Main {
 			{
 				// TEST MODE!
 				case 0:
-				
-					
-					// get account info
-					try {
-						targetAccounts = inputAccounts();
-					} catch (Exception e) {
-						System.out.println("Twitter accounts provided are incorrectly formatted.");
-						System.out.println("An error has occured.");
-						System.out.println("Returning to main menu");
-					}
-					
-					// loops through all the targets, assigning the reader to look at it, record all statuses to a local file,
-					// repeats.
-					// Will need to modify to work with FileManager within Reader!
-					if(targetAccounts.length <= 10)
-					{
-						ArrayList<String> fileNames = dlTwitAccUpdatesToFile(targetAccounts, name, name);
-						
-						for(String s: fileNames)
-							fileManager.addFile(s);
-						
-						try {
-							ArrayList<String> collectedData = fileManager.getAllFilesContent();
-							
-							
-							
-							//   use the following block only for testing.
-							//////////////////////////////////////////////
-//							System.out.println("Printing collective data for verification.");
-//							for(String s: collectedData)
-//							{
-//								System.out.println(s);
-//							}
-							//////////////////////////////////////////////
-							
-							WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
-							
-							if(pa.markChain.markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
-							
-							Set<String> keys = pa.markChain.markovChain.keySet();
-							
-//							NOTE: Used for Showing storage within markov chain!
-							// modified to see the weights as well.
-							// Comment out rather than delete.
-							for(String key: keys)
-							{
-								System.out.print(pa.markChain.weightHashTable.get(key.hashCode()) + "| " + key + " : ");
-								Vector<String[]> tempStringVec = pa.markChain.markovChain.get(key);
-								
-								for(String[] s : tempStringVec)
-								{
-									for(int i = 0; i < s.length; i++)
-										System.out.print(s[i] + " ");
-									
-									System.out.print(" :: ");
-								}
-								
-								System.out.println("");
-							}
-							
-							
-							
-						} catch (IOException e) {
-							System.out.println("An error occured while reading the collective data from the HDD.");
-							e.printStackTrace();
-						}
-						
-					}
-					else
-					{
-						System.out.println("The number of target accounts exceeded the amount allowed.");
-						System.out.println("The maximum number of accounts to pull from is 10.");
-						break;
-					}
-					
-	
-					
+					collectedData = downloadSys();
+					WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
 
+//					checkMarkovChain(pa);
 					
-					// next, read from file...
 					
+					//TODO - give markov to the generator!
 					
-					//TODO
 					break;
+
 				// Download tweets to local file
 				case 1:
-					//TODO
+					collectedData = downloadSys();
+
 				// Download tweets from n twitter accounts and generate (to local file)
 				case 2:
-	
+					
+					
 					//TODO
 					break;
 				// Download tweets from n twitter accounts and generate (to twitter)
@@ -208,9 +135,55 @@ public class Main {
 		scan.close();
 	}
 	
+	public static ArrayList<String> downloadSys(){
+		String[] targetAccounts = new String[10];
+		ArrayList<String> collectedData = null;
+		// get account info
+		try {
+			targetAccounts = inputAccounts();
+		} catch (Exception e) {
+			System.out.println("Twitter accounts provided are incorrectly formatted.");
+			System.out.println("An error has occured.");
+			System.out.println("Returning to main menu");
+		}
+		
+		// loops through all the targets, assigning the reader to look at it, record all statuses to a local file,
+		// repeats.
+		// Will need to modify to work with FileManager within Reader!
+		if(targetAccounts.length <= 10)
+		{
+			ArrayList<String> fileNames = dlTwitAccUpdatesToFile(targetAccounts, name, name);
+			
+			for(String s: fileNames)
+				fileManager.addFile(s);
+			
+
+				try {
+					collectedData = fileManager.getAllFilesContent();
+				} catch (IOException e) {
+					System.out.println("An error occured while reading the collective data from the HDD.");
+					e.printStackTrace();
+				}
+				
+				//   use the following block only for testing.
+				//////////////////////////////////////////////
+//				System.out.println("Printing collective data for verification.");
+//				for(String s: collectedData)
+//				{
+//					System.out.println(s);
+//				}
+				//////////////////////////////////////////////
+				
+		}
+		else
+		{
+			System.out.println("The number of target accounts exceeded the amount allowed.");
+			System.out.println("The maximum number of accounts to pull from is 10.");
+		}
+		
+		return collectedData;
+	}
 	
-	
-	//TODO FIX
 	/**
 	 * Takes twitter account information, contacts Twitter, downloads as many
 	 * tweets as it can from each account given. Returns a list of the
@@ -222,12 +195,6 @@ public class Main {
 	{
 		ArrayList<String> returnStringArray = new ArrayList<String>();
 		
-//		System.out.print("\nVerify you have entered the following data into the config.txt file that came with this program.");
-//		System.out.println("\nConsumer key");
-//		System.out.println("Consumer Secret");
-//		System.out.println("OAuthTokenKey");
-//		System.out.println("OAuthTokenSecret");
-//		pressAnyKeyToContinue();
 		for(String target: targetAccounts)
 		{
 			System.out.println("Downloading " + target + " information.");
@@ -237,11 +204,7 @@ public class Main {
 			ConfigurationBuilder cb = enterAccessData();
 			System.out.print("Keys and Secret Keys entered.");
 			reader.setTarget(target, cb);
-			
-			// TODO - put everything after this into the reader...
 			returnStringArray.add(reader.saveToFile());
-
-			
 		}
 		
 		// update the file manager
@@ -262,11 +225,6 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-//		System.out.println("Consumer key: " + configData[0]);
-//		System.out.println("Consumer Secret: " + configData[1]);
-//		System.out.println("OAuthTokenKey: " + configData[2]);
-//		System.out.println("OAuthTokenSecret: " + configData[3]);
-		
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 	    cb.setDebugEnabled(true)
 	          .setOAuthConsumerKey(configData[0])
@@ -285,11 +243,15 @@ public class Main {
 		File file = new File(path.getFile());
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		
-		// assuming 0 based
+		// Hardcoded - probably should optimize.
 		returnString[0] = reader.readLine().substring(13);
 		returnString[1] = reader.readLine().substring(16);
 		returnString[2] = reader.readLine().substring(15);
 		returnString[3] = reader.readLine().substring(18);
+		
+		for(String s: returnString)
+			if(s.isEmpty() || s == null) throw new IOException(); // had an issue reading it.
+		
 		reader.close();
 		return returnString;
 	}
@@ -301,7 +263,6 @@ public class Main {
 		System.out.println("Enter the account names in the following format:");
 		System.out.println(" @Twitter @FieldOfDesign");
 
-		
 		String in;
 		Scanner scan = new Scanner(System.in);
 		
@@ -309,9 +270,7 @@ public class Main {
 
 		String[] targetAccounts = in.split(" ");
 		for(String s : targetAccounts)
-		{
 			if(!s.startsWith("@")) throw new Exception();
-		}
 
 		return targetAccounts;
 	}
@@ -330,128 +289,29 @@ public class Main {
 		}
 	}
 	
-
-	
-	public static void testingTwitter()
+	public static void checkMarkovChain(WeightedPatternAnalyzer pa)
 	{
-		PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
-		String target = "google";
-		System.out.println("Testing target.\nTarget: " + target);
+		if(pa.markChain.markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
 		
-		ReadTwitter reader = new ReadTwitter();
-		
-		//Reference! 
-		// http://stackoverflow.com/questions/13545936/twitter4j-search-for-public-tweets
-	
-		
-		ConfigurationBuilder cb = new ConfigurationBuilder();
-	    cb.setDebugEnabled(true)
-	          .setOAuthConsumerKey("EMPTY")
-	          .setOAuthConsumerSecret("EMPTY")
-	          .setOAuthAccessToken("EMPTY")
-	          .setOAuthAccessTokenSecret("EMPTY");
-	    
-	    
-		reader.setTarget(target, cb);
-		
-		ArrayList<String> temp = reader.toArrayList();
-		ArrayList<Status> statusTemp = reader.toArrayListStatus();
-		
-		List<String> statusStrgPrep = new ArrayList<String>();
-		
-		Path file = Paths.get(target + "StatusUpdates");
-		for(Status s: statusTemp)
-		{
-			StringBuilder newStr = new StringBuilder();
-			newStr.append(s.getText());
-			newStr.append("\n");
-			newStr.append("RETWEET: " + s.getRetweetCount() +" FAVORITE: " + s.getFavoriteCount());
-			statusStrgPrep.add(newStr.toString());
-		}
-		
-		
-		for(String x: statusStrgPrep)
-			try {
-				
-				Files.write(file, statusStrgPrep, Charset.forName("UTF-8"));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		
-		System.out.println("Done.");
-	}
-	
-	public static void testingTxt()
-	{
-		PrintWriter out = new PrintWriter(new OutputStreamWriter(System.out));
-		ReadTxtFile reader = new ReadTxtFile();
-		
-		String[] target = {"\\Users\\Cuin\\Documents\\GitHub\\TwitterMimicBot\\TestFiles", "googleStatusUpdates.txt"};
-		System.out.println("Testing target.\n target: " + target[0] + "\\" + target[1]);
-		
-		try {
-			reader.setTarget(target);
-		} catch (FileNotFoundException e) {
-
-			System.out.println("The file was not found.");
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
-
-			System.out.println("The encoding provided was not supported");
-			e.printStackTrace();
-		} catch (IOException e) {
-
-			System.out.println("There was an error reading from the file.");
-			e.printStackTrace();
-		}
-		
-		ArrayList<String> temp = reader.toArrayList();
-		int lineCount = 0;
-		for(String str: temp)
-		{
-			System.out.println("Line " + lineCount + " : " + str);
-			out.println(str);
-			++lineCount;
-		}
-		
-		System.out.println("Number of lines:" + lineCount);
-		
-		// End of reading
-		
-		System.out.println("\n\nGenerator Pre-processing step:");
-		Generator gen = new Generator(reader.toArrayList());
-		
-		Hashtable<String, Vector<String[]>> markovChain = gen.getMarkovChain();
-		
-		
-		if(markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
-		
-		Set<String> keys = markovChain.keySet();
+		Set<String> keys = pa.markChain.markovChain.keySet();
 		
 		//NOTE: Used for Showing storage within markov chain!
-//		for(String key: keys)
-//		{
-//			System.out.print(key + " : ");
-//			Vector<String[]> tempStringVec = markovChain.get(key);
-//			for(String[] s : tempStringVec)
-//			{
-//				for(int i = 0; i < s.length; i++)
-//					System.out.print(s[i] + " ");
-//				
-//				System.out.print(" :: ");
-//			}
-//			
-//			System.out.println("");
-//		}
-	
-		OutputPoster outputPost = new OutputPostCMD();
-
-		System.out.println("Printing 42 outputs.");
-		for(int i = 0; i < 42; i++)
+		// modified to see the weights as well.
+		// Comment out rather than delete.
+		for(String key: keys)
 		{
+			System.out.print(pa.markChain.weightHashTable.get(key.hashCode()) + "| " + key + " : ");
+			Vector<String[]> tempStringVec = pa.markChain.markovChain.get(key);
+			
+			for(String[] s : tempStringVec)
+			{
+				for(int i = 0; i < s.length; i++)
+					System.out.print(s[i] + " ");
+				
+				System.out.print(" :: ");
+			}
+			
 			System.out.println("");
-			outputPost.submit(gen.run());
 		}
 	}
 	

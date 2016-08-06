@@ -3,21 +3,16 @@ package readSystem;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-
-import twitterMimicBotMain.Main;
 
 public class FileManager {
 	ArrayList<String> files = new ArrayList<String>();
@@ -136,13 +131,16 @@ public class FileManager {
 				fileContent.add(line);
 				line = reader.readLine();
 			}
-
+			reader.close();
 		} catch (FileNotFoundException e) {
 			System.out.println(fileName + " was not found.");
 			System.out.println("Be sure to include the file type, which should be .txt");
 			System.out.println("Printing stack trace.");
 			e.printStackTrace();
 		}
+		
+		
+		
 		return fileContent;
 	}
 	
@@ -154,7 +152,7 @@ public class FileManager {
 	 */
 	public void addFile(String addedFileName)
 	{
-		//TODO FIND BUG IN HERE
+
 		files.add(addedFileName);
 		updateFileManager();
 	}

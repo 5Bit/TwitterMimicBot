@@ -9,9 +9,7 @@ class PatternAnalyzer extends MarkovThreeState {
 	// will hold a list of all the known words
 	ArrayList<String> knownWords = new ArrayList<String>();
 
-	// will hold a markov chain of the data.
-
-	//may take a while
+	// may take a while
 	PatternAnalyzer(ArrayList<String> lines)
 	{
 		

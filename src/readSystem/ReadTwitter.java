@@ -83,9 +83,10 @@ public class ReadTwitter implements Reader{
 		Twitter twitter = new TwitterFactory(cb.build()).getInstance();
 	    int pageno = 1;
 	    twitter.getScreenName();
+	    
+	    //Ignore the status arraylist warning!
 	    ArrayList<Status> statuses = new ArrayList();
-
-	    //Messy, but works
+	    
 	    while(true){
 	    	
 	    	try{
@@ -133,15 +134,7 @@ public class ReadTwitter implements Reader{
 		
 		for(String s: temp)
 		{
-			if(s.contains("@"))
-			{
-//			    cleanedData.append(atReplacement);
-			}
-			else if(s.contains("#"))
-			{
-//				cleanedData.append(hashReplacement);
-			}
-			else if(s.contains("http"))
+			if(s.contains("http"))
 			{
 				// skip posts with websites...
 			}
@@ -190,11 +183,7 @@ public class ReadTwitter implements Reader{
 		System.out.println("Printing stacktrace.");
 		e.printStackTrace();
 	}
-		
-		
 	
-	
-		
 	System.out.println("Done saving " + twitterAccount + " data.");
 		
 		return fileName;
