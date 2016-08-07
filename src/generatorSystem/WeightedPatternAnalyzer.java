@@ -82,10 +82,11 @@ public class WeightedPatternAnalyzer {
 	
 	private void createWeights(String[] sentence, int retweetCount, int favoriteCount)
 	{
+		int modifier = (retweetCount * retweetModifier) + favoriteCount + 1;
 		for(int i = 1; i<= sentence.length-2; i++)
 		{
 			int hashCode = sentence[i].hashCode();
-			int modifier = (retweetCount * retweetModifier) + favoriteCount + 1;
+
 			// if it does not contain the word...
 			if(markChain.weightHashTable.get(hashCode) == null)
 			{
@@ -96,7 +97,22 @@ public class WeightedPatternAnalyzer {
 				int currentVal = markChain.weightHashTable.get(hashCode) + modifier;
 				markChain.weightHashTable.replace(hashCode, currentVal);
 			}
+			
+			
 		}
+		
+		int endHash = endIdentifier.hashCode();
+		if(markChain.weightHashTable.get(endIdentifier) == null)
+		{
+			markChain.weightHashTable.put(endHash, modifier);
+		}
+		else
+		{
+			int temp = markChain.weightHashTable.get(endHash) + modifier;
+			markChain.weightHashTable.replace(endHash, temp);
+		}
+		
+		
 	}
 	
 	private void AnalyzerHelper(ArrayList<Integer> retweetCounts, ArrayList<Integer> favoriteCounts)

@@ -98,6 +98,8 @@ public class Main {
 					collectedData = downloadSys();
 //					WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
 					WeightedGenerator gen = new WeightedGenerator(collectedData);
+					gen.checkMarkovChain();
+					
 					gen.run();
 
 //					checkMarkovChain(pa);
@@ -288,38 +290,6 @@ public class Main {
 		{
 			System.out.println("Error in pressAnyKeyToContinue. If you are seeing this, something went seriously wrong. PM @FieldOfDesign the stacktrace.");
 			e.printStackTrace();
-		}
-	}
-	
-	public static void checkMarkovChain(WeightedPatternAnalyzer pa)
-	{
-		if(pa.markChain.markovChain.isEmpty()) System.out.println("The markov chain is empty - this aint good, yo.");
-		
-		Set<String> keys = pa.markChain.markovChain.keySet();
-		
-		//NOTE: Used for Showing storage within markov chain!
-		// modified to see the weights as well.
-		// Comment out rather than delete.
-		for(String key: keys)
-		{
-			System.out.print(pa.markChain.weightHashTable.get(key.hashCode()) + "| " + key + " : ");
-			Vector<String[]> tempStringVec = pa.markChain.markovChain.get(key);
-			
-			for(String[] s : tempStringVec)
-			{
-				for(int i = 0; i < s.length; i++)
-					System.out.print(s[i] + " ");
-				
-				System.out.print(" :: ");
-			}
-			
-			System.out.println("");
-		}
-		
-		//Used for showing the known sentences within the markov chain!
-		for(String s: pa.markChain.knownSentences)
-		{
-			System.out.println(s);
 		}
 	}
 	
