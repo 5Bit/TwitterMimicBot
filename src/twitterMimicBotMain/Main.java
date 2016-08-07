@@ -76,7 +76,7 @@ public class Main {
 			choice = 42;
 			do{ 
 			System.out.println("\n\n-MENU-----------------------------------------------------------------------/n");
-			System.out.println("0. Testing the system - download from twitter, store to local file, read from local file, generate to local file AND to twitter.");
+			System.out.println("0. Testing the system - download from twitter, store to local file, read from local file, generate to local file, UI and to twitter.");
 			System.out.println("1. Download tweet data from n Twitter accounts (to local file)");
 			System.out.println("2. Download data from n Twitter accounts and generate tweets (to local file)");
 			System.out.println("3. Download data from n Twitter accounts and generate tweets (to twitter)");
@@ -96,9 +96,9 @@ public class Main {
 				// TEST MODE!
 				case 0:
 					collectedData = downloadSys();
-					WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
-
-					
+//					WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
+					WeightedGenerator gen = new WeightedGenerator(collectedData);
+					gen.run();
 
 //					checkMarkovChain(pa);
 					
