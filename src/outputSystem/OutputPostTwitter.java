@@ -8,6 +8,10 @@ public class OutputPostTwitter implements OutputPoster {
 
 	ConfigurationBuilder cb = null;
 	
+	/**
+	 * Constructs the OutputPostTwitter, and creates a configurationBuilder so it can properly access the twitter account in question.
+	 * @param configData
+	 */
 	public OutputPostTwitter(String[] configData)
 	{
 		// build the cb
@@ -20,6 +24,9 @@ public class OutputPostTwitter implements OutputPoster {
 		
 	}
 	
+	/**
+	 * Submits the provided post to the twitter account.
+	 */
 	public void submit(String post) {
 		
 		Twitter twitter = new TwitterFactory(cb.build()).getInstance();

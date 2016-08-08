@@ -89,6 +89,10 @@ public class PostGenerator extends MarkovThreeState {
 
 	}
 	
+	/**
+	 * Returns the hashtable of the markov chain.
+	 * @return
+	 */
 	public Hashtable<String, Vector<String[]>> getMarkovChain()
 	{
 		return markovChain;

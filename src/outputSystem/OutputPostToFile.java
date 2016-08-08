@@ -8,6 +8,9 @@ import java.io.IOException;
 public class OutputPostToFile implements OutputPoster  {
 	File outputLog = null;
 	
+	/**
+	 * Obtains the outputLog.txt file and holds on to it for further submissions.
+	 */
 	public OutputPostToFile()
 	{
 		outputLog = new File("OutputLog.txt");
@@ -24,6 +27,9 @@ public class OutputPostToFile implements OutputPoster  {
 			}
 	}
 		
+	/**
+	 * Submits to the OutputLog.txt file the provided line.
+	 */
 	public void submit(String out){
 		
 	try{

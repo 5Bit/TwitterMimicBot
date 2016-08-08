@@ -10,10 +10,14 @@ public class WeightedGenerator {
 	
 
 	
+	/**
+	 * Constructs the Weighted generator, building a Weighted Pattern Analyzer and a
+	 * weighted post generator.
+	 * @param sourceLines
+	 */
 	public WeightedGenerator(ArrayList<String> sourceLines)
 	{
 		pa = new WeightedPatternAnalyzer(sourceLines);
-		
 
 		postGen = new WeightedPostGenerator(pa.markChain);
 	}
@@ -27,7 +31,10 @@ public class WeightedGenerator {
 		return postGen;
 	}
 	
-	
+	/**
+	 * on execution, generates and returns a new tweet.
+	 * @return
+	 */
 	public String run()
 	{
 		return postGen.generate();
@@ -39,7 +46,6 @@ public class WeightedGenerator {
 	 */
 	public WeightedThreeStateMarkovChain getMarkovChain()
 	{
-		//TODO - safety - code so it returns a copy.
 		return pa.markChain;
 	}
 	

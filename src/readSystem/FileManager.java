@@ -19,7 +19,6 @@ public class FileManager {
 	String fileManagerName;
 	Path filePath = null;
 	
-	
 	/**
 	 * Constructor for the File Manager. needs the name of the file manager's local file.
 	 * @param fileMangrName
@@ -69,9 +68,6 @@ public class FileManager {
 			returnArray.add(s);
 			System.out.println("The file manager contains: " + s);
 		}
-
-		
-
 		
 		return returnArray;
 	}
@@ -112,7 +108,12 @@ public class FileManager {
 	}
 	
 	
-
+	/**
+	 * Used to get the content of the particular file provided.
+	 * @param fileName
+	 * @return
+	 * @throws IOException
+	 */
 	private ArrayList<String> getFileContent(String fileName) throws IOException
 	{
 		ArrayList<String> fileContent = new ArrayList<String>();

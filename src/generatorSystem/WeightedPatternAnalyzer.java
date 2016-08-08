@@ -17,15 +17,17 @@ public class WeightedPatternAnalyzer {
 	// holds each sentence's retweet and favorite counts.
 
 	
+	/**
+	 * Constructor for a weighted pattern analyzer. Takes in the lines, as formatted in the following way:
+	 *  structure "Sentence RETWEET: 134 FAVORITE: 146
+	 * @param lines
+	 */
 	public WeightedPatternAnalyzer(ArrayList<String> lines)
 	{
-//		ArrayList<String> parsedLines = new ArrayList<String>();
 		ArrayList<Integer> retweetCounts = new ArrayList<Integer>();
 		ArrayList<Integer> favoriteCounts = new ArrayList<Integer>();
-		// structure "Sentence RETWEET: 134 FAVORITE: 146
 		
 		// parse sentence from retweet and favorite data.
-		
 		for(String s: lines)
 		{
 			if(s.contains("RETWEET"))
@@ -54,32 +56,30 @@ public class WeightedPatternAnalyzer {
 			
 			retweetCounts.add(retweetCount);
 			favoriteCounts.add(favoriteCount);
-			
 			// for debugging
 //			System.out.println(sentence.toString().trim());
 //			System.out.println("Retweet: " + retweetCount);
 //			System.out.println("favorite: " + favoriteCount);
-			
-			
 			}
 			else 
 			{
-				// skip any items without proper formatting.
-				//TODO - FIX READ ISSUE WITH NEW LINES! will be within ReadTwitter - have to handle newlines!
-				//Doesn't at the moment.
+				// skip any items without proper formatting. '\n' is apparently hidden within .txt files, so it's best to be safe
+				// than sorry.
 			}
-			
-
-			
+	
 		}
-		
-
-		
 		
 		AnalyzerHelper(retweetCounts, favoriteCounts);
 		
 	}
 	
+	/**
+	 * Used to construct weights. Easily done before constructing the markov chain.
+	 * Takes in a sentence as an array of strings, a retweet count and a favorite count.
+	 * @param sentence
+	 * @param retweetCount
+	 * @param favoriteCount
+	 */
 	private void createWeights(String[] sentence, int retweetCount, int favoriteCount)
 	{
 		int modifier = (retweetCount * retweetModifier) + favoriteCount + 1;
@@ -115,13 +115,16 @@ public class WeightedPatternAnalyzer {
 		
 	}
 	
+	/**
+	 * Used to analyze known sentences, and break down tweets into a markov chain.
+	 * @param retweetCounts
+	 * @param favoriteCounts
+	 */
 	private void AnalyzerHelper(ArrayList<Integer> retweetCounts, ArrayList<Integer> favoriteCounts)
 	{
 		int currentSentenceNum = 0;
 		for(String sentence: markChain.knownSentences)
 		{
-			//TODO - create the markov chains in here!
-			
 			String[]temp = sentence.split(" ");
 			
 			//create weights first!
@@ -129,13 +132,8 @@ public class WeightedPatternAnalyzer {
 			
 			for(int i = 0; i<= temp.length-2; i++)
 			{
-				
 				// For debugging...
 //				System.out.println("At position " + i + "trying to access position" + (i+1) + " and " + (i+2) + " when length is" + temp.length);
-				
-
-
-				
 				if(i == 0)
 				{
 					// getting the first part of the sentence
@@ -146,8 +144,6 @@ public class WeightedPatternAnalyzer {
 					{
 						start = markChain.markovChain.get(strtIdentifier);
 					}
-					
-					
 					
 					// exception for sentences with one word only.
 					if(temp.length == 3)
@@ -171,8 +167,6 @@ public class WeightedPatternAnalyzer {
 							break;
 						}
 					}
-					
-					
 
 					String[] tempArray = {temp[i+1], temp[i+2]};
 					
@@ -190,8 +184,7 @@ public class WeightedPatternAnalyzer {
 							markChain.markovChain.put(strtIdentifier, start);
 							markChain.markovChain.put(temp[i+1], suff);
 						}
-					}
-					
+					}	
 					
 				}
 				else if(i == temp.length-2) // if the end...
@@ -242,19 +235,10 @@ public class WeightedPatternAnalyzer {
 							suff.add(tempSuff);
 						}
 					}
-					
-					
-					
 				}
-					
-				
-				
-				
 			}
 		currentSentenceNum++;
-		}
-		
-		
+		}	
 	}
 	
 	/**
@@ -272,16 +256,8 @@ public class WeightedPatternAnalyzer {
 		for(String[] s: target)
 		{
 			if(s[0].equals(values[0]) && s[1].equals(values[1])) return true;
-			
 		}
-		
 		return false;
 	}
-	
-
-	
-	
-	
-	
 
 }

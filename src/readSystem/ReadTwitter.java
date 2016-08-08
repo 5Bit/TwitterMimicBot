@@ -23,10 +23,12 @@ public class ReadTwitter implements Reader{
 	ArrayList<String> statusListWithoutData = new ArrayList<String>();
 	String hashtag, atUser;
 	
+	/**
+	 * Creates a blank Read Twitter  - needs to have it's target set before running.
+	 */
 	public ReadTwitter(){
 		hashtag = null;
 		atUser = null;
-		
 	}
 	
 	/**
@@ -78,6 +80,10 @@ public class ReadTwitter implements Reader{
 		}
 	}
 	
+	/**
+	 * Reads as many tweets from the account as possible, storing them locally.
+	 * @throws TwitterException
+	 */
 	private void readAccount() throws TwitterException
 	{
 		Twitter twitter = new TwitterFactory(cb.build()).getInstance();
@@ -86,7 +92,7 @@ public class ReadTwitter implements Reader{
 	    
 	    //Ignore the status arraylist warning!
 	    ArrayList<Status> statuses = new ArrayList();
-	    
+	    System.out.print("\n");
 	    while(true){
 	    	
 	    	try{
@@ -104,14 +110,10 @@ public class ReadTwitter implements Reader{
 	    	}
 	    }
 	    
-	    //System.out.println("Earliest post is " + statuses.get(statuses.size()-1).getCreatedAt());
-	    
 	    for(Status s: statuses)
 	    	statusListWithoutData.add(s.getText());
 	    
 	    statusList = statuses;
-		
-		//System.out.println("Total: " + statuses.size());
 	}
 	
 	/**
@@ -126,6 +128,13 @@ public class ReadTwitter implements Reader{
 		return statusListWithoutData;
 	}
 	
+	/**
+	 * Used to pre-process the tweets locally.
+	 * @param status
+	 * @param hashReplacement
+	 * @param atReplacement
+	 * @return
+	 */
 	private String sentenceCleaning(Status status, String hashReplacement, String atReplacement)
 	{
 		StringBuilder cleanedData = new StringBuilder();
@@ -149,6 +158,11 @@ public class ReadTwitter implements Reader{
 		return cleanedData.toString().trim();
 	}
 	
+	
+	/**
+	 * Saves the tweets to a local file.
+	 * @return
+	 */
 	public String saveToFile()
 	{
 		String fileName = twitterAccount + "StatusUpdates.txt";
@@ -162,8 +176,7 @@ public class ReadTwitter implements Reader{
 	{
 		StringBuilder newStr = new StringBuilder();
 		String text = s.getText();
-//		if(s.getText().contains("\n")) System.out.println(s.getText());
-		// if it is a retweet or has a new line, ignore.
+		
 		if(!text.contains("RT ") && !text.contains("\n") && !text.contains("#") && !text.contains("@"))
 		{
 		newStr.append(sentenceCleaning(s, hashtag, atUser));

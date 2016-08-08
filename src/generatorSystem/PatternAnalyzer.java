@@ -9,7 +9,11 @@ class PatternAnalyzer extends MarkovThreeState {
 	// will hold a list of all the known words
 	ArrayList<String> knownWords = new ArrayList<String>();
 
-	// may take a while
+	/**
+	 * Constructor for Pattern Analyzer. Takes a bit of time - takes all lines
+	 * given, adds them to known sentences, and analyzes them with AnalyzerHelper.
+	 * @param lines
+	 */
 	PatternAnalyzer(ArrayList<String> lines)
 	{
 		
@@ -22,10 +26,12 @@ class PatternAnalyzer extends MarkovThreeState {
 	
 
 	
-	//TODO - ISSUE! I think.
+	/**
+	 * Analyzes sentence structures, and adds appropriate data to markov chain.
+	 */
 	private void AnalyzerHelper()
 	{
-		
+		//TODO - might have a bug. Not needed to worry about during weighted version.
 		// for every sentence provided, parse them and turn them into an ArrayList of ArrayList of words, and then go 
 		// For clarity: ArrayList(Sentences) contains ArrayList(words)
 		for(String sentence: knownSentences)
@@ -106,15 +112,10 @@ class PatternAnalyzer extends MarkovThreeState {
 
 	}
 	
-	
 	/**
-	 * Allows the user to save the patterns found as a .TwitterPattern file
+	 * Returns the markov chain hashtable.
+	 * @return
 	 */
-	void savePattern()
-	{
-		//TODO
-	}
-	
 	public Hashtable<String, Vector<String[]>> getMarkovChain(){
 		
 		return markovChain;

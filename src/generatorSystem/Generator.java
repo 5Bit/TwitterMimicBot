@@ -8,16 +8,6 @@ public class Generator {
 	PostGenerator postGen = null;
 	Hashtable<String, Vector<String[]>> localMarkovChain = new Hashtable<String, Vector<String[]>>();
 	
-	
-	/**
-	 * Takes a save file location, and loads it as a Pattern Analyzer.
-	 * @param save
-	 */
-	public Generator(String save)
-	{
-		//TODO
-	}
-	
 	/**
 	 * Takes an ArrayList of strings of lines, processes them for the Pattern Analyzer,
 	 * and creates a pattern Analyzer to hold within it.
@@ -41,15 +31,27 @@ public class Generator {
 		postGen = new PostGenerator(pa.markovChain);
 	}
 	
+	/**
+	 * Returns the PostGenerator.
+	 * @return
+	 */
 	public PostGenerator getPostGeneratorData(){
 		return postGen;
 	}
 	
+	/**
+	 * Generates a sentence.
+	 * @return
+	 */
 	public String run()
 	{
 		return postGen.generate();
 	}
 	
+	/**
+	 * Returns the markovChain's hashtable.
+	 * @return
+	 */
 	public Hashtable<String, Vector<String[]>> getMarkovChain(){
 		
 		return postGen.markovChain;

@@ -21,6 +21,12 @@ public class WeightedPostGenerator {
 		
 	}
 	
+	/**
+	 * Checks if the sentence provided with inSentence is new/novel. If it is, if returns false and adds it to the list.
+	 * Else, it returns true.
+	 * @param inSentence
+	 * @return
+	 */
 	private Boolean sentenceAlreadyKnown(String inSentence)
 	{
 		if(markovChain.knownSentences.contains(inSentence)) return true;
@@ -29,13 +35,15 @@ public class WeightedPostGenerator {
 		return false;
 	}
 	
+	/**
+	 * Generates a new line based on the markov chain.
+	 * @return
+	 */
 	public String generate()
 	{
 		StringBuilder returnSentence = new StringBuilder();
 		
 		do{
-//			Random rand = new Random();
-			
 			
 			Vector<String[]> possibleChoices = markovChain.markovChain.get(startIdentifier);
 			Vector<Integer> possibleChoiceWeights = getWeights(startIdentifier, possibleChoices);
@@ -50,24 +58,21 @@ public class WeightedPostGenerator {
 			String chosenWord = getNextWord(totalWeight, possibleChoices, possibleChoiceWeights);
 			
 			returnSentence.append(chosenWord);
-//			System.out.println(returnSentence.toString());
 			
 			
 			// loop for constructing rest of sentence.
 			do{
-//				System.out.println(returnSentence.toString());
 				totalWeight = 0;
 				returnSentence.append(" ");
 				
 				possibleChoices = markovChain.markovChain.get(chosenWord);
-				if(possibleChoices == null || chosenWord == null) break; // TODO - MUST...ELIMINATE THIS HERESY - after I get it running.
+				if(possibleChoices == null || chosenWord == null) break; // needed in case the source data doesn't follow proper formatting.
 				
 				possibleChoiceWeights = getWeights(chosenWord, possibleChoices);
 				
 				for(Integer i: possibleChoiceWeights)
 					totalWeight+= i;
 				
-				//TODO BUG HERE
 				chosenWord = getNextWord(totalWeight, possibleChoices, possibleChoiceWeights);
 				
 				
@@ -83,14 +88,20 @@ public class WeightedPostGenerator {
 		String returnItem = returnSentence.toString();
 		
 		if(returnItem.endsWith("__END")) returnItem = returnItem.substring(0, returnItem.length()-5);
-//		
+		
 		if(returnItem.endsWith("__END ")) returnItem = returnItem.substring(0, returnItem.length()-7);
 		
 		return returnItem;
 	}
 	
 	
-	
+	/**
+	 * Used to get the next word in the markov chain. takes in the total weight, a vector for all possible choices, and possibleChoiceWeights.
+	 * @param totalWeight
+	 * @param possibleChoices
+	 * @param possibleChoiceWeights
+	 * @return
+	 */
 	private String getNextWord( int totalWeight, Vector<String[]> possibleChoices, Vector<Integer> possibleChoiceWeights)
 	{
 		Random rand = new Random();
@@ -99,7 +110,6 @@ public class WeightedPostGenerator {
 		
 		String chosenWord = possibleChoices.get(0)[0];
 
-		// issue here - array out of range (2)
 		for(int index = 0, count = totalWeight; (count >= choice) && (index < possibleChoiceWeights.size()-1); count-= possibleChoiceWeights.get(index))
 		{
 			chosenWord = possibleChoices.get(index)[0];
@@ -110,6 +120,12 @@ public class WeightedPostGenerator {
 		return chosenWord;
 	}
 	
+	/**
+	 * Given the word and it's possible choices, returns a vector of ints that are weights.
+	 * @param word
+	 * @param possibleChoices
+	 * @return
+	 */
 	private Vector<Integer> getWeights(String word, Vector<String[]> possibleChoices)
 	{
 		Vector<Integer> possibleChoiceWeights = new Vector<Integer>();

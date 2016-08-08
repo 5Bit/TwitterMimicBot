@@ -48,11 +48,15 @@ public class Main {
 	
 
 	
+	/**
+	 * The main menu system. It does a lot.
+	 */
 	public static void mainMenu(){
 		int choice = 42;
 		boolean quit = false;
 		ArrayList<String> collectedData = null;
 
+		// Ignore the following complaint - it's closed after the while loop.
 		Scanner scan = new Scanner(System.in);
 
 		while(quit == false)
@@ -94,13 +98,11 @@ public class Main {
 					localSave = new OutputPostToFile();
 					poster.submit(post);
 					localSave.submit(post);
-					
 					break;
 
 				// Download tweets to local file
 				case 1:
 					collectedData = downloadSys();
-
 					break;
 					
 				// Download tweets from n twitter accounts and generate (to local file)
@@ -123,6 +125,7 @@ public class Main {
 					poster.submit(post);
 					
 					break;
+				// Use saved twitter data and generate tweets (to local file)
 				case 4:
 					
 					collectedData = getAllFileContent();
@@ -132,6 +135,7 @@ public class Main {
 					localSave.submit(post);
 				
 					break;
+				// Use saved twitter data and generate tweets (to twitter)
 				case 5:
 					
 					collectedData = getAllFileContent();
@@ -141,6 +145,7 @@ public class Main {
 					poster.submit(post);
 					break;
 				case 6:
+				//Quits!
 					System.out.print("Quitting " + name);
 					quit = true;
 					break;
@@ -149,6 +154,10 @@ public class Main {
 		scan.close();
 	}
 	
+	/**
+	 * Gets all saved file content saved via the dataManager.txt.
+	 * @return
+	 */
 	public static ArrayList<String> getAllFileContent()
 	{
 		ArrayList<String> collectedData = null;
@@ -161,7 +170,13 @@ public class Main {
 		return collectedData;
 	}
 	
-	
+	/**
+	 * Reads from the the target accounts stored within the file manager, and 
+	 * returns (collectively) the data within all of the files.
+	 * Has an exception if the twitter accounts are not properly formatted.
+	 * Has an IOException if the file manager has an issue getting all file(s) content.
+	 * @return
+	 */
 	public static ArrayList<String> downloadSys(){
 		String[] targetAccounts = new String[10];
 		ArrayList<String> collectedData = null;
@@ -240,6 +255,11 @@ public class Main {
 		return returnStringArray;
 	}
 	
+	/**
+	 * Creates a ConfigurationBuilder based on the data within the
+	 * config.txt file.
+	 * @return
+	 */
 	public static ConfigurationBuilder enterAccessData()
 	{
 
@@ -264,12 +284,22 @@ public class Main {
 		return cb;
 	}
 	
+	/**
+	 * Reads the configuration file of the program. If it is not found, an
+	 * IOException will occur. If a line is empty or null, an IOException
+	 * will occur.
+	 * If this is having multiple issues, be sure you have the configuration
+	 * file set up.
+	 * @return
+	 * @throws IOException
+	 */
 	public static String[] readConfigFile() throws IOException
 	{
 		String[] returnString = new String[4];
 		
 		URL path = Main.class.getResource("config.txt");
 		File file = new File(path.getFile());
+		
 		BufferedReader reader = new BufferedReader(new FileReader(file));
 		
 		// Hardcoded - probably should optimize.
@@ -285,7 +315,12 @@ public class Main {
 		return returnString;
 	}
 	
-	
+	/**
+	 * Asks the user to input the target accounts, which it will parse. Will throw an error
+	 * If it is given an account not started with the '@' symbol.
+	 * @return
+	 * @throws Exception
+	 */
 	public static String[] inputAccounts() throws Exception
 	{
 		System.out.println("Enter twitter accounts you would like to analyze.");
@@ -293,6 +328,8 @@ public class Main {
 		System.out.println(" @Twitter @FieldOfDesign");
 
 		String in;
+		
+		//Ignore this complaint. if closed, it closes the in stream. No bueno.
 		Scanner scan = new Scanner(System.in);
 		
 		in = scan.nextLine();
@@ -304,7 +341,10 @@ public class Main {
 		return targetAccounts;
 	}
 	
-	public static void pressAnyKeyToContinue()
+	/**
+	 * A function that requires the user to press enter to continue.
+	 */
+	public static void pressEnterToContinue()
 	{
 		System.out.println("Press enter to continue...");
 		try
@@ -313,7 +353,7 @@ public class Main {
 		}
 		catch(Exception e)
 		{
-			System.out.println("Error in pressAnyKeyToContinue. If you are seeing this, something went seriously wrong. PM @FieldOfDesign the stacktrace.");
+			System.out.println("Error in pressEnterToContinue. If you are seeing this, something went seriously wrong. PM @FieldOfDesign the stacktrace.");
 			e.printStackTrace();
 		}
 	}
