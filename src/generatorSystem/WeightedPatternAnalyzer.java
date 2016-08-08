@@ -10,7 +10,7 @@ import java.util.Vector;
 public class WeightedPatternAnalyzer {
 	String strtIdentifier = "__STRT";
 	String endIdentifier = "__END";
-	int retweetModifier = 2;
+	int retweetModifier = 1;
 	public WeightedThreeStateMarkovChain markChain = new WeightedThreeStateMarkovChain();
 	
 	public ArrayList<String> knownWords = new ArrayList<String>();

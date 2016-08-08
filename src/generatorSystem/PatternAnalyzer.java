@@ -67,7 +67,7 @@ class PatternAnalyzer extends MarkovThreeState {
 
 					Vector<String[]> endOfSentence = new Vector<String[]>();
 					String end = "__END";
-					System.out.println(temp[i] +" will hold" + temp[i+1] + "and __END");
+//					System.out.println(temp[i] +" will hold" + temp[i+1] + "and __END");
 					String[] tempEnd = {temp[i+1], end};
 					
 					if(markovChain.get(tempEnd) != null)

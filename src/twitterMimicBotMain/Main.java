@@ -30,6 +30,7 @@ import generatorSystem.*;
 import outputSystem.OutputPostCMD;
 import outputSystem.OutputPoster;
 import java.util.Scanner;
+import outputSystem.*;
 
 
 public class Main {
@@ -40,6 +41,8 @@ public class Main {
 	final static String tools = "Utilizing Twitter4j - http://twitter4j.org/en/index.html";
 	final static String fileManagerName = "dataManager.txt";
 	final static FileManager fileManager = new FileManager(fileManagerName);
+	static String[] configData = null;
+	
 	
 	//Where the magic happens!
 	public static void main(String[] args)
@@ -98,10 +101,16 @@ public class Main {
 					collectedData = downloadSys();
 //					WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
 					WeightedGenerator gen = new WeightedGenerator(collectedData);
-					gen.checkMarkovChain();
+//					gen.checkMarkovChain();
 					
-					gen.run();
-
+					String post = gen.run();
+					
+//					OutputPoster poster = new OutputPostTwitter(configData);
+					OutputPoster localSave = new OutputPostToFile();
+//					poster.submit(post);
+					localSave.submit(post);
+					
+					
 //					checkMarkovChain(pa);
 					
 					
@@ -220,7 +229,7 @@ public class Main {
 	public static ConfigurationBuilder enterAccessData()
 	{
 
-		String[] configData = null;
+
 		try {
 			configData = readConfigFile();
 		} catch (IOException e) {
@@ -229,7 +238,9 @@ public class Main {
 			e.printStackTrace();
 		}
 		
+		
 		ConfigurationBuilder cb = new ConfigurationBuilder();
+
 	    cb.setDebugEnabled(true)
 	          .setOAuthConsumerKey(configData[0])
 	          .setOAuthConsumerSecret(configData[1])

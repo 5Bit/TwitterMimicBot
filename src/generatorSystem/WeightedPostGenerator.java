@@ -55,7 +55,7 @@ public class WeightedPostGenerator {
 			
 			// loop for constructing rest of sentence.
 			do{
-				System.out.println(returnSentence.toString());
+//				System.out.println(returnSentence.toString());
 				totalWeight = 0;
 				returnSentence.append(" ");
 				
