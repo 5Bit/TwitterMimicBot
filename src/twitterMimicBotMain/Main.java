@@ -3,31 +3,13 @@ package twitterMimicBotMain;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-//import java.lang.instrument.*;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-//import java.util.Collections;
-import java.util.Hashtable;
-import java.util.List;
-//import java.util.Locale;
-import java.util.Set;
-import java.util.Vector;
-//import java.util.function.BiConsumer;
 import readSystem.*;
-import twitter4j.Status;
 import twitter4j.conf.ConfigurationBuilder;
 import generatorSystem.*;
-import outputSystem.OutputPostCMD;
 import outputSystem.OutputPoster;
 import java.util.Scanner;
 import outputSystem.*;
@@ -75,11 +57,15 @@ public class Main {
 
 		while(quit == false)
 		{
-
+			WeightedGenerator gen = null;
+			String post = null;
+			OutputPoster poster = null;
+			OutputPoster localSave = null;
+			
 			choice = 42;
 			do{ 
 			System.out.println("\n\n-MENU-----------------------------------------------------------------------/n");
-			System.out.println("0. Testing the system - download from twitter, store to local file, read from local file, generate to local file, UI and to twitter.");
+//			System.out.println("0. Testing the system - download from twitter, store to local file, read from local file, generate to local file, UI and to twitter.");
 			System.out.println("1. Download tweet data from n Twitter accounts (to local file)");
 			System.out.println("2. Download data from n Twitter accounts and generate tweets (to local file)");
 			System.out.println("3. Download data from n Twitter accounts and generate tweets (to twitter)");
@@ -99,22 +85,15 @@ public class Main {
 				// TEST MODE!
 				case 0:
 					collectedData = downloadSys();
-//					WeightedPatternAnalyzer pa = new WeightedPatternAnalyzer(collectedData);
-					WeightedGenerator gen = new WeightedGenerator(collectedData);
-//					gen.checkMarkovChain();
+					gen = new WeightedGenerator(collectedData);
+					gen.checkMarkovChain();
 					
-					String post = gen.run();
-					
-//					OutputPoster poster = new OutputPostTwitter(configData);
-					OutputPoster localSave = new OutputPostToFile();
-//					poster.submit(post);
+					post = gen.run();
+					System.out.println(post);
+					poster = new OutputPostTwitter(configData);
+					localSave = new OutputPostToFile();
+					poster.submit(post);
 					localSave.submit(post);
-					
-					
-//					checkMarkovChain(pa);
-					
-					
-					//TODO - give markov to the generator!
 					
 					break;
 
@@ -122,22 +101,44 @@ public class Main {
 				case 1:
 					collectedData = downloadSys();
 
+					break;
+					
 				// Download tweets from n twitter accounts and generate (to local file)
 				case 2:
-					
-					
-					//TODO
+					collectedData = downloadSys();
+
+					gen = new WeightedGenerator(collectedData);
+					post = gen.run();
+					localSave = new OutputPostToFile();
+					localSave.submit(post);
+
 					break;
 				// Download tweets from n twitter accounts and generate (to twitter)
 				case 3:
 					
-					//TODO
+					collectedData = downloadSys();
+					gen = new WeightedGenerator(collectedData);
+					post = gen.run();
+					poster = new OutputPostTwitter(configData);
+					poster.submit(post);
+					
 					break;
 				case 4:
-					//TODO
+					
+					collectedData = getAllFileContent();
+					gen = new WeightedGenerator(collectedData);
+					post = gen.run();
+					localSave = new OutputPostToFile();
+					localSave.submit(post);
+				
 					break;
 				case 5:
-					//TODO
+					
+					collectedData = getAllFileContent();
+					gen = new WeightedGenerator(collectedData);
+					post = gen.run();
+					poster = new OutputPostTwitter(configData);
+					poster.submit(post);
 					break;
 				case 6:
 					System.out.print("Quitting " + name);
@@ -147,6 +148,19 @@ public class Main {
 		}
 		scan.close();
 	}
+	
+	public static ArrayList<String> getAllFileContent()
+	{
+		ArrayList<String> collectedData = null;
+		try {
+			collectedData = fileManager.getAllFilesContent();
+		} catch (IOException e) {
+			System.out.println("There was an error reading all files via the fileManager.");
+			e.printStackTrace();
+		}
+		return collectedData;
+	}
+	
 	
 	public static ArrayList<String> downloadSys(){
 		String[] targetAccounts = new String[10];
