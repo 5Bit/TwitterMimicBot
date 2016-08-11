@@ -11,7 +11,7 @@ public class WeightedPatternAnalyzer {
 	String strtIdentifier = "__STRT";
 	String endIdentifier = "__END";
 	int retweetModifier = 1;
-	public WeightedThreeStateMarkovChain markChain = new WeightedThreeStateMarkovChain();
+	public WeightedMarkovChain markChain = new WeightedMarkovChain();
 	
 	public ArrayList<String> knownWords = new ArrayList<String>();
 	// holds each sentence's retweet and favorite counts.

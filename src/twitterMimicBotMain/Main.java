@@ -90,7 +90,7 @@ public class Main {
 				case 0:
 					collectedData = downloadSys();
 					gen = new WeightedGenerator(collectedData);
-					gen.checkMarkovChain();
+//					gen.checkMarkovChain();
 					
 					post = gen.run();
 					System.out.println(post);

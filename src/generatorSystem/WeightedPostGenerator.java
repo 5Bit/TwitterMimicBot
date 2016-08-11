@@ -6,7 +6,7 @@ import java.util.Vector;
 public class WeightedPostGenerator {
 	
 	private final int sentenceLength = 140;
-	private WeightedThreeStateMarkovChain markovChain = null;
+	private WeightedMarkovChain markovChain = null;
 	private final String startIdentifier = "__STRT";
 	private final String endIdentifier = "__END";
 	
@@ -15,7 +15,7 @@ public class WeightedPostGenerator {
 	 * chain it uses to generate sentences.
 	 * @param inMarkov
 	 */
-	WeightedPostGenerator(WeightedThreeStateMarkovChain inMarkov)
+	WeightedPostGenerator(WeightedMarkovChain inMarkov)
 	{
 		this.markovChain = inMarkov;
 		

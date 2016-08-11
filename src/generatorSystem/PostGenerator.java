@@ -6,7 +6,7 @@ import java.util.Hashtable;
 import java.util.Random;
 import java.util.Vector;
 
-public class PostGenerator extends MarkovThreeState {
+public class PostGenerator extends MarkovOneState {
 	private int sentenceLength = 140;
 
 	/**

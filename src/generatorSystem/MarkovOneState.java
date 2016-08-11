@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.Vector;
 
-abstract class MarkovThreeState {
+abstract class MarkovOneState {
 
 	//used to remember known sentences.
 	public ArrayList<String> knownSentences = new ArrayList<String>();

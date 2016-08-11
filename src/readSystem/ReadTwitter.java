@@ -160,7 +160,7 @@ public class ReadTwitter implements Reader{
 	
 	
 	/**
-	 * Saves the tweets to a local file.
+	 * Saves the tweets to a local file. Returns file name.
 	 * @return
 	 */
 	public String saveToFile()

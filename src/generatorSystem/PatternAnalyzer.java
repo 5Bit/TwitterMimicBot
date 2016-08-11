@@ -5,7 +5,7 @@ import java.util.Hashtable;
 //import java.util.Hashtable;
 import java.util.Vector;
 
-class PatternAnalyzer extends MarkovThreeState {
+class PatternAnalyzer extends MarkovOneState {
 	// will hold a list of all the known words
 	ArrayList<String> knownWords = new ArrayList<String>();
 

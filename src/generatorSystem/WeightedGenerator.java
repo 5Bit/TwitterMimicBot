@@ -44,7 +44,7 @@ public class WeightedGenerator {
 	 * Returns the markov chain this generator has.
 	 * @return
 	 */
-	public WeightedThreeStateMarkovChain getMarkovChain()
+	public WeightedMarkovChain getMarkovChain()
 	{
 		return pa.markChain;
 	}
