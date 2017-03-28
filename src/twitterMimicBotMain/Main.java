@@ -6,7 +6,12 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
+
 import readSystem.*;
 import twitter4j.conf.ConfigurationBuilder;
 import generatorSystem.*;
@@ -297,21 +302,18 @@ public class Main {
 	{
 		String[] returnString = new String[4];
 		
-		URL path = Main.class.getResource("config.txt");
-		File file = new File(path.getFile());
+		Path filePath = Paths.get("config.txt");
 		
-		BufferedReader reader = new BufferedReader(new FileReader(file));
+		List<String> fileContent = Files.readAllLines(filePath);
 		
-		// Hardcoded - probably should optimize.
-		returnString[0] = reader.readLine().substring(13);
-		returnString[1] = reader.readLine().substring(16);
-		returnString[2] = reader.readLine().substring(15);
-		returnString[3] = reader.readLine().substring(18);
+		returnString[0] = fileContent.get(0).substring(13);
+		returnString[1] = fileContent.get(1).substring(16);
+		returnString[2] = fileContent.get(2).substring(15);
+		returnString[3] = fileContent.get(3).substring(18);
 		
 		for(String s: returnString)
 			if(s.isEmpty() || s == null) throw new IOException(); // had an issue reading it.
-		
-		reader.close();
+
 		return returnString;
 	}
 	
